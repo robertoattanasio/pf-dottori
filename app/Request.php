@@ -11,6 +11,5 @@ class Request extends Model
     }
 
     protected $fillable = [
-        'name_patient', 'surname_patient', 'text_patient', 'email_patient'
-    ];
+        'name_patient', 'surname_patient', 'text_patient', 'email_patient'];
 }

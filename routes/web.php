@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', 'GuestController@index')->name('index');
 Route::get('/dottori', 'GuestController@doctors')->name('doctors');
 Route::get('/chi-siamo', 'GuestController@about')->name('about');

@@ -11,6 +11,5 @@ class Boost extends Model
     }
 
     protected $fillable = [
-        'boost_name', 'hours', 'price'
-    ];
+        'boost_name', 'hours', 'price'];
 }

@@ -51,14 +51,8 @@
         <div class="doctor-right-container">
 
             <form action="{{route('return-edit-profile')}}" method="post">
-
                 @csrf
-            
                 @method('PUT')
-
-
-            {{-- <form class="form-auth" enctype="multipart/form-data" method="POST" action="{{ route('register') }}">
-                @csrf --}}
         
                 {{-- NAME --}}
                 <div class="form-auth-item">
@@ -110,7 +104,7 @@
                         @enderror
                     </div>
                 </div>
-        
+
                 {{-- STREET NUMBER --}}
                 <div class="form-auth-item">
                     <label for="street_number">{{ __('Street number') }}</label>
@@ -144,9 +138,9 @@
                         @enderror
                     </div>
                 </div>
-        
+
                 {{-- COUNTY --}}
-                <div class="form-auth-item">
+                {{-- <div class="form-auth-item">
                     <label for="county">{{ __('County') }}</label>
         
                     <div class="auth-item-input">
@@ -160,9 +154,8 @@
                             </span>
                         @enderror
                     </div>
-                </div>
-        
-        
+                </div> --}}
+
                 {{-- PROFILE PIC --}}
                 <div class="form-auth-item">
                     <label for="fname">Profile picture:</label>
@@ -209,32 +202,6 @@
                     <input name="specializations[]"  type="checkbox" value="{{$specialization->id}}" {{Auth::user()->specializations->contains($specialization) ? 'checked=checked' : ''}}>
                     <label>{{$specialization->name}}</label>
                 @endforeach
-                        
-                {{-- PASSWORD
-                <div class="form-auth-item">
-                    <label for="password">{{ __('Password') }}</label>
-        
-                    <div class="auth-item-input">
-                        <input id="password" type="password"
-                            class="form-control @error('password') is-invalid @enderror" name="password"
-                            required autocomplete="new-password">
-        
-                        @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-                </div>
-        
-                <div class="form-auth-item">
-                    <label for="password-confirm">{{ __('Confirm Password') }}</label>
-        
-                    <div class="auth-item-input">
-                        <input id="password-confirm" type="password" class="form-control"
-                            name="password_confirmation" required autocomplete="new-password">
-                    </div>
-                </div> --}}
         
                 <div class="form-auth-item">
                     <div class="auth-item-input">
@@ -243,6 +210,7 @@
                         </button>
                     </div>
                 </div>
+                
             </form>
         </div>
         {{-- FINE DOCTOR RIGHT CONTAINER --}}

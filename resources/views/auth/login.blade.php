@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+        {{-- EMAIL --}}
         <div class="card-header">{{ __('Login') }}</div>
         <form class="form-auth" method="POST" action="{{ route('login') }}">
             @csrf
@@ -19,6 +21,7 @@
                 </div>
             </div>
 
+            {{-- PASSWORD --}}
             <div class="form-auth-item">
                 <label for="password" class="">{{ __('Password') }}</label>
 

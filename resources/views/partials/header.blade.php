@@ -20,24 +20,13 @@
                         @auth
                             <li><a href="{{ route('dashboard-about') }}">Dashboard</a></li>
 
-                            
-                                {{-- LOG OUT --}}
-                                {{-- <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); 
-                                document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                                </a></li>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                    @csrf
-                                </form> --}}
-                                {{-- FINE LOG OUT --}}
                         @else
-                            <a href="{{ route('login') }}">Login</a>
+                        <li><a href="{{ route('login') }}">Login</a></li>
 
                             @if (Route::has('register'))
                                 <li><a href="{{ route('register') }}">Registrati</a></li>
                             @endif
-                        @endauth
-                    
+                        @endauth    
                 @endif
             </ul>
         </nav>
