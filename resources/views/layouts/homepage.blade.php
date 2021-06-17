@@ -15,6 +15,10 @@
     {{-- STYLES CSS --}}
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
 
+    {{-- CDN VUE.JS --}}
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+
     {{-- TITLE --}}
     <title>@yield('pageTitle')</title>
 

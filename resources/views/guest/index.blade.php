@@ -3,5 +3,7 @@
 @section('pageTitle', 'Home')
 
 @section('content')
-    index
+<h3 id="info"></h3>
+
 @endsection
+
