@@ -4,56 +4,23 @@
 
 @section('content')
 
-    {{-- MAIN CONTAINER --}}
-    <div class="container">
-        {{-- DOCTOR LEFT CONTAINER --}}
-        <div class="doctor-left-container">
+<i class="fas fa-arrow-left"><a href="{{ route('dashboard-about') }}">Dashboard</a></i>
 
-            {{-- DOCTOR ICONS --}}
-            <div class="doctor-icons">
-                <a href="{{ route('index') }}"><i class="fas fa-home"></i></a>
-                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}</a>
+{{-- <form action="{{route('add-sponsorization')}}" method="post">
+    @csrf
+    @method('PUT') --}}
 
-                    {{-- <i class="fas fa-sign-out-alt"></i> --}}
-                    
-                <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                    @csrf
-                </form>
-            </div>
+    @foreach ($boosts as $boost)
+        <input type="radio" id="boost_stuff" name="boost_stuff" value="{{$boost->id}}">
+        <label for="boost_name">
+            <h3>{{$boost->boost_name}}</h3>
+            <p>{{$boost->hours}}H</p>
+            <p>{{$boost->price}}$</p>
+        </label><br>
+    @endforeach
+    
+    <input type="submit" value="send">
+    <label for="">Vai al pagamento</label>
+{{-- </form> --}}
 
-            {{-- DOCTOR-PIC --}}
-            <div class="doctor-pic">
-                <img src="{{ asset('storage/' . Auth::user()->profile_pic) }}">
-            </div>
-
-            {{-- DOCTOR-INFO --}}
-            <div class="doctor-info">
-                <div class="doctor-name">
-                    <h2>{{Auth::user()->name}} {{Auth::user()->surname}}</h2>
-                </div>
-            </div>
-
-            {{-- DOCTOR-MENU --}}
-            <div class="doctor-menu">
-                <ul>
-                    <li><a href="">Il Mio Profilo</a></li>
-                    <li><a href="">Recensioni</a></li>
-                    <li><a href="">Messaggi</a></li>
-                    <li><a href="">Statistiche</a></li>
-                    <li><a href="">Sponsorizzazioni</a></li>
-                </ul>
-            </div> 
-        </div>
-        {{-- FINE DOCTOR LEFT CONTAINER --}}
-
-        {{-- DOCTOR RIGHT CONTAINER --}}
-        <div class="doctor-right-container">
-            <h2>{{Auth::user()->name}} {{Auth::user()->surname}}</h2>
-            <a href="{{ URL::to('/') }}/storage/{{ Auth::user()->cv }}" name="cv">cv</a>
-
-            <a href="{{ route('edit-profile') }}">modifica profilo</a>
-        </div>
-        {{-- FINE DOCTOR RIGHT CONTAINER --}}
-    </div>
 @endsection

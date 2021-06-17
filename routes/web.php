@@ -29,5 +29,7 @@ Route::prefix('admin')
 ->group(function () {
     Route::get('/', 'AdminController@dashboard')->name('dashboard-about');
     Route::get('/modifica-profilo', 'AdminController@editUser')->name('edit-profile');
+    Route::get('/sponsorizzazioni', 'AdminController@sponsorizeUser')->name('boost-profile');
+    // Route::put('/', 'AdminController@addSponsorization')->name('add-sponsorization');
     Route::put('/', 'AdminController@updateUser')->name('return-edit-profile');
 });

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Specialization;
+use App\Boost;
 // Use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,6 +15,16 @@ class AdminController extends Controller
 
     public function dashboard()
     {
+        return view('admin.dashboard-about');
+    }
+
+    public function sponsorizeUser() {
+        $boosts = Boost::all();
+        return view('admin.boost', compact('boosts'));
+    }
+
+    public function addSponsorization(Request $request) {
+        dd($request);
         return view('admin.dashboard-about');
     }
 

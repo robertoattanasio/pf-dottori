@@ -41,7 +41,7 @@
                     <li><a href="">Recensioni</a></li>
                     <li><a href="">Messaggi</a></li>
                     <li><a href="">Statistiche</a></li>
-                    <li><a href="">Sponsorizzazioni</a></li>
+                    <li><a href="{{ route('boost-profile') }}">Sponsorizzazioni</a></li>
                 </ul>
             </div> 
         </div>
