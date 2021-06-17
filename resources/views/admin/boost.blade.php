@@ -6,9 +6,9 @@
 
 <i class="fas fa-arrow-left"><a href="{{ route('dashboard-about') }}">Dashboard</a></i>
 
-{{-- <form action="{{route('add-sponsorization')}}" method="post">
+<form action="{{ route('add-sponsorization') }}" method="post">
     @csrf
-    @method('PUT') --}}
+    @method('PUT')
 
     @foreach ($boosts as $boost)
         <input type="radio" id="boost_stuff" name="boost_stuff" value="{{$boost->id}}">
@@ -21,6 +21,6 @@
     
     <input type="submit" value="send">
     <label for="">Vai al pagamento</label>
-{{-- </form> --}}
+</form>
 
 @endsection

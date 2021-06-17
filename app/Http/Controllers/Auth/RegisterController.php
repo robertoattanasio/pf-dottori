@@ -49,7 +49,7 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
+    protected function validator($data)
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:50', 'regex:/^[a-zA-Z ]+$/'],
@@ -72,6 +72,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        // $this->validator($data);
         // dd($data);
         if (array_key_exists('profile_pic', $data)) {
             $image_path = Storage::put('post_images', $data['profile_pic']);
@@ -89,6 +90,8 @@ class RegisterController extends Controller
         else {
             $data['cv'] = null;
         }
+
+        
 
         return User::create([
             'name' => $data['name'],
