@@ -1,0 +1,60 @@
+.wrapper-auth {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+    width: 50%;
+    max-width: 500px;
+    height: 500px;
+    margin: auto;
+    background-color: $blue;
+    color: $white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px rgb(190, 202, 212);
+    .form-auth {
+        height: 80%;
+        width: 50%;
+        margin-top: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .auth-item-input {
+            margin: 10px 0;
+            input {
+                height: 30px;
+                width: 100%;
+            }
+        }
+        .button-auth {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            button {
+                margin: 10px 0;
+                text-transform: uppercase;
+                font-weight: 600;
+                cursor: pointer;
+                background-color: $white;
+                color: $blue;
+                border: 1px solid $blue;
+                padding: 7.5px 25px;
+                border-radius: 5px;
+                &:hover {
+                    background-color: $blue;
+                    color: $white;
+                    border: 1px solid white;
+                    transition: .2s linear;
+                }
+            }
+            .forgot-your-password {
+                text-align: center;
+                font-size: 11px;
+                &:hover {
+                    text-decoration: underline;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

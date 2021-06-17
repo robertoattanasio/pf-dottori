@@ -1,0 +1,15 @@
+index.blade
+    navbar
+        - chi siamo
+        - prenota ora
+        - login
+    main  (personalizzato)
+
+        pagine
+            chi-siamo
+            domande_frequenti
+            termini_condizioni
+
+
+login.blade
+    navbar
