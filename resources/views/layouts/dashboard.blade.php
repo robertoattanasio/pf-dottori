@@ -27,8 +27,6 @@
     <main class="dashboard">
         @yield('content')
     </main>
-
-    <script src="js/app.js"></script>
     
 </body>
 </html>

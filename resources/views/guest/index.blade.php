@@ -3,7 +3,11 @@
 @section('pageTitle', 'Home')
 
 @section('content')
-<h3 id="info"></h3>
 
+    <select name="specializations" id="selectSpecializations">
+
+    </select>
+
+    <button id="btnSendSearch">Invia ricerca</button>
+    
 @endsection
-
