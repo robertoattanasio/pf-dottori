@@ -27,19 +27,29 @@ class GuestController extends Controller
     public function filter_specialization(Request $request) {
         $data = $request->all();
         // dd($data);
+        $users = [];
         $specialization = Specialization::where('name', $data['specialization'])->first();
-        $users = $specialization->users()->get();
-        // dd($specialization_id);
-        // $users = User::where('', $specialization_id)->first();
+        $request_users = $specialization->users()->get()->toArray();
 
-        // per prendere tutti i dati usare ->get();
-        dd($users);
+        for ($i = 0; $i < count($request_users); $i++) {
+            // dd($request_users[$i]['county']);
+            // if ($data['county'] == $request_users[$i]['county']) {
+                array_push($users, $request_users[$i]);
+            // }
+
+        }
+
+        // dd($users);
+
+        // dd(compact('users'));
+
+        return view('guest.doctors', compact('users'));
     }
     
-    public function doctors()
-    {
-        return view('guest.doctors');
-    }
+    // public function doctors()
+    // {
+    //     return view('guest.doctors');
+    // }
 
     public function about()
     {

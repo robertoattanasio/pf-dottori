@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'GuestController@index')->name('index');
 Route::post('/', 'GuestController@filter_specialization')->name('filter-specialization');
-Route::get('/dottori', 'GuestController@doctors')->name('doctors');
+// Route::get('/dottori', 'GuestController@doctors')->name('doctors');
 Route::get('/chi-siamo', 'GuestController@about')->name('about');
 Route::get('/faq', 'GuestController@faq')->name('faq');
 Route::get('/termini-condizioni', 'GuestController@terms')->name('terms');
