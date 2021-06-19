@@ -13,10 +13,12 @@ class ReviewSeeder extends Seeder
     public function run()
     {
         // $new_review = new Review();
+        // $new_review->id = 1;
         // $new_review->name_patient = "Roberto Attanasio";
         // $new_review->review_text = "E' proprio un cattivo urologo.";
-        // $new_review->user_id = 1;
+        // new_review->user_id = 1;
         // $new_review->mark_id = 32;
+        // $new_review->timestamps();
 
         // $new_review->save();
     }
