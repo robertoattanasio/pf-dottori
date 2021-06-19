@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Specialization;
 use App\User;
+use App\Mark;
+use App\Review;
+// use App\Request;
 
 class GuestController extends Controller
 {
@@ -46,10 +49,53 @@ class GuestController extends Controller
         return view('guest.doctors', compact('users'));
     }
     
-    // public function doctors()
-    // {
-    //     return view('guest.doctors');
-    // }
+    public function infoDoctor($id)
+    {
+        // dd($id);
+        $user = User::where('id', $id)->first();
+        // dd(compact('user'));
+        return view('guest.infoDoctor', compact('user'));
+    }
+
+
+    public function contactIt($id)
+    {
+        // dd($id);
+        return view('guest.contactit', compact('id'));
+    }
+
+    public function sendRequest(Request $request, $id)
+    {
+        // dd($id);
+        dd($request);
+        // chiamato model uguale a "request"......... cambiare model request.......
+
+    }
+
+    public function reviewIt($id)
+    {
+        // dd($id);
+        $marks = Mark::all();
+        // dd($marks);
+        return view('guest.reviewit', compact('id'), compact('marks'));
+    }
+
+    public function sendReview(Request $request, $id)
+    {
+        $data = $request->all();
+        $user_id = User::where('id', $id)->first()['id'];
+        $mark_id = Mark::where('mark', $data['mark'])->first()['id'];
+        // dd($mark_id);
+        // dd($data);
+        $new_review = new Review;
+
+        $new_review->fill($data);
+        $new_review['user_id'] = $user_id;
+        $new_review['mark_id'] = $mark_id;
+        dd($new_review);
+        // sistemare la tabella reviews.......... cambiare nome.......
+        // $new_review->save();
+    }
 
     public function about()
     {

@@ -1,6 +1,6 @@
 @extends('layouts.homepage')
 
-@section('pageTitle', 'Home')
+@section('pageTitle', 'doctors')
 
 @section('content')
 
@@ -15,23 +15,28 @@
         sort($counties_name, SORT_REGULAR);
     ?>
 
+    <label for="cerca">Cerca per citta':</label>
     <select id="countySelect">
+        <option value="Tutti">- Tutti i risultati -</option>
         @foreach ($counties_name as $county_name)
             <option value="{{$county_name}}">{{$county_name}}</option>
         @endforeach
     </select>
 
-    @if (count($users) == 0)
-        <h3>Nessun risultato.</h3>
-    @else
-        @foreach ($users as $user)
-            <div class="card">
-                <p id="name">{{$user['name']}}</p>
-                <p id="surname">{{$user['surname']}}</p>
-                <p id="county">{{$user['county']}}</p>
-            </div>
-        @endforeach 
-    @endif
+    <div class="results">
+        @if (count($users) == 0)
+            <h3>Nessun risultato.</h3>
+        @else
+            @foreach ($users as $user)
+                <div class="card {{$user['county']}}">
+                    <p id="name">{{$user['name']}}</p>
+                    <p id="surname">{{$user['surname']}}</p>
+                    <p id="county">{{$user['county']}}</p>
+                    <a href="{{route('infoDoctor', [$user['id']])}}">Vedi informazioni specialista</a>
+                </div>
+            @endforeach 
+        @endif
+    </div>
 
 
     <script>
@@ -40,8 +45,32 @@
         // users = <?php echo json_encode($users) ?>;
 
         document.getElementById('countySelect').addEventListener('change', function() {
-            console.log(document.getElementById('countySelect').value);
-        })
+            var county_selected = document.getElementById('countySelect').value;
+            var none = document.getElementsByClassName('card');
+
+            if (county_selected == "Tutti") {
+                // console.log(county_selected);
+                // console.log(none.length);
+                for (j = 0; j < none.length; j++) {
+                    none[j].classList.remove("none");
+                }
+
+            } else if (document.getElementsByClassName(county_selected)) {
+
+                for (i = 0; i < none.length; i++) {
+                    none[i].classList.add("none");
+                }
+
+                var block = document.getElementsByClassName(county_selected);
+                // console.log(block);
+
+                for (ii = 0; ii < block.length; ii++) {
+                    block[ii].classList.remove("none");
+                }
+
+            } 
+
+        });
 
     </script>
 @endsection
