@@ -27,6 +27,11 @@ a:active {
   text-decoration: none;
 }
 
+/*! OBJECTS */
+.none {
+  display: none;
+}
+
 /*! BODY */
 body {
   width: 100%;
@@ -35,10 +40,6 @@ body {
   font-size: 16px;
   color: #224760;
   background-color: #fefcf8;
-}
-
-.none {
-  display: none;
 }
 
 /*! HEADER */
@@ -72,36 +73,20 @@ nav.nav-desktop li:last-child {
 }
 
 /*! MAIN */
+/*! MAIN HOME */
 main.home {
-  width: 100%;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
 }
-main.home .results {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
-  margin-top: 150px;
-}
-main.home .results .card {
-  height: 150px;
-  width: 100px;
-  background-color: lightgreen;
-}
-main.home .results .card button {
-  cursor: pointer;
-}
-main.home .info_doctor .contatti li {
+
+.info_doctor .contatti li {
   display: block;
 }
 
+/*! MAIN DASHBOARD */
 main.dashboard {
   width: 100%;
   height: 100%;
-  background-color: #fae3ec;
+  background-color: #f6f8fee5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,7 +107,7 @@ main.dashboard .container .doctor-left-container {
   flex: 0 0 350px;
   padding: 50px;
   color: #fefcf8;
-  background-color: #528f87;
+  background-color: #1c4d7c;
 }
 main.dashboard .container .doctor-left-container .doctor-icons {
   width: 100%;
@@ -137,7 +122,7 @@ main.dashboard .container .doctor-left-container .doctor-pic {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 2px solid #fefcf8;
+  border: 2px solid #fafafa;
   overflow: hidden;
 }
 main.dashboard .container .doctor-left-container .doctor-pic img {
@@ -170,9 +155,10 @@ main.dashboard .container .doctor-left-container .doctor-menu li:last-child {
 }
 main.dashboard .container .doctor-right-container {
   flex: 1 1 auto;
-  background-color: #f6f8fee5;
+  background-color: #fefcf8;
 }
 
+/*! MAIN CARD */
 /*! FOOTER */
 footer {
   display: flex;

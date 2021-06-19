@@ -1,54 +1,30 @@
 /*! MAIN */
 
+
+/*! MAIN HOME */
+
 main.home {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .results {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        width: 100%;
-        margin-top: 150px;
-
-        .card {
-            height: 150px;
-            width: 100px;
-            background-color: lightgreen;
-
-            button {
-                cursor: pointer;
-            }
-
-        }
-
-    }
-
-    .info_doctor {
-
-        .contatti {
-            
-            li {
-                display: block;
-            }
-
-        }
-
-    }
-
+    min-height: 100vh;
 }
+
+.info_doctor {
+    .contatti {
+        li {
+            display: block;
+        }
+    }
+}
+
+
+/*! MAIN DASHBOARD */
 
 main.dashboard {
     width: 100%;
     height: 100%;
-    background-color: $light-pink;
+    background-color: $color-background;
     display: flex;
     justify-content: center;
     align-items: center;
-
     .container {
         width: 80%;
         height: 80%;
@@ -56,7 +32,6 @@ main.dashboard {
         display: flex;
         flex-flow: row nowrap;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-        
         .doctor-left-container {
             display: flex;
             align-items: center;
@@ -65,8 +40,7 @@ main.dashboard {
             flex: 0 0 350px;
             padding: 50px;
             color: $cream-white;
-            background-color: $light-green;
-            
+            background-color: $color-primary;
             .doctor-icons {
                 width: 100%;
                 height: fit-content;
@@ -74,39 +48,31 @@ main.dashboard {
                 justify-content: space-around;
                 font-size: 3em;
             }
-
             .doctor-pic {
                 width: 250px;
                 height: 250px;
                 border-radius: 50%;
-                border: 2px solid $cream-white;
+                border: 2px solid $color-border;
                 overflow: hidden;
-                
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                 }
-
             }
-            
             .doctor-info {
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 flex-flow: column nowrap;
-                
                 .doctor-name {
                     width: 100%;
                     display: flex;
                     justify-content: center;
                 }
-
             }
-            
             .doctor-menu {
                 width: 100%;
-                
                 li {
                     font-size: 1.5em;
                     display: block;
@@ -115,14 +81,16 @@ main.dashboard {
                         margin-bottom: 0;
                     }
                 }
-
             }
         }
-
         .doctor-right-container {
             flex: 1 1 auto;
-            background-color: $dark-grey;
+            background-color: $color-container;
         }
-
     }
 }
+
+
+/*! MAIN CARD */
+
+main.card {}

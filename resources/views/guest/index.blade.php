@@ -25,12 +25,6 @@
                 @endforeach
             </select>
 
-            {{-- <select name="county">
-                @foreach ($counties_name as $county_name)
-                    <option value="{{$county_name}}">{{$county_name}}</option>
-                @endforeach
-            </select> --}}
-
             <button type="submit">
                 {{ __('Ricerca') }}
             </button>

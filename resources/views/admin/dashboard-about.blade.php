@@ -12,10 +12,9 @@
             {{-- DOCTOR ICONS --}}
             <div class="doctor-icons">
                 <a href="{{ route('index') }}"><i class="fas fa-home"></i></a>
-                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}</a>
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt"></i></a>
 
-                    {{-- <i class="fas fa-sign-out-alt"></i> --}}
+                    
                     
                 <form id="logout-form" action="{{ route('logout') }}" method="POST">
                     @csrf
