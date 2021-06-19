@@ -32,6 +32,10 @@ a:active {
   display: none;
 }
 
+.relative {
+  position: relative;
+}
+
 /*! BODY */
 body {
   width: 100%;
@@ -102,12 +106,13 @@ main.dashboard .container {
 main.dashboard .container .doctor-left-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-flow: column nowrap;
   flex: 0 0 350px;
-  padding: 50px;
+  padding: 20px;
   color: #fefcf8;
   background-color: #1c4d7c;
+  text-transform: capitalize;
 }
 main.dashboard .container .doctor-left-container .doctor-icons {
   width: 100%;
@@ -115,12 +120,16 @@ main.dashboard .container .doctor-left-container .doctor-icons {
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
   font-size: 3em;
 }
+main.dashboard .container .doctor-left-container .doctor-icons form {
+  display: none;
+}
 main.dashboard .container .doctor-left-container .doctor-pic {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 2px solid #fafafa;
   overflow: hidden;
@@ -156,6 +165,47 @@ main.dashboard .container .doctor-left-container .doctor-menu li:last-child {
 main.dashboard .container .doctor-right-container {
   flex: 1 1 auto;
   background-color: #fefcf8;
+  text-transform: capitalize;
+}
+main.dashboard .container .doctor-right-container .doctor-right-top-container {
+  height: 15%;
+  background-color: #1c4d7c;
+  color: #fefcf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container {
+  height: 85%;
+  padding: 20px 20px;
+  background-image: url(../img/2.png);
+  background-size: 550px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  backtext-align: justify;
+  text-justify: inter-word;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container h4 {
+  padding-bottom: 20px;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container h4 span {
+  color: #528f87;
+  font-weight: bolder;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .form-auth-item * {
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container #specialization {
+  width: 30%;
+  height: 100px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container #confirm_modification {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
 }
 
 /*! MAIN CARD */
@@ -167,7 +217,7 @@ footer {
   width: 100%;
   height: 5vh;
   color: #fafafa;
-  background-color: #1c4d7c;
+  background-color: #bfcad4;
 }
 
 .wrapper-auth {
@@ -180,7 +230,7 @@ footer {
   max-width: 500px;
   height: 2000px;
   margin: auto;
-  background-color: #1c4d7c;
+  background-color: #bfcad4;
   color: #fafafa;
   border-radius: 10px;
   box-shadow: 0px 0px 2px 2px #becad4;
@@ -211,13 +261,13 @@ footer {
   font-weight: 600;
   cursor: pointer;
   background-color: #fafafa;
-  color: #1c4d7c;
-  border: 1px solid #1c4d7c;
+  color: #bfcad4;
+  border: 1px solid #bfcad4;
   padding: 7.5px 25px;
   border-radius: 5px;
 }
 .wrapper-auth .form-auth .button-auth button:hover {
-  background-color: #1c4d7c;
+  background-color: #bfcad4;
   color: #fafafa;
   border: 1px solid white;
   transition: 0.2s linear;

@@ -1,6 +1,5 @@
 /*! MAIN */
 
-
 /*! MAIN HOME */
 
 main.home {
@@ -14,7 +13,6 @@ main.home {
         }
     }
 }
-
 
 /*! MAIN DASHBOARD */
 
@@ -31,26 +29,36 @@ main.dashboard {
         margin: 0 auto;
         display: flex;
         flex-flow: row nowrap;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+            rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
         .doctor-left-container {
+            // * {
+            //     border: 1px solid lime;
+            // }
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
             flex-flow: column nowrap;
             flex: 0 0 350px;
-            padding: 50px;
+            padding: 20px;
             color: $cream-white;
             background-color: $color-primary;
+            text-transform: capitalize;
             .doctor-icons {
                 width: 100%;
                 height: fit-content;
                 display: flex;
-                justify-content: space-around;
+                align-items: center;
+                justify-content: space-between;
                 font-size: 3em;
+                form {
+                    //questo display none serve per evitare che il form tenga spazio inutile
+                    display: none;
+                }
             }
             .doctor-pic {
-                width: 250px;
-                height: 250px;
+                width: 200px;
+                height: 200px;
                 border-radius: 50%;
                 border: 2px solid $color-border;
                 overflow: hidden;
@@ -86,11 +94,52 @@ main.dashboard {
         .doctor-right-container {
             flex: 1 1 auto;
             background-color: $color-container;
+            text-transform: capitalize;
+            .doctor-right-top-container {
+                height: 15%;
+                background-color: $color-primary;
+                color: $cream-white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .doctor-right-bottom-container {
+                height: 85%;
+                padding: 20px 20px;
+                h4 {
+                    padding-bottom: 20px;
+                }
+                background-image: url(../img/2.png);
+                background-size: 550px;
+                background-repeat: no-repeat;
+                background-position: right bottom;
+                backtext-align: justify;
+                text-justify: inter-word;
+                h4 span {
+                    color: $color-secondary;
+                    font-weight: bolder;
+                }
+                .form-auth-item * {
+                    padding-bottom: 5px;
+                    overflow: hidden;
+                }
+                #specialization {
+                    width: 30%;
+                    height: 100px;
+                    overflow: scroll;
+                    scroll-behavior: smooth;
+                }
+                #confirm_modification {
+                    position: absolute;
+                    bottom: 5px;
+                    right: 10px;
+                }
+            }
         }
     }
 }
 
-
 /*! MAIN CARD */
 
-main.card {}
+main.card {
+}
