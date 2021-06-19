@@ -35,7 +35,7 @@
             {{-- DOCTOR-INFO --}}
             <div class="doctor-info">
                 <div class="doctor-name">
-                    <h2>{{ Auth::user()->name }} {{ Auth::user()->surname }}</h2>
+                    <h2 class="dashboard-title">{{ Auth::user()->name }} {{ Auth::user()->surname }}</h2>
                 </div>
             </div>
 
