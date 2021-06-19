@@ -15,7 +15,7 @@
         sort($counties_name, SORT_REGULAR);
     ?>
 
-    <select id="c">
+    <select id="countySelect">
         @foreach ($counties_name as $county_name)
             <option value="{{$county_name}}">{{$county_name}}</option>
         @endforeach
@@ -36,13 +36,12 @@
 
     <script>
 
-        // e' possibile interagire fra php e js tramite html prendendo il valore inserito in html
+        // QUESTA RIGA SERVE SE VUOI VEDERE IN CONSOLE LOG L'ARRAY USERS IN CONSOLELOG JAVASCRIPT
+        // users = <?php echo json_encode($users) ?>;
 
-        name = document.getElementById('c');
-
-        name.addEventListener('change', function() {
-            console.log(name.value);
-        });
+        document.getElementById('countySelect').addEventListener('change', function() {
+            console.log(document.getElementById('countySelect').value);
+        })
 
     </script>
 @endsection
