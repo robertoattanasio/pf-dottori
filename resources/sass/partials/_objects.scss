@@ -1,5 +1,16 @@
 /*! OBJECTS */
 
+@for $i from 1 through 10 {
+    .margin-top-#{$i * 10} {
+        margin-top: #{$i * 10}px;
+    }
+}
+
+@mixin main-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .none {
     display: none;
 }

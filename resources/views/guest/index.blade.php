@@ -14,20 +14,53 @@
 
         sort($counties_name, SORT_REGULAR);
     ?>
+    {{-- JUMBOTRON --}}
+    <div class="jumbotron">
+
+        {{-- JUMBOTRON WRAPPER --}}
+        <div class="jumbotron-wrapper">
+
+            {{-- JUMBOTRON LEFT CONTAINER --}}
+            <div class="jumbotron-left-container">
+
+                {{-- H2 TITLE --}}
+                <h2>Visite a domicilio, videoconsulti e assistenza domiciliare</h2>
+                
+                {{-- PARAGRAPH --}}
+                <p class="generic margin-top-10">Prenota in pochi clic servizi sanitari e socio-assistenziali, 7 giorni su 7, senza liste d'attesa.</p>
+
+                {{-- H3 SEARCH --}}
+                <h3 class="margin-top-80">Scopri i nostri servizi a domicilio</h3>
+
+                {{-- SEARCH --}}
+                <form class="margin-top-20" enctype="multipart/form-data" method="POST" action="{{ route('filter-specialization') }}">
+                    @csrf
+            
+                        <select name="specialization">
+                            @foreach ($specializations as $specialization)
+                                <option value="{{$specialization}}">{{$specialization}}</option>
+                            @endforeach
+                        </select>
+            
+                        <button type="submit">
+                            {{ __('Ricerca') }}
+                        </button>
+                </form>
+            </div>
+            {{-- FINE JUMBOTRON LEFT CONTAINER --}}
+
+            <div class="jumbotron-right-container">
+                <img src="img/info-graphic-1.png" alt="">
+            </div>
+
+        </div>
+    </div>
 
 
-    <form class="" enctype="multipart/form-data" method="POST" action="{{ route('filter-specialization') }}">
-        @csrf
 
-            <select name="specialization">
-                @foreach ($specializations as $specialization)
-                    <option value="{{$specialization}}">{{$specialization}}</option>
-                @endforeach
-            </select>
 
-            <button type="submit">
-                {{ __('Ricerca') }}
-            </button>
-    </form>
+
+
+
     
 @endsection
