@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! DEBUG */
 .debug * {
   border: 1px solid black;
@@ -434,4 +435,60 @@ footer {
   height: 8vh;
   color: #fafafa;
   background-color: #1c4d7c;
+}
+
+.container-faq {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+  padding-top: calc(50px - 18px);
+}
+.container-faq button.accordion {
+  margin-top: 18px;
+  background-color: #f6f8fe;
+  color: #1c4d7c;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  font-weight: 300;
+  transition: 0.4s;
+  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
+  box-shadow: 0px 6px 5px -6px #a1a1a1;
+}
+.container-faq button.accordion.active, .container-faq button.accordion:hover {
+  color: white;
+  background-color: #1c4d7c;
+  box-shadow: none;
+}
+.container-faq button.accordion:after {
+  content: "+";
+  color: #1c4d7c;
+  float: right;
+  margin-left: 5px;
+}
+.container-faq button.accordion:hover::after {
+  color: white;
+}
+.container-faq button.accordion.active:after {
+  content: "\2212";
+  color: white;
+}
+.container-faq div.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.6s ease-in-out;
+  opacity: 0;
+}
+.container-faq div.panel.show {
+  padding: 18px;
+  opacity: 1;
+  max-height: 500px;
+  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
+  box-shadow: 0px 6px 5px -6px #a1a1a1;
 }
