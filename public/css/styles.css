@@ -76,6 +76,11 @@ a:active {
   position: relative;
 }
 
+.nav_scrollOverHeader {
+  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
+  box-shadow: 0px 6px 5px -6px #a1a1a1;
+}
+
 /*! TYPOGRAPHY */
 h2 {
   color: #224760;
@@ -105,14 +110,17 @@ body {
   font-family: "Karla", sans-serif;
   font-size: 16px;
   color: #224760;
-  background-color: #f6f8fee5;
+  background-color: #f6f8fe;
 }
 
 /*! HEADER */
 header {
   width: 100%;
-  height: 5vh;
-  background-color: #f6f8fee5;
+  height: 8vh;
+  position: fixed;
+  inset: 0 0 0 0;
+  background-color: #f6f8fe;
+  transition: 200ms ease-in-out;
 }
 header .header-wrapper {
   width: 80%;
@@ -128,6 +136,7 @@ header .header-wrapper .logo {
   align-items: center;
   font-size: 32px;
   font-weight: 800;
+  text-shadow: 1px 2px 2px #a1a1a1;
 }
 header .header-wrapper .logo span.true {
   color: #528f87;
@@ -148,20 +157,27 @@ header .header-wrapper nav.nav-desktop li {
 header .header-wrapper nav.nav-desktop li:last-child {
   margin-right: 0;
 }
+header .header-wrapper nav.nav-desktop li:nth-child(4) {
+  margin-right: 80px;
+}
 
 /*! MAIN */
 /*! MAIN HOME */
 main.home {
+  margin-top: 8vh;
   width: 100%;
   min-height: 100vh;
   background-color: #fefcf8;
 }
 main.home .jumbotron {
   width: 100%;
-  height: 600px;
-  background-color: #f6f8fee5;
-  -o-box-shadow: 0px 6px 10px -6px #224760;
-  box-shadow: 0px 6px 10px -6px #224760;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #f6f8fe;
+  padding: 50px 0;
+  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
+  box-shadow: 0px 6px 5px -6px #a1a1a1;
 }
 main.home .jumbotron .jumbotron-wrapper {
   width: 80%;
@@ -191,6 +207,11 @@ main.home .jumbotron .jumbotron-wrapper .jumbotron-right-container img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+main.home .sponsorized_doctors {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
 
 .info_doctor .contatti li {
   display: block;
@@ -200,7 +221,7 @@ main.home .jumbotron .jumbotron-wrapper .jumbotron-right-container img {
 main.dashboard {
   width: 100%;
   height: 100%;
-  background-color: #f6f8fee5;
+  background-color: #f6f8fe;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -322,7 +343,7 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
 main.card {
   width: 100%;
   height: 100%;
-  background-color: #f6f8fee5;
+  background-color: #f6f8fe;
   display: flex;
   justify-content: center;
   align-items: center;

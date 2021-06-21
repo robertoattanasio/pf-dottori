@@ -12,7 +12,7 @@
                 <li><a href="{{ route('index') }}">Home</a></li>
                 <li><a href="{{ route('about') }}">Chi Siamo</a></li>
                 <li><a href="{{ route('faq') }}">Domande Frequenti</a></li>
-                <li><a href="{{ route('terms') }}">Termini e Condizioni</a></li>
+                <li><a href="{{ route('psychology') }}">Psicologia Online</a></li>
 
                 {{-- ADMINISTRATOR SECTION --}}
                 @if (Route::has('login'))

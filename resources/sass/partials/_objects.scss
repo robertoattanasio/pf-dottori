@@ -11,6 +11,10 @@
     margin: 0 auto;
 }
 
+@mixin main-padding {
+    padding: 50px 0;
+}
+
 @mixin flex-center {
     width: 100%;
     height: 100%;
@@ -20,10 +24,26 @@
     align-items: center;
 }
 
+@mixin box-shadow {
+    -webkit-box-shadow: 0px 6px 5px -6px $color-shadow;
+    -moz-box-shadow: 0px 6px 5px -6px $color-shadow;
+    -o-box-shadow: 0px 6px 5px -6px $color-shadow;
+    box-shadow: 0px 6px 5px -6px $color-shadow;
+}
+
+@mixin text-shadow {
+    text-shadow: 1px 2px 2px $color-shadow;
+}
+
 .none {
     display: none;
 }
 
 .relative {
     position: relative;
+}
+
+// CLASSE MODULARE PER IL BOX-SHADOW DELLA NAVBAR
+.nav_scrollOverHeader {
+    @include box-shadow;
 }

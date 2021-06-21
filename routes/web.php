@@ -25,8 +25,7 @@ Route::get('/review/{id}', 'GuestController@sendReview')->name('return-review-it
 Route::get('/recensisci/{id}', 'GuestController@reviewIt')->name('review-it');
 Route::get('/chi-siamo', 'GuestController@about')->name('about');
 Route::get('/faq', 'GuestController@faq')->name('faq');
-Route::get('/termini-condizioni', 'GuestController@terms')->name('terms');
-
+Route::get('/psicologia-online', 'GuestController@psychology')->name('psychology');
 
 Auth::routes();
 

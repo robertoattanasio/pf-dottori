@@ -21,8 +21,6 @@
 
 </head>
 
-<?php include(app_path().'/Includes/counties.php'); ?>
-
 <body class="">
     
     @include('partials.header')
@@ -32,6 +30,8 @@
     </main>
 
     @include('partials.footer')
+
+    <script src="js/main.js"></script>
 
 </body>
 </html>

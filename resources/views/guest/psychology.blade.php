@@ -3,5 +3,5 @@
 @section('pageTitle', 'Home')
 
 @section('content')
-    termini e condizioni
+    Psicologia Online
 @endsection

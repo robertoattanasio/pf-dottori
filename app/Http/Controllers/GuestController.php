@@ -241,8 +241,8 @@ class GuestController extends Controller
         return view('guest.faq');
     }
 
-    public function terms()
+    public function psychology()
     {
-        return view('guest.terms');
+        return view('guest.psychology');
     }
 }
