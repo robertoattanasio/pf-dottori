@@ -5,8 +5,14 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Specialization;
 use App\Boost;
+use App\Message;
+use App\Reviews;
+use App\Mark;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
+use App\Mail\SendNewMail;
+use App\Review;
+use Illuminate\Support\Facades\Mail;
 // Use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -35,6 +41,48 @@ class AdminController extends Controller
         return view('admin.dashboard-about');
     }
 
+    public function reviews() {
+        $reviews = Review::where('user_id', Auth::user()->id)->get()->toArray();
+        // dd($reviews);
+        // foreach ($reviews as $review) {
+        //     $mark = Mark::where('id', $review['mark_id'])->first()['mark'];
+        //     $review['mark'] = $mark;
+        //     // dd($review);
+        // }
+        // dd($reviews);
+        return view('admin.reviews', compact('reviews'));
+    }
+
+    public function messages() 
+    {
+        $messages = Message::where('user_id', Auth::user()->id)->get()->toArray();
+
+        return view('admin.messages', compact('messages'));
+    }
+
+    public function infoMessage($email_patient) {
+        // dd($email_patient);
+        $message = Message::where('email_patient', $email_patient)->first();
+        // dd($message);
+        return view('admin.messageinfo', compact('message'));
+    }
+
+    public function messageSent(Request $request) {
+        // dd($request);
+        $message = $request->all();
+        $message['doctor'] = 'Dr. ' . Auth::user()->name . ' ' . Auth::user()->surname;
+        $message['email_doctor'] = Auth::user()->email;
+
+        // dd($message);
+
+        // ATTENZIONE, se non funziona il Mail::to() e' perche' c'e' un validatore automatico che verifica che la mail sia sintatticamente corretta!!!
+        Mail::to($message['email_patient'])->send(new SendNewMail($message));
+
+        $messages = Message::where('user_id', Auth::user()->id)->get()->toArray();
+
+        return view('admin.messages', compact('messages'));
+    }
+
     public function sponsorizeUser() {
         $boosts = Boost::all();
         return view('admin.boost', compact('boosts'));
@@ -50,6 +98,12 @@ class AdminController extends Controller
         return redirect()->route('dashboard-about');
     }
 
+    public function statistics() {
+        $reviews = Review::where('user_id', Auth::user()->id)->get()->toArray();
+
+        return view('admin.statistics', compact('reviews'));
+    }
+ 
     public function editUser() {
         $specializations = Specialization::all();
         // dd(compact('specializations'));

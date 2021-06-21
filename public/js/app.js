@@ -115,8 +115,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/roberto/Desktop/Personale/Scuola/Boolean/Esercitazioni/Progetto Finale/pf-dottori/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/roberto/Desktop/Personale/Scuola/Boolean/Esercitazioni/Progetto Finale/pf-dottori/resources/sass/styles.scss */"./resources/sass/styles.scss");
+__webpack_require__(/*! C:\Users\ale79\Progetti\Boolean Careers\Progetti\pf-dottori\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\ale79\Progetti\Boolean Careers\Progetti\pf-dottori\resources\sass\styles.scss */"./resources/sass/styles.scss");
 
 
 /***/ })

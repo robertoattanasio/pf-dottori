@@ -56,7 +56,29 @@
         </div>
     </div>
 
-
+    <div class="sponsorized_doctors">
+        <h2>I nostri specialisti (sponsorizzati... mettiamo un titolo appetibile)</h2>
+        @foreach ($sponsorized_users as $user)
+            <div class="card {{$user['county']}}">
+                <p id="name">{{$user['name']}}</p>
+                <p id="surname">{{$user['surname']}}</p>
+                <p id="county">{{$user['county']}}</p>
+                @if($user['numero_recensioni'])
+                <p id="media_voti">Media voti: {{$user['media_voti']}}</p>
+                <p id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</p>
+                @endif
+                @if($user->specializations)
+                    @foreach ($user->specializations->toArray() as $specialization)
+                        <p class="specialistica">{{$specialization['name']}}</p>
+                    @endforeach
+                @endif
+                {{-- @if ($user['specialization'])
+                <p id="specialistica">{{$user['specialization']}}</p>
+                @endif --}}
+                <a href="{{route('infoDoctor', [$user['id']])}}">Vedi informazioni specialista</a>
+            </div>
+        @endforeach 
+    </div>
 
 
 

@@ -20,8 +20,59 @@
 </head>
 <body>
 
+    <?php
+    $ilmioprofilo = 'il mio profilo';
+    $recensioni = 'recensioni';
+    $messaggi = 'messaggi';
+    $statistiche = 'statistiche';
+    $sponsorizzazioni = 'sponsorizzazioni';
+    ?>
+
     <main class="dashboard">
+        <div class="container">
+            {{-- DOCTOR LEFT CONTAINER --}}
+            <div class="doctor-left-container">
+    
+                {{-- DOCTOR ICONS --}}
+                <div class="doctor-icons">
+                    <a href="{{ route('index') }}"><i class="fas fa-home"></i></a>
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
+                            class="fas fa-sign-out-alt"></i></a>
+                    <a href="{{ route('edit-profile') }}"><i class="fas fa-pen"></i></a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                    </form>
+                </div>
+    
+                {{-- DOCTOR-PIC --}}
+                <div class="doctor-pic">
+                    <img src="{{ asset('storage/' . Auth::user()->profile_pic) }}">
+                </div>
+    
+                {{-- DOCTOR-INFO --}}
+                <div class="doctor-info">
+                    <div class="doctor-name">
+                        <h2 class="dashboard-title">{{ Auth::user()->name }} {{ Auth::user()->surname }}</h2>
+                    </div>
+                </div>
+    
+                {{-- DOCTOR-MENU --}}
+                <div class="doctor-menu">
+                    <ul>
+                        <li><a href="{{ route('dashboard-about') }}">Il Mio Profilo</a></li>
+                        <li><a href="{{ route('reviews') }}">Recensioni</a></li>
+                        <li><a href="{{ route('messages') }}">Messaggi</a></li>
+                        <li><a href="{{ route('statistics') }}">Statistiche</a></li>
+                        <li><a href="{{ route('boost-profile') }}">Sponsorizzazioni</a></li>
+                    </ul>
+                </div>
+            </div>
+            {{-- FINE DOCTOR LEFT CONTAINER --}}
+    
         @yield('content')
+
+        </div>
     </main>
     
 </body>

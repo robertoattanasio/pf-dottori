@@ -35,6 +35,11 @@ Route::prefix('admin')
 ->middleware('auth')
 ->group(function () {
     Route::get('/', 'AdminController@dashboard')->name('dashboard-about');
+    Route::get('/recensioni', 'AdminController@reviews')->name('reviews');
+    Route::get('/messaggi', 'AdminController@messages')->name('messages');
+    Route::get('/infomessaggio/{email_patient}', 'AdminController@infoMessage')->name('info-message');
+    Route::post('/messaggio-inviato', 'AdminController@messageSent')->name('message-sent');
+    Route::get('/statistiche', 'AdminController@statistics')->name('statistics');
     Route::get('/modifica-profilo', 'AdminController@editUser')->name('edit-profile');
     Route::get('/sponsorizzazioni', 'AdminController@sponsorizeUser')->name('boost-profile');
     Route::put('/sponsorizzazioni', 'AdminController@addSponsorization')->name('add-sponsorization');
