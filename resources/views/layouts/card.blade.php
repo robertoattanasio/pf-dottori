@@ -21,7 +21,7 @@
 
 </head>
 <body>
-
+    
     <main class="card">
         <div class="wrapper-auth">
             @yield('content')

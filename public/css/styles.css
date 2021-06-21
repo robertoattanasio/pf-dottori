@@ -275,7 +275,6 @@ main.dashboard .container .doctor-left-container .doctor-menu li:last-child {
 main.dashboard .container .doctor-right-container {
   flex: 1 1 auto;
   background-color: #fefcf8;
-  text-transform: capitalize;
 }
 main.dashboard .container .doctor-right-container .doctor-right-top-container {
   height: 15%;
@@ -284,6 +283,7 @@ main.dashboard .container .doctor-right-container .doctor-right-top-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-transform: capitalize;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container {
   height: 85%;

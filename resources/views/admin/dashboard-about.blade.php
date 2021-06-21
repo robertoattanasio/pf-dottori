@@ -4,6 +4,8 @@
 
 @section('content')
 
+    <?php include(app_path().'/Includes/counties.php'); ?>
+
         {{-- DOCTOR RIGHT CONTAINER --}}
         <div class="doctor-right-container">
             <div class="doctor-right-top-container">

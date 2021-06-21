@@ -91,8 +91,6 @@ class RegisterController extends Controller
             $data['cv'] = null;
         }
 
-        
-
         return User::create([
             'name' => $data['name'],
             'surname' => $data['surname'],

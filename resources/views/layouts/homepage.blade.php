@@ -21,6 +21,8 @@
 
 </head>
 
+<?php include(app_path().'/Includes/counties.php'); ?>
+
 <body class="">
     
     @include('partials.header')
