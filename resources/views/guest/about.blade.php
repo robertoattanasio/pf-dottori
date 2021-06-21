@@ -3,5 +3,7 @@
 @section('pageTitle', 'Home')
 
 @section('content')
-    Sono la pagina chi siamo
+    <div class="jumbotron-small">
+        Sono la pagina chi siamo
+    </div>
 @endsection

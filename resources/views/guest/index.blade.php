@@ -7,7 +7,7 @@
 <?php include(app_path().'/Includes/counties.php'); ?>
 
     {{-- JUMBOTRON --}}
-    <div class="jumbotron">
+    <div class="jumbotron-big">
 
         {{-- JUMBOTRON WRAPPER --}}
         <div class="jumbotron-wrapper">

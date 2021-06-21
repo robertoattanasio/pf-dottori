@@ -6,11 +6,10 @@
 main.home {
     margin-top: 8vh;
     width: 100%;
-    min-height: 100vh;
     background-color: $color-container;
-    .jumbotron {
+    .jumbotron-big {
         width: 100%;
-        height: fit-content;
+        height: 40vh;
         background-color: $color-background;
         @include main-padding;
         @include box-shadow;
@@ -41,9 +40,16 @@ main.home {
             }
         }
     }
+    .jumbotron-small {
+        width: 100%;
+        height: 400px;
+        background-color: $color-background;
+        @include box-shadow;
+    }
     .sponsorized_doctors {
         @include main-wrapper;
         @include main-padding;
+        height: 44vh;
     }
 }
 

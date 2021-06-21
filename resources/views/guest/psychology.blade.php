@@ -3,5 +3,7 @@
 @section('pageTitle', 'Home')
 
 @section('content')
-    Psicologia Online
+<div class="jumbotron-small">
+    psicologi
+</div>
 @endsection
