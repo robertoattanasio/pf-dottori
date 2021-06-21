@@ -437,7 +437,6 @@ footer {
   background-color: #1c4d7c;
 }
 
-<<<<<<< HEAD
 /*! INDEX */
 .doctors-container {
   width: 80%;
@@ -465,7 +464,8 @@ footer {
 }
 .doctors-container .doctors-scroll-container .doctors-card ul li {
   display: block;
-=======
+}
+
 .container-faq {
   width: 80%;
   margin: 0 auto;
@@ -520,5 +520,4 @@ footer {
   max-height: 500px;
   -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
   box-shadow: 0px 6px 5px -6px #a1a1a1;
->>>>>>> carmine-html
 }
