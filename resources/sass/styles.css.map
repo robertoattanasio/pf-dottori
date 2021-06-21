@@ -12,7 +12,8 @@
         "partials/_footer.scss",
         "partials/_auth.scss",
         "partials/_login.scss",
-        "partials/_register.scss"
+        "partials/_register.scss",
+        "parials/_about.scss"
     ],
     "names": [],
     "file": "styles.css"

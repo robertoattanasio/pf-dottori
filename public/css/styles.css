@@ -176,7 +176,15 @@ main.home .jumbotron-big {
   -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
   box-shadow: 0px 6px 5px -6px #a1a1a1;
 }
-main.home .jumbotron-big .jumbotron-wrapper {
+main.home .jumbotron-small {
+  width: 100%;
+  height: 400px;
+  background-color: #f6f8fe;
+  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
+  box-shadow: 0px 6px 5px -6px #a1a1a1;
+}
+
+.jumbotron-wrapper {
   width: 80%;
   margin: 0 auto;
   height: 100%;
@@ -185,33 +193,26 @@ main.home .jumbotron-big .jumbotron-wrapper {
   align-items: center;
   flex-flow: row nowrap;
 }
-main.home .jumbotron-big .jumbotron-wrapper .jumbotron-left-container {
+.jumbotron-wrapper .jumbotron-left-container {
   width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
   flex-flow: column nowrap;
 }
-main.home .jumbotron-big .jumbotron-wrapper .jumbotron-right-container {
+.jumbotron-wrapper .jumbotron-right-container {
   width: 50%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
 }
-main.home .jumbotron-big .jumbotron-wrapper .jumbotron-right-container img {
+.jumbotron-wrapper .jumbotron-right-container img {
   max-width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main.home .jumbotron-small {
-  width: 100%;
-  height: 400px;
-  background-color: #f6f8fe;
-  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
-  box-shadow: 0px 6px 5px -6px #a1a1a1;
-}
-main.home .sponsorized_doctors {
+.jumbotron-wrapper .sponsorized_doctors {
   width: 80%;
   margin: 0 auto;
   padding: 50px 0;
@@ -434,4 +435,71 @@ footer {
   height: 8vh;
   color: #fafafa;
   background-color: #1c4d7c;
+}
+
+/*ABOUT PAGE*/
+.about_container {
+  width: 80%;
+  margin: 0 auto;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_item {
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.about_main {
+  width: 100%;
+  background-color: #f5f8ff;
+  text-align: center;
+  padding: 30px 0px;
+}
+
+.about_red {
+  color: #f75e75;
+}
+
+.about_green {
+  color: #008075;
+}
+
+.about_submain {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about_uppercase {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.top_main {
+  padding: 30px;
+  font-size: 20px;
+}
+
+.about_card_container {
+  display: flex;
+}
+
+.about_card {
+  background-color: #224760;
+  color: white;
+  padding: 20px;
+  padding-bottom: 30px;
+  margin: 10px;
+}
+
+.about_card i {
+  font-size: 100px;
+  padding: 10px;
+}
+
+.about_padding {
+  padding: 10px;
 }
