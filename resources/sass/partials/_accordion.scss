@@ -1,0 +1,61 @@
+
+.container-faq{
+    @include main-wrapper;
+    @include main-padding;
+    padding-top: calc(50px - 18px);
+    
+    button.accordion {
+        margin-top: 18px;
+        background-color: $color-background;
+        color: $color-primary;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
+        font-weight: 300;
+        transition: 0.4s;
+        @include box-shadow;
+    }
+    
+    button.accordion.active, button.accordion:hover {
+        color: white;
+        background-color: $color-primary;
+        box-shadow: none;
+    }
+
+    button.accordion:after {
+        content: '\002B';
+        color: $color-primary;
+        float: right;
+        margin-left: 5px;
+    }
+
+    button.accordion:hover::after{
+        color: white;
+    }
+
+
+    button.accordion.active:after {
+        content: "\2212";
+        color: white;
+    }
+
+    div.panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.6s ease-in-out;
+        opacity: 0;
+    }
+
+    div.panel.show {
+        padding: 18px;
+        opacity: 1;
+        max-height: 500px;
+        @include box-shadow;  
+    }
+}
