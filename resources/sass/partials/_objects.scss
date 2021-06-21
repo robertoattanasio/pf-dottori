@@ -11,8 +11,24 @@
     margin: 0 auto;
 }
 
+@mixin small-padding-all-around {
+    padding: 10px 10px;
+}
+
 @mixin main-padding {
     padding: 50px 0;
+}
+
+@mixin small-margin-bottom {
+    margin-bottom: 5px;
+}
+
+@mixin standard-margin-bottom {
+    margin-bottom: 20px;
+}
+
+@mixin wide-margin-bottom {
+    margin-bottom: 40px;
 }
 
 @mixin flex-center {
@@ -31,8 +47,50 @@
     box-shadow: 0px 6px 5px -6px $color-shadow;
 }
 
+@mixin box-shadow-dashboard-card {
+    box-shadow: $color-shadow 0px 5px 15px;
+    // dare transition: 600ms al padre
+    cursor: pointer;
+}
+
 @mixin text-shadow {
     text-shadow: 1px 2px 2px $color-shadow;
+}
+
+.small-button {
+    width: 100px;
+    height: 30px;
+    border: 0px solid transparent;
+    font-size: 15px;
+    padding: 5px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.big-button {
+    width: 200px;
+    height: 50px;
+    border: 0px solid transparent;
+    font-size: 20px;
+    padding: 10px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.small-button:hover,
+.big-button:hover {
+    transition: 2s;
+    @include box-shadow-dashboard-card;
+}
+
+.green-button {
+    background-color: $light-green;
+    color: $color-background;
+}
+
+.pink-button {
+    background-color: $light-pink;
+    color: $color-primary;
 }
 
 .none {
@@ -47,4 +105,3 @@
 .nav_scrollOverHeader {
     @include box-shadow;
 }
-
