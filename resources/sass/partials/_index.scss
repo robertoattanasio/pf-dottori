@@ -1,0 +1,25 @@
+/*! INDEX */
+
+.doctors-container {
+    @include main-wrapper;
+    @include main-padding;
+    height: fit-content;
+    .doctors-scroll-container {
+        width: 100%;
+        height: 400px;
+        overflow: auto;
+        white-space: nowrap;
+        .doctors-card {
+            display: inline-block;
+            color: white;
+            width: 400px;
+            height: 100%;
+            padding: 20px;
+            background-color: $color-secondary;
+            @include box-shadow;
+            ul li {
+                display: block;
+            }
+        }
+    }
+}

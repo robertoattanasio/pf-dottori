@@ -22,7 +22,7 @@
                 <p class="generic margin-top-10">Prenota in pochi clic servizi sanitari e socio-assistenziali, 7 giorni su 7, senza liste d'attesa.</p>
 
                 {{-- H3 SEARCH --}}
-                <h3 class="margin-top-80">Scopri i nostri servizi a domicilio</h3>
+                <h4 class="margin-top-80">Scopri i nostri servizi a domicilio</h4>
 
                 {{-- SEARCH --}}
                 <form class="margin-top-20" enctype="multipart/form-data" method="POST" action="{{ route('filter-specialization') }}">
@@ -48,30 +48,213 @@
         </div>
     </div>
 
-    <div class="sponsorized_doctors">
-        <h2>I nostri specialisti (sponsorizzati... mettiamo un titolo appetibile)</h2>
-        @foreach ($sponsorized_users as $user)
-            <div class="card {{$user['county']}}">
-                <p id="name">{{$user['name']}}</p>
-                <p id="surname">{{$user['surname']}}</p>
-                <p id="county">{{$user['county']}}</p>
-                @if($user['numero_recensioni'])
-                <p id="media_voti">Media voti: {{$user['media_voti']}}</p>
-                <p id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</p>
-                @endif
-                @if($user->specializations)
-                    @foreach ($user->specializations->toArray() as $specialization)
-                        <p class="specialistica">{{$specialization['name']}}</p>
-                    @endforeach
-                @endif
-                {{-- @if ($user['specialization'])
-                <p id="specialistica">{{$user['specialization']}}</p>
-                @endif --}}
-                <a href="{{route('infoDoctor', [$user['id']])}}">Vedi informazioni specialista</a>
-            </div>
-        @endforeach
-        
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis natus explicabo non nobis voluptatibus, aperiam laborum magni aliquid reprehenderit qui minus vel tempore repellendus doloribus voluptatum, quam aut placeat?</p>
+    {{-- DOCTOR HORIZONTAL --}}
+    <div class="doctors-container">
+        <h3>I nostri specialisti di punta</h3>
+        {{-- PARAGRAPH --}}
+        <p class="generic margin-top-10">Prenota in pochi clic servizi sanitari e socio-assistenziali, 7 giorni su 7, senza liste d'attesa.</p>
+
+        {{-- DOCTOR SCROLL HORIZONTAL --}}
+        <div class="doctors-scroll-container margin-top-20">
+
+            @foreach ($sponsorized_users as $user)
+                {{-- DOCTOR CARD --}}
+                <div class="doctors-card {{$user['county']}}">
+
+                    {{-- DOCTOR CARD INFO --}}
+                    <div class="doctors-card-info">
+                        <span></span>
+                        <span id="name">{{$user['name']}}</span>
+                        <span id="surname">{{$user['surname']}}</span>
+                        <div class="margin-top-10" id="county">{{$user['county']}}</div>
+
+                        <div class="doctors-card-specialistic margin-top-10">
+                            <ul>
+                                @if($user->specializations)
+                                    @foreach ($user->specializations->toArray() as $specialization)
+                                        <li class="specialistica">&bull; {{$specialization['name']}}</li>
+                                    @endforeach
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
+
+                    {{-- DOCTOR CARD VOTES --}}
+                    <div class="doctor-card-votes margin-top-10">
+                        @if($user['numero_recensioni'])
+                        <div id="media_voti">Media voti: {{$user['media_voti']}}/5</div>
+
+                        <div id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</div>
+                        @endif
+                    </div>
+
+                    {{-- @if ($user['specialization'])
+                    <p id="specialistica">{{$user['specialization']}}</p>
+                    @endif --}}
+                    <a class="margin-top-20" href="{{route('infoDoctor', [$user['id']])}}">Vedi informazioni specialista</a>
+                </div>
+                {{-- FINE DOCTOR CARD --}}
+            @endforeach
+
+            @foreach ($sponsorized_users as $user)
+                {{-- DOCTOR CARD --}}
+                <div class="doctors-card {{$user['county']}}">
+
+                    {{-- DOCTOR CARD INFO --}}
+                    <div class="doctors-card-info">
+                        <span></span>
+                        <span id="name">{{$user['name']}}</span>
+                        <span id="surname">{{$user['surname']}}</span>
+                        <div class="margin-top-10" id="county">{{$user['county']}}</div>
+
+                        <div class="doctors-card-specialistic margin-top-10">
+                            <ul>
+                                @if($user->specializations)
+                                    @foreach ($user->specializations->toArray() as $specialization)
+                                        <li class="specialistica">{{$specialization['name']}}</li>
+                                    @endforeach
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
+
+                    {{-- DOCTOR CARD VOTES --}}
+                    <div class="doctor-card-votes margin-top-10">
+                        @if($user['numero_recensioni'])
+                        <div id="media_voti">Media voti: {{$user['media_voti']}}/5</div>
+
+                        <div id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</div>
+                        @endif
+                    </div>
+
+                    {{-- @if ($user['specialization'])
+                    <p id="specialistica">{{$user['specialization']}}</p>
+                    @endif --}}
+                    <a class="margin-top-20" href="{{route('infoDoctor', [$user['id']])}}">Vedi informazioni specialista</a>
+                </div>
+                {{-- FINE DOCTOR CARD --}}
+            @endforeach
+
+            @foreach ($sponsorized_users as $user)
+                {{-- DOCTOR CARD --}}
+                <div class="doctors-card {{$user['county']}}">
+
+                    {{-- DOCTOR CARD INFO --}}
+                    <div class="doctors-card-info">
+                        <span></span>
+                        <span id="name">{{$user['name']}}</span>
+                        <span id="surname">{{$user['surname']}}</span>
+                        <div class="margin-top-10" id="county">{{$user['county']}}</div>
+
+                        <div class="doctors-card-specialistic margin-top-10">
+                            <ul>
+                                @if($user->specializations)
+                                    @foreach ($user->specializations->toArray() as $specialization)
+                                        <li class="specialistica">{{$specialization['name']}}</li>
+                                    @endforeach
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
+
+                    {{-- DOCTOR CARD VOTES --}}
+                    <div class="doctor-card-votes margin-top-10">
+                        @if($user['numero_recensioni'])
+                        <div id="media_voti">Media voti: {{$user['media_voti']}}/5</div>
+
+                        <div id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</div>
+                        @endif
+                    </div>
+
+                    {{-- @if ($user['specialization'])
+                    <p id="specialistica">{{$user['specialization']}}</p>
+                    @endif --}}
+                    <a class="margin-top-20" href="{{route('infoDoctor', [$user['id']])}}">Vedi informazioni specialista</a>
+                </div>
+                {{-- FINE DOCTOR CARD --}}
+            @endforeach
+
+            @foreach ($sponsorized_users as $user)
+                {{-- DOCTOR CARD --}}
+                <div class="doctors-card {{$user['county']}}">
+
+                    {{-- DOCTOR CARD INFO --}}
+                    <div class="doctors-card-info">
+                        <span></span>
+                        <span id="name">{{$user['name']}}</span>
+                        <span id="surname">{{$user['surname']}}</span>
+                        <div class="margin-top-10" id="county">{{$user['county']}}</div>
+
+                        <div class="doctors-card-specialistic margin-top-10">
+                            <ul>
+                                @if($user->specializations)
+                                    @foreach ($user->specializations->toArray() as $specialization)
+                                        <li class="specialistica">{{$specialization['name']}}</li>
+                                    @endforeach
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
+
+                    {{-- DOCTOR CARD VOTES --}}
+                    <div class="doctor-card-votes margin-top-10">
+                        @if($user['numero_recensioni'])
+                        <div id="media_voti">Media voti: {{$user['media_voti']}}/5</div>
+
+                        <div id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</div>
+                        @endif
+                    </div>
+
+                    {{-- @if ($user['specialization'])
+                    <p id="specialistica">{{$user['specialization']}}</p>
+                    @endif --}}
+                    <a class="margin-top-20" href="{{route('infoDoctor', [$user['id']])}}">Vedi informazioni specialista</a>
+                </div>
+                {{-- FINE DOCTOR CARD --}}
+            @endforeach
+
+            @foreach ($sponsorized_users as $user)
+                {{-- DOCTOR CARD --}}
+                <div class="doctors-card {{$user['county']}}">
+
+                    {{-- DOCTOR CARD INFO --}}
+                    <div class="doctors-card-info">
+                        <span></span>
+                        <span id="name">{{$user['name']}}</span>
+                        <span id="surname">{{$user['surname']}}</span>
+                        <div class="margin-top-10" id="county">{{$user['county']}}</div>
+
+                        <div class="doctors-card-specialistic margin-top-10">
+                            <ul>
+                                @if($user->specializations)
+                                    @foreach ($user->specializations->toArray() as $specialization)
+                                        <li class="specialistica">{{$specialization['name']}}</li>
+                                    @endforeach
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
+
+                    {{-- DOCTOR CARD VOTES --}}
+                    <div class="doctor-card-votes margin-top-10">
+                        @if($user['numero_recensioni'])
+                        <div id="media_voti">Media voti: {{$user['media_voti']}}/5</div>
+
+                        <div id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</div>
+                        @endif
+                    </div>
+
+                    {{-- @if ($user['specialization'])
+                    <p id="specialistica">{{$user['specialization']}}</p>
+                    @endif --}}
+                    <a class="margin-top-20" href="{{route('infoDoctor', [$user['id']])}}">Vedi informazioni specialista</a>
+                </div>
+                {{-- FINE DOCTOR CARD --}}
+            @endforeach
+        </div>
+        {{-- FINE DOCTOR SCROLL HORIZONTAL --}}
     </div>
+    {{-- DOCTOR HORIZONTAL --}}
+
     
 @endsection

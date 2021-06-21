@@ -11,7 +11,7 @@
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
 }
 
 li {
@@ -86,7 +86,7 @@ h2 {
   color: #224760;
   font-size: 40px;
   font-weight: 800;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 }
 
 h2.dashboard-title {
@@ -94,6 +94,12 @@ h2.dashboard-title {
 }
 
 h3 {
+  color: #224760;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+h4 {
   color: #224760;
   font-size: 24px;
   font-weight: 500;
@@ -116,7 +122,7 @@ body {
 /*! HEADER */
 header {
   width: 100%;
-  height: 8vh;
+  height: 110px;
   position: fixed;
   inset: 0 0 0 0;
   background-color: #f6f8fe;
@@ -164,13 +170,13 @@ header .header-wrapper nav.nav-desktop li:nth-child(4) {
 /*! MAIN */
 /*! MAIN HOME */
 main.home {
-  margin-top: 8vh;
+  margin-top: 110px;
   width: 100%;
   background-color: #fefcf8;
 }
 main.home .jumbotron-big {
   width: 100%;
-  height: 40vh;
+  height: 700px;
   background-color: #f6f8fe;
   padding: 50px 0;
   -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
@@ -210,12 +216,6 @@ main.home .jumbotron-small {
   background-color: #f6f8fe;
   -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
   box-shadow: 0px 6px 5px -6px #a1a1a1;
-}
-main.home .sponsorized_doctors {
-  width: 80%;
-  margin: 0 auto;
-  padding: 50px 0;
-  height: 44vh;
 }
 
 .info_doctor .contatti li {
@@ -431,7 +431,36 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 8vh;
+  height: 110px;
   color: #fafafa;
   background-color: #1c4d7c;
+}
+
+/*! INDEX */
+.doctors-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.doctors-container .doctors-scroll-container {
+  width: 100%;
+  height: 400px;
+  overflow: auto;
+  white-space: nowrap;
+}
+.doctors-container .doctors-scroll-container .doctors-card {
+  display: inline-block;
+  color: white;
+  width: 400px;
+  height: 100%;
+  padding: 20px;
+  background-color: #528f87;
+  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
+  box-shadow: 0px 6px 5px -6px #a1a1a1;
+}
+.doctors-container .doctors-scroll-container .doctors-card ul li {
+  display: block;
 }
