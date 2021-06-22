@@ -56,14 +56,6 @@
                     <img src="{{ asset('storage/' . Auth::user()->profile_pic) }}">
                 </div>
 
-                {{-- DOCTOR-INFO --}}
-                {{-- <div class="doctor-info">
-                    <div class="doctor-name">
-                        <h2 class="dashboard-title">{{ Auth::user()->name }} {{ Auth::user()->surname }}</h2>
-                    </div>
-                </div> --}}
-
-                {{-- DOCTOR-MENU --}}
                 <div class="doctor-menu">
                     <ul>
                         <li><a href="{{ route('dashboard-about') }}">Il Mio Profilo</a></li>

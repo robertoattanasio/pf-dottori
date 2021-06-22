@@ -1,6 +1,5 @@
 /*! MAIN */
 
-
 /*! MAIN HOME */
 
 main.home {
@@ -62,22 +61,20 @@ main.home {
     }
 }
 
-
 /*! MAIN DASHBOARD */
 
 main.dashboard {
     @include flex-center;
     .container {
         width: 80%;
-        height: 80%;
+        height: 80vh;
         margin: 0 auto;
         display: flex;
         flex-flow: row nowrap;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        box-shadow: $color-primary 0px 30px 90px;
+        // box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        //     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
         .doctor-left-container {
-            // * {
-            //     border: 1px solid lime;
-            // }
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -93,10 +90,14 @@ main.dashboard {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                font-size: 3em;
+                font-size: 2em;
                 form {
                     //questo display none serve per evitare che il form tenga spazio inutile
                     display: none;
+                }
+                a:hover {
+                    transition: 600ms;
+                    text-shadow: 0px 0px 10px $color-background;
                 }
             }
             .doctor-pic {
@@ -128,9 +129,19 @@ main.dashboard {
                     font-size: 1.5em;
                     display: block;
                     margin-bottom: 20px;
+                    border-left: 5px solid transparent;
+                    padding-left: 5px;
                     &:last-child {
                         margin-bottom: 0;
                     }
+                }
+                li {
+                    transition: 120ms ease-in-out;
+                    padding-left: 10px;
+                    border-left: 4px solid transparent;
+                }
+                li:hover {
+                    border-left: 4px solid $color-background;
                 }
             }
         }
@@ -155,6 +166,7 @@ main.dashboard {
                 background-position: right bottom;
                 text-align: justify;
                 text-justify: inter-word;
+                overflow-y: auto;
                 .personal_info {
                     h4 {
                         margin-bottom: 30px;
@@ -179,16 +191,30 @@ main.dashboard {
                         content: "ciao";
                     }
                 }
+                .marks_section {
+                    height: 100%;
+                    li {
+                        display: block;
+                        @include small-margin-bottom;
+                    }
+                    
+                }
+                .single_review,
+                .card_message,
+                .single_boost,
+                .marks_section {
+                    @include wide-margin-bottom;
+                }
                 .single_review,
                 .card_message,
                 .card_message_details,
-                .single_boost {
+                .single_boost,
+                .marks_section {
                     width: 100%;
                     transition: 600ms;
                     border: 1px solid transparent;
                     background-color: $light-pink;
                     @include small-padding-all-around;
-                    @include wide-margin-bottom;
                     span {
                         color: $light-green;
                         font-weight: bolder;
@@ -263,7 +289,6 @@ main.dashboard {
     }
 }
 
-
 /*! MAIN CARD */
 
 // main.card {}
@@ -277,7 +302,8 @@ main.card {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+            rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
         background-color: $color-primary;
         color: $white;
         .form-auth {
@@ -330,7 +356,6 @@ main.card {
     }
 }
 
-
 /* Chrome, Safari, Edge, Opera */
 
 input::-webkit-outer-spin-button,
@@ -339,9 +364,8 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-
 /* Firefox */
 
-input[type=number] {
+input[type="number"] {
     -moz-appearance: textfield;
 }

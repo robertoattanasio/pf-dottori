@@ -87,6 +87,9 @@ a:active {
   padding: 10px 10px;
   border-radius: 2px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .small-button:hover,
@@ -278,11 +281,11 @@ main.dashboard {
 }
 main.dashboard .container {
   width: 80%;
-  height: 80%;
+  height: 80vh;
   margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-shadow: #1c4d7c 0px 30px 90px;
 }
 main.dashboard .container .doctor-left-container {
   display: flex;
@@ -303,10 +306,14 @@ main.dashboard .container .doctor-left-container .doctor-icons {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 3em;
+  font-size: 2em;
 }
 main.dashboard .container .doctor-left-container .doctor-icons form {
   display: none;
+}
+main.dashboard .container .doctor-left-container .doctor-icons a:hover {
+  transition: 600ms;
+  text-shadow: 0px 0px 10px #f6f8fe;
 }
 main.dashboard .container .doctor-left-container .doctor-pic {
   width: 200px;
@@ -339,9 +346,19 @@ main.dashboard .container .doctor-left-container .doctor-menu li {
   font-size: 1.5em;
   display: block;
   margin-bottom: 20px;
+  border-left: 5px solid transparent;
+  padding-left: 5px;
 }
 main.dashboard .container .doctor-left-container .doctor-menu li:last-child {
   margin-bottom: 0;
+}
+main.dashboard .container .doctor-left-container .doctor-menu li {
+  transition: 120ms ease-in-out;
+  padding-left: 10px;
+  border-left: 4px solid transparent;
+}
+main.dashboard .container .doctor-left-container .doctor-menu li:hover {
+  border-left: 4px solid #f6f8fe;
 }
 main.dashboard .container .doctor-right-container {
   flex: 1 1 auto;
@@ -365,9 +382,11 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
   background-position: right bottom;
   text-align: justify;
   text-justify: inter-word;
+  overflow-y: auto;
 }
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container h4 {
-  padding-bottom: 20px;
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .personal_info h4 {
+  margin-bottom: 30px;
+  text-transform: capitalize;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details {
   height: 100%;
@@ -387,21 +406,35 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost input[type=submit]::after {
   content: "ciao";
 }
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section {
+  height: 100%;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section li {
+  display: block;
+  margin-bottom: 10px;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section {
+  margin-bottom: 40px;
+}
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section {
   width: 100%;
   transition: 600ms;
   border: 1px solid transparent;
   background-color: #fae3ec;
   padding: 10px 10px;
-  margin-bottom: 40px;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review span,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message span,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details span,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost span {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost span,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section span {
   color: #528f87;
   font-weight: bolder;
   text-transform: capitalize;
@@ -417,27 +450,33 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details p,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost h4,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost h3,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost p {
-  margin-bottom: 5px;
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost p,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section h4,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section h3,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section p {
+  margin-bottom: 10px;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review:hover,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message:hover,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details:hover,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost:hover {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost:hover,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section:hover {
   box-shadow: #a1a1a1 0px 5px 15px;
   cursor: pointer;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #message_details,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #message_details,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #message_details,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #message_details {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #message_details,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #message_details {
   transition: 600ms;
   color: #528f87;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #message_details i,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #message_details i,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #message_details i,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #message_details i {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #message_details i,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #message_details i {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -446,20 +485,23 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #message_details i:hover,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #message_details i:hover,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #message_details i:hover,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #message_details i:hover {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #message_details i:hover,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #message_details i:hover {
   font-weight: bold;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .form-auth-item {
   display: flex;
   align-items: center;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item label,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item label,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item label,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item label {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item label,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .form-auth-item label {
   margin-right: 20px;
   text-transform: capitalize;
   color: #528f87;
@@ -468,13 +510,15 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item input,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item input,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item input,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item input {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item input,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .form-auth-item input {
   padding: 10px 10px;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item #answer,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item #answer,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item #answer,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item #answer {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item #answer,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .form-auth-item #answer {
   min-height: 100px;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #email_patient,
@@ -484,7 +528,9 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #email_patient,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #answer,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #email_patient,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #answer {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #answer,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #email_patient,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #answer {
   width: 300px;
   height: 30px;
   text-transform: capitalize;

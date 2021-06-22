@@ -20,7 +20,7 @@
 }
 
 @mixin small-margin-bottom {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 @mixin standard-margin-bottom {
@@ -75,6 +75,9 @@
     padding: 10px 10px;
     border-radius: 2px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .small-button:hover,
