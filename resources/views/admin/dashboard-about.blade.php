@@ -11,7 +11,7 @@
         <div class="doctor-right-top-container">
             <h1>Il mio profilo</h1>
         </div>
-        <div class="doctor-right-bottom-container">
+        <div class="doctor-right-bottom-container relative">
             <div class="personal_info">
                 <h4><span>Nome: </span> {{ Auth::user()->name }} {{ Auth::user()->surname }}</h4>
                 <h4><span>Indirizzo: </span> {{ Auth::user()->address }}, {{ Auth::user()->street_number }}</h4>

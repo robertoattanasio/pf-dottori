@@ -149,15 +149,96 @@ main.dashboard {
             .doctor-right-bottom-container {
                 height: 85%;
                 padding: 20px 20px;
-                h4 {
-                    padding-bottom: 20px;
-                }
-                background-image: url(../img/2.png);
+                background-image: url(../img/info-graphic-8.png);
                 background-size: 550px;
                 background-repeat: no-repeat;
                 background-position: right bottom;
                 text-align: justify;
                 text-justify: inter-word;
+                .personal_info {
+                    h4 {
+                        margin-bottom: 30px;
+                        text-transform: capitalize;
+                    }
+                }
+                .card_message_details {
+                    height: 100%;
+                }
+                .single_boost {
+                    display: flex;
+                    align-items: center;
+                    div {
+                        width: 300px;
+                        display: flex;
+                        align-items: center;
+                        * {
+                            margin-right: 50px;
+                        }
+                    }
+                    input[type="submit"]::after {
+                        content: "ciao";
+                    }
+                }
+                .single_review,
+                .card_message,
+                .card_message_details,
+                .single_boost {
+                    width: 100%;
+                    transition: 600ms;
+                    border: 1px solid transparent;
+                    background-color: $light-pink;
+                    @include small-padding-all-around;
+                    @include wide-margin-bottom;
+                    span {
+                        color: $light-green;
+                        font-weight: bolder;
+                        text-transform: capitalize;
+                    }
+                    h4,
+                    h3,
+                    p {
+                        @include small-margin-bottom;
+                    }
+                    &:hover {
+                        @include box-shadow-dashboard-card;
+                    }
+                    #message_details {
+                        transition: 600ms;
+                        color: $light-green;
+                        i {
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                            font-size: 4em;
+                        }
+                        i:hover {
+                            font-weight: bold;
+                        }
+                    }
+                    .form-auth-item {
+                        display: flex;
+                        align-items: center;
+                        label {
+                            margin-right: 20px;
+                            text-transform: capitalize;
+                            color: $light-green;
+                            font-weight: bold;
+                        }
+                        input {
+                            @include small-padding-all-around;
+                        }
+                        #answer {
+                            min-height: 100px;
+                        }
+                    }
+                    #email_patient,
+                    #answer {
+                        width: 300px;
+                        height: 30px;
+                        text-transform: capitalize;
+                        border: 1px solid $light-pink;
+                    }
+                }
                 h4 span {
                     color: $color-secondary;
                     font-weight: bolder;
