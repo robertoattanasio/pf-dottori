@@ -7,7 +7,7 @@
 }
 
 @mixin main-wrapper {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -113,6 +113,16 @@
 .relative {
     position: relative;
 }
+
+/* BACKGROUND COLOR */
+.bg-color-yellow{
+    background-color: $light-yellow;
+}
+
+.bg-color-lightblue{
+    background-color: $light-blue;
+}
+
 
 // CLASSE MODULARE PER IL BOX-SHADOW DELLA NAVBAR
 .nav_scrollOverHeader {

@@ -117,6 +117,15 @@ a:active {
   position: relative;
 }
 
+/* BACKGROUND COLOR */
+.bg-color-yellow {
+  background-color: #ffe9a7;
+}
+
+.bg-color-lightblue {
+  background-color: #cef5f2;
+}
+
 .nav_scrollOverHeader {
   -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
   box-shadow: 0px 6px 5px -6px #a1a1a1;
@@ -155,6 +164,14 @@ h4 {
 
 p.generic {
   font-size: 18px;
+}
+
+.vh-25 {
+  height: 25vh;
+}
+
+.vh-45 {
+  height: 45vh;
 }
 
 /*! BODY */
@@ -217,7 +234,7 @@ header {
   transition: 200ms ease-in-out;
 }
 header .header-wrapper {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -325,14 +342,13 @@ main.home .jumbotron-big {
 }
 main.home .jumbotron-small {
   width: 100%;
-  height: 400px;
-  background-color: #f6f8fe;
+  height: 40vh;
   -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
   box-shadow: 0px 6px 5px -6px #a1a1a1;
 }
 
 .jumbotron-wrapper {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -360,7 +376,7 @@ main.home .jumbotron-small {
      object-fit: cover;
 }
 .jumbotron-wrapper .sponsorized_doctors {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   padding: 50px 0;
   height: 44vh;
@@ -752,7 +768,7 @@ footer {
 
 /*! INDEX */
 .doctors-container {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   padding: 50px 0;
   height: -webkit-fit-content;
@@ -779,54 +795,16 @@ footer {
   display: block;
 }
 
-section#banner {
-  width: 70%;
-  margin: 30px auto;
-  height: 400px;
-  padding: 50px 0;
-}
-section#banner .banner-container {
-  z-index: 1;
-  position: relative;
+.bg-image {
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-section#banner .banner-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  border: 1px solid #528f87;
-}
-section#banner .banner-container::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100px;
-  border: 1px solid #528f87;
-}
-
-section#collaborate {
-  width: 100%;
-  height: 800px;
-  padding: 50px 0;
-  background-color: #fae3ec;
-  background-image: url(../img/bg-bottom-1.webp);
-  background-position: bottom;
-  background-repeat: repeat-x;
-}
-section#collaborate .collaborate-wrapper {
-  width: 65%;
-  margin: 0 auto;
-  height: 100%;
+  background-image: url(../img/info-graphic-10.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 85%;
 }
 
 .container-faq {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   padding: 50px 0;
   padding-top: calc(50px - 18px);
@@ -846,6 +824,9 @@ section#collaborate .collaborate-wrapper {
   transition: 0.4s;
   -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
   box-shadow: 0px 6px 5px -6px #a1a1a1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .container-faq button.accordion.active,
 .container-faq button.accordion:hover {
@@ -880,6 +861,18 @@ section#collaborate .collaborate-wrapper {
   max-height: 500px;
   -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
   box-shadow: 0px 6px 5px -6px #a1a1a1;
+}
+
+.bg-image-2 {
+  height: 100%;
+  background-image: url(../img/info-graphic-9.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-position-y: 20%;
+}
+
+.half-size {
+  width: 50%;
 }
 
 /*ABOUT PAGE*/

@@ -115,8 +115,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/marcolepore/Documents/Boolean/pf-dottori/pf-dottori/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/marcolepore/Documents/Boolean/pf-dottori/pf-dottori/resources/sass/styles.scss */"./resources/sass/styles.scss");
+__webpack_require__(/*! D:\pf-dottori\pf-dottori\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\pf-dottori\pf-dottori\resources\sass\styles.scss */"./resources/sass/styles.scss");
 
 
 /***/ })
