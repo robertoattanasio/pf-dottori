@@ -352,7 +352,7 @@ main.dashboard .container .doctor-right-container .doctor-right-top-container {
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container {
   height: 85%;
   padding: 20px 20px;
-  background-image: url(../img/2.png);
+  background-image: url(../img/info-graphic-8.png);
   background-size: 550px;
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -363,9 +363,28 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
   margin-bottom: 30px;
   text-transform: capitalize;
 }
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details {
+  height: 100%;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost {
+  display: flex;
+  align-items: center;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost div {
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost div * {
+  margin-right: 50px;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost input[type=submit]::after {
+  content: "ciao";
+}
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost {
   width: 100%;
   transition: 600ms;
   border: 1px solid transparent;
@@ -375,34 +394,44 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review span,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message span,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details span {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details span,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost span {
   color: #528f87;
   font-weight: bolder;
   text-transform: capitalize;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review h4,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review h3,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review p,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message h4,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message h3,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message p,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details h4,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details p {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details h3,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details p,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost h4,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost h3,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost p {
   margin-bottom: 5px;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review:hover,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message:hover,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details:hover {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details:hover,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost:hover {
   box-shadow: #a1a1a1 0px 5px 15px;
   cursor: pointer;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #message_details,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #message_details,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #message_details {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #message_details,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #message_details {
   transition: 600ms;
   color: #528f87;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #message_details i,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #message_details i,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #message_details i {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #message_details i,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #message_details i {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -410,18 +439,21 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #message_details i:hover,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #message_details i:hover,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #message_details i:hover {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #message_details i:hover,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #message_details i:hover {
   font-weight: bold;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item {
   display: flex;
   align-items: center;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item label,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item label,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item label {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item label,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item label {
   margin-right: 20px;
   text-transform: capitalize;
   color: #528f87;
@@ -429,12 +461,14 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item input,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item input,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item input {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item input,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item input {
   padding: 10px 10px;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item #answer,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item #answer,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item #answer {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item #answer,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item #answer {
   min-height: 100px;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #email_patient,
@@ -442,7 +476,9 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #email_patient,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #answer,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #email_patient,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #answer {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #answer,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #email_patient,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #answer {
   width: 300px;
   height: 30px;
   text-transform: capitalize;

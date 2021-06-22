@@ -41,7 +41,8 @@ class AdminController extends Controller
         return view('admin.dashboard-about');
     }
 
-    public function reviews() {
+    public function reviews()
+    {
         $reviews = Review::where('user_id', Auth::user()->id)->get()->toArray();
         // dd($reviews);
         // foreach ($reviews as $review) {
@@ -53,21 +54,23 @@ class AdminController extends Controller
         return view('admin.reviews', compact('reviews'));
     }
 
-    public function messages() 
+    public function messages()
     {
         $messages = Message::where('user_id', Auth::user()->id)->get()->toArray();
 
         return view('admin.messages', compact('messages'));
     }
 
-    public function infoMessage($email_patient) {
+    public function infoMessage($email_patient)
+    {
         // dd($email_patient);
         $message = Message::where('email_patient', $email_patient)->first();
         // dd($message);
         return view('admin.messageinfo', compact('message'));
     }
 
-    public function messageSent(Request $request) {
+    public function messageSent(Request $request)
+    {
         // dd($request);
         $message = $request->all();
         $message['doctor'] = 'Dr. ' . Auth::user()->name . ' ' . Auth::user()->surname;
@@ -83,12 +86,14 @@ class AdminController extends Controller
         return view('admin.messages', compact('messages'));
     }
 
-    public function sponsorizeUser() {
+    public function sponsorizeUser()
+    {
         $boosts = Boost::all();
         return view('admin.boost', compact('boosts'));
     }
 
-    public function addSponsorization(Request $request) {
+    public function addSponsorization(Request $request)
+    {
         // dd($request);
         $boost = $request->all();
         // dd($boost);
@@ -98,19 +103,22 @@ class AdminController extends Controller
         return redirect()->route('dashboard-about');
     }
 
-    public function statistics() {
+    public function statistics()
+    {
         $reviews = Review::where('user_id', Auth::user()->id)->get()->toArray();
 
         return view('admin.statistics', compact('reviews'));
     }
- 
-    public function editUser() {
+
+    public function editUser()
+    {
         $specializations = Specialization::all();
         // dd(compact('specializations'));
         return view('admin.user.edit', compact('specializations'));
     }
 
-    public function updateUser(Request $request) {
+    public function updateUser(Request $request)
+    {
         $data = $request->all();
         // $this->validator($data);
         // dd($data);
@@ -119,16 +127,14 @@ class AdminController extends Controller
         //     $image_path = Storage::put('post_images', $data['profile_pic']);
         //     $data['profile_pic'] = $image_path;
         //     // dd($data['profile_pic']);
-        // }
-        // else {
+        // } else {
         //     $data['profile_pic'] = null;
         // }
 
         // if (array_key_exists('cv', $data)) {
         //     $file_path = Storage::put('post_files', $data['cv']);
         //     $data['cv'] = $file_path;
-        // }
-        // else {
+        // } else {
         //     $data['cv'] = null;
         // }
 

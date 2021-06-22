@@ -15,15 +15,22 @@
                 @method('PUT')
 
                 @foreach ($boosts as $boost)
-                    <input type="radio" id="boost_stuff" name="boost_stuff" value="{{$boost->id}}">
-                    <label for="boost_name">
-                        <h3>{{$boost->boost_name}}</h3>
-                        <p>{{$boost->hours}}H</p>
-                        <p>{{$boost->price}}$</p>
-                    </label><br>
+                    <div class="single_boost">
+                        <div id="boost_name">
+                            <input type="radio" id="boost_stuff" name="boost_stuff" value="{{ $boost->id }}">
+                            <label for="boost_name">
+                                <h3><span>{{ $boost->boost_name }}</span></h3>
+                        </div>
+                        <div id="boost_details">
+                            <p>{{ $boost->hours }}H</p>
+                            <p>{{ $boost->price }}$</p>
+                        </div>
+
+                        </label><br>
+                    </div>
                 @endforeach
-                
-                <input type="submit" value="send">
+
+                <input type="submit" value="send" class="small-button green-button">
                 <label for="">Vai al pagamento</label>
             </form>
         </div>

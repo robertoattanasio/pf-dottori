@@ -145,10 +145,7 @@ main.dashboard {
             .doctor-right-bottom-container {
                 height: 85%;
                 padding: 20px 20px;
-                // h4 {
-                //     padding-bottom: 20px;
-                // }
-                background-image: url(../img/2.png);
+                background-image: url(../img/info-graphic-8.png);
                 background-size: 550px;
                 background-repeat: no-repeat;
                 background-position: right bottom;
@@ -160,9 +157,28 @@ main.dashboard {
                         text-transform: capitalize;
                     }
                 }
+                .card_message_details {
+                    height: 100%;
+                }
+                .single_boost {
+                    display: flex;
+                    align-items: center;
+                    div {
+                        width: 300px;
+                        display: flex;
+                        align-items: center;
+                        * {
+                            margin-right: 50px;
+                        }
+                    }
+                    input[type="submit"]::after {
+                        content: "ciao";
+                    }
+                }
                 .single_review,
                 .card_message,
-                .card_message_details {
+                .card_message_details,
+                .single_boost {
                     width: 100%;
                     transition: 600ms;
                     border: 1px solid transparent;
@@ -175,6 +191,7 @@ main.dashboard {
                         text-transform: capitalize;
                     }
                     h4,
+                    h3,
                     p {
                         @include small-margin-bottom;
                     }
