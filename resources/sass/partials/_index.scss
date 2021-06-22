@@ -6,14 +6,14 @@
     height: fit-content;
     .doctors-scroll-container {
         width: 100%;
-        height: 400px;
-        overflow: auto;
+        height: 520px;
+        overflow-x: auto;
         white-space: nowrap;
         .doctors-card {
             display: inline-block;
             color: white;
             width: 400px;
-            height: 100%;
+            height: 500px;
             padding: 20px;
             background-color: $color-secondary;
             @include box-shadow;
@@ -24,13 +24,49 @@
     }
 }
 
+section#banner {
+    width: 70%;
+    margin: 30px auto;
+    height: 400px;
+    @include main-padding;
+    .banner-container {
+        z-index: 1;
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            border: 1px solid $color-secondary;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            border: 1px solid $color-secondary;
+        }
+    }
+}
+
 section#collaborate {
     width: 100%;
-    height: 500px;
+    height: 800px;
     @include main-padding;
+    background-color: $light-pink;
+    background-image: url(../img/bg-bottom-1.webp);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    // background-size: contain;
     .collaborate-wrapper {
         width: 65%;
-        height: 100%;
         margin: 0 auto;
+        height: 100%;
     }
 }

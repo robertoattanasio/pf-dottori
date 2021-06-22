@@ -7,6 +7,13 @@ h2 {
     letter-spacing: 2px;
 }
 
+h2.banner {
+    font-size: 56px;
+    font-weight: 800;
+    text-align: center;
+    color: $color-secondary;
+}
+
 h2.dashboard-title {
     color: white;
 }
@@ -14,7 +21,7 @@ h2.dashboard-title {
 h3 {
     color: $color-font-primary;
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 h4 {

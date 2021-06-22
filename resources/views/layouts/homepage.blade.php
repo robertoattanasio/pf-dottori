@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="debug">
+<body id="mainBody" class="">
     
     @include('partials.header')
 

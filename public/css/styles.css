@@ -127,6 +127,13 @@ h2 {
   letter-spacing: 2px;
 }
 
+h2.banner {
+  font-size: 56px;
+  font-weight: 800;
+  text-align: center;
+  color: #528f87;
+}
+
 h2.dashboard-title {
   color: white;
 }
@@ -134,7 +141,7 @@ h2.dashboard-title {
 h3 {
   color: #224760;
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h4 {
@@ -155,14 +162,54 @@ body {
   font-size: 16px;
   color: #224760;
   background-color: #f6f8fe;
+  overflow: auto;
 }
 
 /*! HEADER */
+.menu-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fafafa;
+  z-index: 991;
+  transform: translateY(-100%);
+  transition: 600ms ease-in-out;
+  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
+  box-shadow: 0px 6px 5px -6px #a1a1a1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.menu-mobile li {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 20px;
+  width: 500px;
+  transition: 120ms ease-in-out;
+  padding-left: 10px;
+  border-left: 4px solid transparent;
+}
+.menu-mobile li:last-child {
+  margin-bottom: 0;
+}
+.menu-mobile li:nth-child(4) {
+  margin-bottom: 80px;
+}
+.menu-mobile li:hover {
+  border-left: 4px solid #224760;
+  padding-left: 22px;
+}
+
 header {
   width: 100%;
   height: 110px;
   position: fixed;
-  inset: 0 0 0 0;
+  z-index: 990;
+  top: 0;
+  left: 0;
   background-color: #f6f8fe;
   transition: 200ms ease-in-out;
 }
@@ -174,7 +221,7 @@ header .header-wrapper {
   justify-content: space-between;
 }
 header .header-wrapper .logo {
-  width: 30%;
+  width: 20%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -189,7 +236,7 @@ header .header-wrapper .logo span.doctors {
   color: #1c4d7c;
 }
 header .header-wrapper nav.nav-desktop {
-  width: 70%;
+  width: 80%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
@@ -203,6 +250,59 @@ header .header-wrapper nav.nav-desktop li:last-child {
 }
 header .header-wrapper nav.nav-desktop li:nth-child(4) {
   margin-right: 80px;
+}
+header .header-wrapper nav.nav-mobile {
+  width: 80%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+header .header-wrapper nav.nav-mobile .hamburger {
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  z-index: 992;
+}
+header .header-wrapper nav.nav-mobile .hamburger div {
+  width: 80%;
+  height: 3px;
+  background: #224760;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.2s ease-in-out;
+}
+header .header-wrapper nav.nav-mobile .hamburger .hamburger-line:nth-child(1) {
+  transform: translate(-50%, -50%) translateY(-8px);
+}
+header .header-wrapper nav.nav-mobile .hamburger .hamburger-line:nth-child(2) {
+  background: #224760;
+}
+header .header-wrapper nav.nav-mobile .hamburger .hamburger-line:nth-child(3) {
+  background: #224760;
+  box-shadow: 1px gray;
+}
+header .header-wrapper nav.nav-mobile .hamburger .hamburger-line:nth-child(4) {
+  background: #224760;
+  transform: translate(-50%, -50%) translateY(8px);
+}
+header .header-wrapper nav.nav-mobile .hamburger.active .hamburger-line:nth-child(1) {
+  transform: translate(-50%, -50%) translateY(-20px);
+  opacity: 0;
+}
+header .header-wrapper nav.nav-mobile .hamburger.active .hamburger-line:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+header .header-wrapper nav.nav-mobile .hamburger.active .hamburger-line:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+header .header-wrapper nav.nav-mobile .hamburger.active .hamburger-line:nth-child(4) {
+  transform: translate(-50%, -50%) translateY(20px);
+  opacity: 0;
 }
 
 /*! MAIN */
@@ -521,6 +621,7 @@ main.card {
   align-items: center;
 }
 main.card .wrapper-auth {
+  min-height: 500px;
   width: 50%;
   padding: 2%;
   margin: auto;
@@ -601,6 +702,7 @@ footer {
   height: 110px;
   color: #fafafa;
   background-color: #1c4d7c;
+  text-align: center;
 }
 
 /*! INDEX */
@@ -614,15 +716,15 @@ footer {
 }
 .doctors-container .doctors-scroll-container {
   width: 100%;
-  height: 400px;
-  overflow: auto;
+  height: 520px;
+  overflow-x: auto;
   white-space: nowrap;
 }
 .doctors-container .doctors-scroll-container .doctors-card {
   display: inline-block;
   color: white;
   width: 400px;
-  height: 100%;
+  height: 500px;
   padding: 20px;
   background-color: #528f87;
   -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
@@ -632,15 +734,50 @@ footer {
   display: block;
 }
 
+section#banner {
+  width: 70%;
+  margin: 30px auto;
+  height: 400px;
+  padding: 50px 0;
+}
+section#banner .banner-container {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#banner .banner-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  border: 1px solid #528f87;
+}
+section#banner .banner-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  border: 1px solid #528f87;
+}
+
 section#collaborate {
   width: 100%;
-  height: 500px;
+  height: 800px;
   padding: 50px 0;
+  background-color: #fae3ec;
+  background-image: url(../img/bg-bottom-1.webp);
+  background-position: bottom;
+  background-repeat: repeat-x;
 }
 section#collaborate .collaborate-wrapper {
   width: 65%;
-  height: 100%;
   margin: 0 auto;
+  height: 100%;
 }
 
 .container-faq {
@@ -665,7 +802,8 @@ section#collaborate .collaborate-wrapper {
   -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
   box-shadow: 0px 6px 5px -6px #a1a1a1;
 }
-.container-faq button.accordion.active, .container-faq button.accordion:hover {
+.container-faq button.accordion.active,
+.container-faq button.accordion:hover {
   color: white;
   background-color: #1c4d7c;
   box-shadow: none;
@@ -765,3 +903,15 @@ section#collaborate .collaborate-wrapper {
 .about_padding {
   padding: 10px;
 }
+
+/*! QUERY TABLET */
+@media screen and (max-width: 1170px) {
+  nav.nav-desktop {
+    display: none !important;
+  }
+
+  nav.nav-mobile {
+    display: flex !important;
+  }
+}
+/*! QUERY MOBILE */
