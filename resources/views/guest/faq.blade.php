@@ -5,9 +5,12 @@
 @section('content')
 
 {{-- JUMBOTRON FAQ --}}
-<div class="jumbotron-small">
-    <div class="container-faq">
-        <h2>Accordion</h2>
+<div class="vh-25 bg-color-lightblue">
+    <div class="bg-image">
+        <div class="container-faq">
+            <h2>Domande frequenti</h2>
+            <h4>Abbiamo tutte le risposte che cerchi.</h4>
+        </div>
     </div>
 </div>
 {{-- /JUMBOTRON FAQ --}}

@@ -16,8 +16,7 @@ main.home {
     }
     .jumbotron-small {
         width: 100%;
-        height: 400px;
-        background-color: $color-background;
+        height: 40vh;
         @include box-shadow;
     }
 }

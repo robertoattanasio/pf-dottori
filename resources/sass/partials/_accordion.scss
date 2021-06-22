@@ -1,3 +1,10 @@
+.bg-image{
+        height: 100%;
+        background-image: url(../img/info-graphic-10.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: 85%;
+}
 
 .container-faq{
     @include main-wrapper;
@@ -18,8 +25,11 @@
         font-weight: 300;
         transition: 0.4s;
         @include box-shadow;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-    
+
     button.accordion.active, button.accordion:hover {
         color: white;
         background-color: $color-primary;
