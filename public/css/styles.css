@@ -29,6 +29,7 @@ a:active {
 }
 
 /*! OBJECTS */
+/*! MARGINS */
 .margin-top-10 {
   margin-top: 10px;
 }
@@ -69,6 +70,9 @@ a:active {
   margin-top: 100px;
 }
 
+/*! MIXINS */
+/*! INPUTS */
+/*! BUTTONS */
 .small-button {
   width: 100px;
   height: 30px;
@@ -109,15 +113,28 @@ a:active {
   color: #1c4d7c;
 }
 
+/*! MODULAR CLASSES */
 .none {
-  display: none;
+  display: none !important;
 }
 
 .relative {
-  position: relative;
+  position: relative !important;
 }
 
-/* BACKGROUND COLOR */
+.no-padding {
+  padding: 0 !important;
+}
+
+.vh-25 {
+  height: 25vh;
+}
+
+.vh-45 {
+  height: 45vh;
+}
+
+/* BACKGROUND COLORS */
 .bg-color-yellow {
   background-color: #ffe9a7;
 }
@@ -164,14 +181,6 @@ h4 {
 
 p.generic {
   font-size: 18px;
-}
-
-.vh-25 {
-  height: 25vh;
-}
-
-.vh-45 {
-  height: 45vh;
 }
 
 /*! BODY */
@@ -325,7 +334,6 @@ header .header-wrapper nav.nav-mobile .hamburger.active .hamburger-line:nth-chil
   opacity: 0;
 }
 
-/*! MAIN */
 /*! MAIN HOME */
 main.home {
   margin-top: 110px;
@@ -384,386 +392,6 @@ main.home .jumbotron-small {
 
 .info_doctor .contatti li {
   display: block;
-}
-
-/*! MAIN DASHBOARD */
-main.dashboard {
-  width: 100%;
-  height: 100%;
-  background-color: #f6f8fe;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main.dashboard .container {
-  width: 80%;
-  height: 80vh;
-  margin: 0 auto;
-  display: flex;
-  flex-flow: row nowrap;
-  box-shadow: #1c4d7c 0px 30px 90px;
-}
-main.dashboard .container .doctor-left-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-flow: column nowrap;
-  flex: 0 0 350px;
-  padding: 20px;
-  color: #fefcf8;
-  background-color: #1c4d7c;
-  text-transform: capitalize;
-}
-main.dashboard .container .doctor-left-container .doctor-icons {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 2em;
-}
-main.dashboard .container .doctor-left-container .doctor-icons form {
-  display: none;
-}
-main.dashboard .container .doctor-left-container .doctor-icons a:hover {
-  transition: 600ms;
-  text-shadow: 0px 0px 10px #f6f8fe;
-}
-main.dashboard .container .doctor-left-container .doctor-pic {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 2px solid #fafafa;
-  overflow: hidden;
-}
-main.dashboard .container .doctor-left-container .doctor-pic img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main.dashboard .container .doctor-left-container .doctor-info {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-flow: column nowrap;
-}
-main.dashboard .container .doctor-left-container .doctor-info .doctor-name {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-main.dashboard .container .doctor-left-container .doctor-menu {
-  width: 100%;
-}
-main.dashboard .container .doctor-left-container .doctor-menu li {
-  font-size: 1.5em;
-  display: block;
-  margin-bottom: 20px;
-  border-left: 5px solid transparent;
-  padding-left: 5px;
-}
-main.dashboard .container .doctor-left-container .doctor-menu li:last-child {
-  margin-bottom: 0;
-}
-main.dashboard .container .doctor-left-container .doctor-menu li {
-  transition: 120ms ease-in-out;
-  padding-left: 10px;
-  border-left: 4px solid transparent;
-}
-main.dashboard .container .doctor-left-container .doctor-menu li:hover {
-  border-left: 4px solid #f6f8fe;
-}
-main.dashboard .container .doctor-right-container {
-  flex: 1 1 auto;
-  background-color: #fefcf8;
-}
-main.dashboard .container .doctor-right-container .doctor-right-top-container {
-  height: 15%;
-  background-color: #1c4d7c;
-  color: #fefcf8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: capitalize;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container {
-  height: 85%;
-  padding: 20px 20px;
-  background-image: url(../img/info-graphic-8.png);
-  background-size: 550px;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  text-align: justify;
-  text-justify: inter-word;
-  overflow-y: auto;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .personal_info h4 {
-  margin-bottom: 30px;
-  text-transform: capitalize;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details {
-  height: 100%;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost {
-  display: flex;
-  align-items: center;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost div {
-  width: 300px;
-  display: flex;
-  align-items: center;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost div * {
-  margin-right: 50px;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost input[type=submit]::after {
-  content: "ciao";
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section {
-  height: 100%;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section li {
-  display: block;
-  margin-bottom: 10px;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section {
-  margin-bottom: 40px;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section {
-  width: 100%;
-  transition: 600ms;
-  border: 1px solid transparent;
-  background-color: #fae3ec;
-  padding: 10px 10px;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review span,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message span,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details span,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost span,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section span {
-  color: #528f87;
-  font-weight: bolder;
-  text-transform: capitalize;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review h4,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review h3,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review p,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message h4,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message h3,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message p,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details h4,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details h3,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details p,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost h4,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost h3,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost p,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section h4,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section h3,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section p {
-  margin-bottom: 10px;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review:hover,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message:hover,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details:hover,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost:hover,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section:hover {
-  box-shadow: #a1a1a1 0px 5px 15px;
-  cursor: pointer;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #message_details,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #message_details,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #message_details,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #message_details,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #message_details {
-  transition: 600ms;
-  color: #528f87;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #message_details i,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #message_details i,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #message_details i,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #message_details i,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #message_details i {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 4em;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #message_details i:hover,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #message_details i:hover,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #message_details i:hover,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #message_details i:hover,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #message_details i:hover {
-  font-weight: bold;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .form-auth-item {
-  display: flex;
-  align-items: center;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item label,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item label,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item label,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item label,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .form-auth-item label {
-  margin-right: 20px;
-  text-transform: capitalize;
-  color: #528f87;
-  font-weight: bold;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item input,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item input,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item input,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item input,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .form-auth-item input {
-  padding: 10px 10px;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item #answer,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item #answer,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item #answer,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item #answer,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .form-auth-item #answer {
-  min-height: 100px;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #email_patient,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #answer,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #email_patient,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #answer,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #email_patient,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #answer,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #email_patient,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #answer,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #email_patient,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #answer {
-  width: 300px;
-  height: 30px;
-  text-transform: capitalize;
-  border: 1px solid #fae3ec;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container h4 span {
-  color: #528f87;
-  font-weight: bolder;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .form-auth-item * {
-  padding-bottom: 5px;
-  overflow: hidden;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container #specialization {
-  width: 30%;
-  height: 100px;
-  overflow: scroll;
-  scroll-behavior: smooth;
-}
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container #confirm_modification {
-  position: absolute;
-  bottom: 5px;
-  right: 10px;
-}
-
-/*! MAIN CARD */
-main.card {
-  width: 100%;
-  height: 100%;
-  background-color: #f6f8fe;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main.card .wrapper-auth {
-  min-height: 500px;
-  width: 50%;
-  padding: 2%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  background-color: #1c4d7c;
-  color: #fafafa;
-}
-main.card .wrapper-auth .form-auth {
-  height: 80%;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-main.card .wrapper-auth .form-auth .auth-item-input {
-  margin: 10px 0;
-}
-main.card .wrapper-auth .form-auth .auth-item-input input {
-  height: 30px;
-  width: 100%;
-}
-main.card .wrapper-auth .form-auth .button-auth {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-around; */
-  /* button {
-      margin: 10px 0;
-      text-transform: uppercase;
-      font-weight: 600;
-      cursor: pointer;
-      background-color: $white;
-      color: $blue;
-      border: 1px solid $blue;
-      padding: 7.5px 25px;
-      border-radius: 5px;
-      &:hover {
-          background-color: $blue;
-          color: $white;
-          border: 1px solid white;
-          transition: .2s linear;
-      }
-  } */
-}
-main.card .wrapper-auth .form-auth .button-auth .forgot-your-password {
-  text-align: center;
-  font-size: 11px;
-}
-main.card .wrapper-auth .form-auth .button-auth .forgot-your-password:hover {
-  text-decoration: underline;
-  opacity: 0.8;
-}
-main.card .card-header {
-  font-size: 25px;
-}
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-/*! FOOTER */
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 110px;
-  color: #fafafa;
-  background-color: #1c4d7c;
-  text-align: center;
 }
 
 /*! INDEX */
@@ -839,85 +467,6 @@ section#collaborate .collaborate-wrapper {
   width: 65%;
   margin: 0 auto;
   height: 100%;
-}
-
-.bg-image {
-  height: 100%;
-  background-image: url(../img/info-graphic-10.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: 85%;
-}
-
-.container-faq {
-  width: 60%;
-  margin: 0 auto;
-  padding: 50px 0;
-  padding-top: calc(50px - 18px);
-}
-.container-faq button.accordion {
-  margin-top: 18px;
-  background-color: #f6f8fe;
-  color: #1c4d7c;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 18px;
-  font-weight: 300;
-  transition: 0.4s;
-  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
-  box-shadow: 0px 6px 5px -6px #a1a1a1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.container-faq button.accordion.active, .container-faq button.accordion:hover {
-  color: white;
-  background-color: #1c4d7c;
-  box-shadow: none;
-}
-.container-faq button.accordion:after {
-  content: "+";
-  color: #1c4d7c;
-  float: right;
-  margin-left: 5px;
-}
-.container-faq button.accordion:hover::after {
-  color: white;
-}
-.container-faq button.accordion.active:after {
-  content: "\2212";
-  color: white;
-}
-.container-faq div.panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: 0.6s ease-in-out;
-  opacity: 0;
-}
-.container-faq div.panel.show {
-  padding: 18px;
-  opacity: 1;
-  max-height: 500px;
-  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
-  box-shadow: 0px 6px 5px -6px #a1a1a1;
-}
-
-.bg-image-2 {
-  height: 100%;
-  background-image: url(../img/info-graphic-9.png);
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-position-y: 20%;
-}
-
-.half-size {
-  width: 50%;
 }
 
 /*ABOUT PAGE*/
@@ -1190,6 +739,411 @@ section#collaborate .collaborate-wrapper {
 iframe {
   width: 100%;
   height: 100vh;
+}
+
+.bg-image {
+  height: 100%;
+  background-image: url(../img/info-graphic-10.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 85%;
+}
+
+.container-faq {
+  width: 60%;
+  margin: 0 auto;
+  padding: 50px 0;
+  padding-top: calc(50px - 18px);
+}
+.container-faq button.accordion {
+  margin-top: 18px;
+  background-color: #f6f8fe;
+  color: #1c4d7c;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  font-weight: 300;
+  transition: 0.4s;
+  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
+  box-shadow: 0px 6px 5px -6px #a1a1a1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-faq button.accordion.active,
+.container-faq button.accordion:hover {
+  color: white;
+  background-color: #1c4d7c;
+  box-shadow: none;
+}
+.container-faq button.accordion:after {
+  content: "+";
+  color: #1c4d7c;
+  float: right;
+  margin-left: 5px;
+}
+.container-faq button.accordion:hover::after {
+  color: white;
+}
+.container-faq button.accordion.active:after {
+  content: "\2212";
+  color: white;
+}
+.container-faq div.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.6s ease-in-out;
+  opacity: 0;
+}
+.container-faq div.panel.show {
+  padding: 18px;
+  opacity: 1;
+  max-height: 500px;
+  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
+  box-shadow: 0px 6px 5px -6px #a1a1a1;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*! MAIN DASHBOARD */
+main.dashboard {
+  width: 100%;
+  height: 100%;
+  background-color: #f6f8fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.dashboard .container {
+  width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  box-shadow: #1c4d7c 0px 30px 90px;
+}
+main.dashboard .container .doctor-left-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  flex: 0 0 350px;
+  padding: 20px;
+  color: #fefcf8;
+  background-color: #1c4d7c;
+  text-transform: capitalize;
+}
+main.dashboard .container .doctor-left-container .doctor-icons {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2em;
+}
+main.dashboard .container .doctor-left-container .doctor-icons form {
+  display: none;
+}
+main.dashboard .container .doctor-left-container .doctor-icons a:hover {
+  transition: 600ms;
+  text-shadow: 0px 0px 10px #f6f8fe;
+}
+main.dashboard .container .doctor-left-container .doctor-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #fafafa;
+  overflow: hidden;
+}
+main.dashboard .container .doctor-left-container .doctor-pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main.dashboard .container .doctor-left-container .doctor-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+main.dashboard .container .doctor-left-container .doctor-info .doctor-name {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main.dashboard .container .doctor-left-container .doctor-menu {
+  width: 100%;
+}
+main.dashboard .container .doctor-left-container .doctor-menu li {
+  font-size: 1.5em;
+  display: block;
+  margin-bottom: 20px;
+  border-left: 5px solid transparent;
+  padding-left: 5px;
+}
+main.dashboard .container .doctor-left-container .doctor-menu li:last-child {
+  margin-bottom: 0;
+}
+main.dashboard .container .doctor-left-container .doctor-menu li {
+  transition: 120ms ease-in-out;
+  padding-left: 10px;
+  border-left: 4px solid transparent;
+}
+main.dashboard .container .doctor-left-container .doctor-menu li:hover {
+  border-left: 4px solid #f6f8fe;
+}
+main.dashboard .container .doctor-right-container {
+  flex: 1 1 auto;
+  background-color: #fefcf8;
+}
+main.dashboard .container .doctor-right-container .doctor-right-top-container {
+  height: 15%;
+  background-color: #1c4d7c;
+  color: #fefcf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container {
+  height: 85%;
+  padding: 20px 20px;
+  background-image: url(../img/info-graphic-8.png);
+  background-size: 550px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow-y: auto;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .personal_info h4 {
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details {
+  height: 100%;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost {
+  display: flex;
+  align-items: center;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost div {
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost div * {
+  margin-right: 50px;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost input[type=submit]::after {
+  content: "ciao";
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_container {
+  width: 100%;
+  height: 100%;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section {
+  scroll-snap-align: start;
+  height: 100%;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section li {
+  display: block;
+  margin-bottom: 10px;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section {
+  margin-bottom: 40px;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review:last-child,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message:last-child,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost:last-child,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section:last-child {
+  margin-bottom: 0;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section {
+  width: 100%;
+  transition: 600ms;
+  border: 1px solid transparent;
+  background-color: #fae3ec;
+  padding: 10px 10px;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review span,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message span,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details span,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost span,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section span {
+  color: #528f87;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review h4,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review h3,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review p,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message h4,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message h3,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message p,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details h4,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details h3,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details p,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost h4,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost h3,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost p,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section h4,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section h3,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section p {
+  margin-bottom: 10px;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review:hover,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message:hover,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details:hover,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost:hover,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section:hover {
+  box-shadow: #a1a1a1 0px 5px 15px;
+  cursor: pointer;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #message_details,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #message_details,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #message_details,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #message_details,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #message_details {
+  transition: 600ms;
+  color: #528f87;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #message_details i,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #message_details i,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #message_details i,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #message_details i,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #message_details i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 4em;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #message_details i:hover,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #message_details i:hover,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #message_details i:hover,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #message_details i:hover,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #message_details i:hover {
+  font-weight: bold;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .form-auth-item {
+  display: flex;
+  align-items: center;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item label,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item label,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item label,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item label,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .form-auth-item label {
+  margin-right: 20px;
+  text-transform: capitalize;
+  color: #528f87;
+  font-weight: bold;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item input,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item input,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item input,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item input,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .form-auth-item input {
+  padding: 10px 10px;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review .form-auth-item #answer,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message .form-auth-item #answer,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details .form-auth-item #answer,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost .form-auth-item #answer,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .form-auth-item #answer {
+  min-height: 100px;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #email_patient,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review #answer,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #email_patient,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message #answer,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #email_patient,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message_details #answer,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #email_patient,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #answer,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #email_patient,
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #answer {
+  width: 300px;
+  height: 30px;
+  text-transform: capitalize;
+  border: 1px solid #fae3ec;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container h4 span {
+  color: #528f87;
+  font-weight: bolder;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .form-auth-item * {
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container #specialization {
+  width: 30%;
+  height: 100px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container #confirm_modification {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.bg-image-2 {
+  height: 100%;
+  background-image: url(../img/info-graphic-9.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-position-y: 20%;
+}
+
+.half-size {
+  width: 50%;
+}
+
+/*! FOOTER */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 110px;
+  color: #fafafa;
+  background-color: #1c4d7c;
+  text-align: center;
 }
 
 /*! QUERY TABLET */

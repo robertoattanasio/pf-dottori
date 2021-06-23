@@ -1,10 +1,28 @@
 /*! OBJECTS */
 
+
+/*! MARGINS */
+
 @for $i from 1 through 10 {
     .margin-top-#{$i * 10} {
         margin-top: #{$i * 10}px;
     }
 }
+
+@mixin small-margin-bottom {
+    margin-bottom: 10px;
+}
+
+@mixin standard-margin-bottom {
+    margin-bottom: 20px;
+}
+
+@mixin wide-margin-bottom {
+    margin-bottom: 40px;
+}
+
+
+/*! MIXINS */
 
 @mixin main-wrapper {
     width: 60%;
@@ -21,18 +39,6 @@
 
 @mixin big-padding {
     padding: 100px 0;
-}
-
-@mixin small-margin-bottom {
-    margin-bottom: 10px;
-}
-
-@mixin standard-margin-bottom {
-    margin-bottom: 20px;
-}
-
-@mixin wide-margin-bottom {
-    margin-bottom: 40px;
 }
 
 @mixin flex-center {
@@ -53,7 +59,6 @@
 
 @mixin box-shadow-dashboard-card {
     box-shadow: $color-shadow 0px 5px 15px;
-    // dare transition: 600ms al padre
     cursor: pointer;
 }
 
@@ -66,6 +71,12 @@
     padding-left: 10px;
     border-left: 4px solid transparent;
 }
+
+
+/*! INPUTS */
+
+
+/*! BUTTONS */
 
 .small-button {
     width: 100px;
@@ -106,23 +117,39 @@
     color: $color-primary;
 }
 
+
+/*! MODULAR CLASSES */
+
 .none {
-    display: none;
+    display: none!important;
 }
 
 .relative {
-    position: relative;
+    position: relative!important;
 }
 
-/* BACKGROUND COLOR */
-.bg-color-yellow{
+.no-padding {
+    padding: 0!important;
+}
+
+.vh-25 {
+    height: 25vh;
+}
+
+.vh-45 {
+    height: 45vh;
+}
+
+
+/* BACKGROUND COLORS */
+
+.bg-color-yellow {
     background-color: $light-yellow;
 }
 
-.bg-color-lightblue{
+.bg-color-lightblue {
     background-color: $light-blue;
 }
-
 
 // CLASSE MODULARE PER IL BOX-SHADOW DELLA NAVBAR
 .nav_scrollOverHeader {

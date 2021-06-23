@@ -21,7 +21,6 @@
             @endforeach
         </div>
 
-        {{-- <a href="{{ URL::to('/') }}/storage/{{ Auth::user()->cv }}" name="cv">cv</a> --}}
     </div>
     {{-- FINE DOCTOR RIGHT CONTAINER --}}
 @endsection

@@ -1,12 +1,12 @@
-.bg-image{
-        height: 100%;
-        background-image: url(../img/info-graphic-10.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position-x: 85%;
+.bg-image {
+    height: 100%;
+    background-image: url(../img/info-graphic-10.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 85%;
 }
 
-.container-faq{
+.container-faq {
     @include main-wrapper;
     @include main-padding;
     padding-top: calc(50px - 18px);
@@ -28,8 +28,8 @@
         align-items: center;
         justify-content: space-between;
     }
-
-    button.accordion.active, button.accordion:hover {
+    button.accordion.active,
+    button.accordion:hover {
         color: white;
         background-color: $color-primary;
         box-shadow: none;
@@ -61,4 +61,20 @@
         max-height: 500px;
         @include box-shadow;
     }
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type="number"] {
+    -moz-appearance: textfield;
 }

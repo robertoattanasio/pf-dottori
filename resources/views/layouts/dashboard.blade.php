@@ -26,14 +26,6 @@
 
 <body>
 
-    <?php
-    // $ilmioprofilo = 'il mio profilo';
-    $recensioni = 'recensioni';
-    $messaggi = 'messaggi';
-    $statistiche = 'statistiche';
-    $sponsorizzazioni = 'sponsorizzazioni';
-    ?>
-
     <main class="dashboard">
         <div class="container">
             {{-- DOCTOR LEFT CONTAINER --}}
