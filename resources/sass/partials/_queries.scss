@@ -1,15 +1,60 @@
 /*! QUERY TABLET */
 
 @media screen and (max-width: 1170px) {
+    /*! NAVBAR */
     nav.nav-desktop {
         display: none!important;
     }
     nav.nav-mobile {
         display: flex!important;
     }
+    /*! INDEX */
+    .jumbotron-big {
+        width: 100%;
+        height: fit-content!important;
+    }
+    .jumbotron-wrapper {
+        width: 100%;
+        flex-flow: column nowrap;
+        .jumbotron-left-container {
+            @include main-wrapper;
+        }
+        .jumbotron-right-container {
+            display: none;
+        }
+    }
+    section#payments {
+        height: fit-content;
+        .payments-container {
+            flex-flow: column nowrap!important;
+            .payments-left-container {
+                @include main-wrapper;
+            }
+            .payments-right-container {
+                @include main-wrapper;
+                margin-top: 30px;
+            }
+        }
+    }
+    section#banner {
+        @include main-wrapper;
+        h2.banner {
+            font-size: 40px;
+        }
+    }
 }
 
 
 /*! QUERY MOBILE */
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    /*! INDEX */
+    select.index-select {
+        width: 200px;
+    }
+    section#banner {
+        h2.banner {
+            font-size: 30px;
+        }
+    }
+}

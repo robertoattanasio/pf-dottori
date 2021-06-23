@@ -254,6 +254,23 @@
     </div>
     {{-- DOCTOR CONTAINER --}}
 
+    {{-- SECTION PAYMENTS --}}
+    <section id="payments">
+        <div class="payments-container">
+            <div class="payments-left-container">
+                <h3>Paga comodamente online in modo semplice e sicuro</h3>
+                {{-- PARAGRAPH --}}
+                <p class="generic margin-top-10">Prenota e paga in pochi click, in totale sicurezza: accettiamo carte di credito, bancomat e prepagate. Puoi inoltre effettuare pagamenti tramite bonifico per le spese superiori a 150€.</p>
+            </div>
+            <div class="payments-right-container">
+                <img src="img/info-graphic-6.png" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    {{-- FINE SECTION PAYMENTS --}}
+
     {{-- SECTION BANNER --}}
     <section id="banner">
         <div class="banner-container">
