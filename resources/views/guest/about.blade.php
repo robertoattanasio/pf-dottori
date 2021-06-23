@@ -3,7 +3,7 @@
 @section('pageTitle', 'Home')
 
 @section('content')
-         {{-- JUMBOTRON --}}
+        {{-- JUMBOTRON --}}
         <div class="jumbotron-small bg-image-3">
 
             {{-- JUMBOTRON WRAPPER --}}
@@ -51,9 +51,9 @@
                         Abbiamo una rete nazionale che oggi conta 800 professionisti attivi, tra medici, 
                         personale sanitario e assistenti domiciliari in 10 delle principali città italiane. 
 
-                         <!-- Trigger/Open The Modal -->
+                        <!-- Trigger/Open The Modal -->
                         <span class="about_green about_bold" id="triggerModal">Il nostro servizio è attivo 7 giorni su 7, dalle 8 alle 20.
-                          
+
                             <!-- The Modal -->
                             <div id="myModal" class="modal">
 

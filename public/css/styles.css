@@ -184,10 +184,14 @@ button.collaborate:hover {
 
 .vh-25 {
   height: 25vh;
+  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
+  box-shadow: 0px 6px 5px -6px #a1a1a1;
 }
 
 .vh-45 {
   height: 45vh;
+  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
+  box-shadow: 0px 6px 5px -6px #a1a1a1;
 }
 
 /* BACKGROUND COLORS */
@@ -1271,7 +1275,7 @@ footer {
 }
 
 /*! QUERY TABLET */
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1169px) {
   nav.nav-desktop {
     display: none !important;
   }
@@ -1279,5 +1283,54 @@ footer {
   nav.nav-mobile {
     display: flex !important;
   }
+
+  /* Pagina FAQ */
+  .bg-image {
+    height: 100%;
+    background-image: url(../img/info-graphic-11.png);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: right;
+  }
+
+  /* /FAQ */
+  /* Pagina Psicologia Online */
+  .bg-image-2 {
+    height: 100%;
+    background-image: url(../img/info-graphic-12.png);
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 90%;
+  }
+
+  .half-size {
+    width: 70%;
+  }
+
+  /* /Psicologia Online */
+  /* Pagina Login */
+  /* /Login */
+  /* Pagina Registrati */
+  /* /Registrati */
 }
 /*! QUERY MOBILE */
+@media screen and (max-width: 767px) {
+  /* Pagina FAQ */
+  .bg-image {
+    height: 100%;
+    background-image: none;
+  }
+
+  /* /FAQ */
+  /* Pagina Psicologia Online */
+  .bg-image-2 {
+    height: 100%;
+    background-image: none;
+  }
+
+  .half-size {
+    width: 100%;
+  }
+
+  /* /Psicologia Online */
+}
