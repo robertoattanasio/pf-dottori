@@ -28,16 +28,17 @@
                 <form class="margin-top-20" enctype="multipart/form-data" method="POST" action="{{ route('filter-specialization') }}">
                     @csrf
             
-                        <select name="specialization">
+                        <select class="index-select" name="specialization">
                             @foreach ($specializations as $specialization)
                                 <option value="{{$specialization}}">{{$specialization}}</option>
                             @endforeach
                         </select>
             
-                        <button type="submit">
+                        <button class="search-btn" type="submit">
                             {{ __('Ricerca') }}
                         </button>
                 </form>
+
             </div>
             {{-- FINE JUMBOTRON LEFT CONTAINER --}}
 
@@ -269,7 +270,7 @@
             <h3>Sei un medico o un professionista sanitario?</h3>
             {{-- PARAGRAPH --}}
             <p class="generic margin-top-10">Lavoriamo solo con personale qualificato e certificato, capace di rispondere a precisi criteri di selezione.<br>Il nostro obiettivo è garantirti un servizio con elevati standard di qualità.<br><br>Con noi la tua salute è nelle mani dei migliori professionisti!</p>
-            <button class="margin-top-40">Collaboriamo</button>
+            <button class="margin-top-40 collaborate">Collaboriamo</button>
         </div>
     </section>
     {{-- FINE SECTION COLLABORATE --}}
