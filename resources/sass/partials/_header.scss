@@ -15,21 +15,24 @@
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
-    li {
-        display: block;
-        font-size: 30px;
-        margin-bottom: 20px;
-        width: 500px;
-        @include transition-border-li;
-        &:last-child {
-            margin-bottom: 0;
-        }
-        &:nth-child(4) {
-            margin-bottom: 80px;
-        }
-        &:hover {
-            border-left: 4px solid $color-font-primary;
-            padding-left: 22px;
+    ul {
+        @include main-wrapper;
+        li {
+            width: 100%!important;
+            display: block;
+            font-size: 30px;
+            margin-bottom: 20px;
+            @include transition-border-li;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:nth-child(4) {
+                margin-bottom: 80px;
+            }
+            &:hover {
+                border-left: 4px solid $color-font-primary;
+                padding-left: 22px;
+            }
         }
     }
 }
@@ -76,6 +79,9 @@ header {
                 }
                 &:nth-child(4) {
                     margin-right: 60px;
+                }
+                &:hover {
+                    text-decoration: underline;
                 }
             }
         }

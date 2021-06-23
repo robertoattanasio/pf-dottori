@@ -1,6 +1,6 @@
 /*! QUERY TABLET */
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1169px) {
     /*! NAVBAR */
     nav.nav-desktop {
         display: none!important;
@@ -28,10 +28,10 @@
         .payments-container {
             flex-flow: column nowrap!important;
             .payments-left-container {
-                @include main-wrapper;
+                width: 100%
             }
             .payments-right-container {
-                @include main-wrapper;
+                width: 100%;
                 margin-top: 30px;
             }
         }
@@ -47,10 +47,21 @@
 
 /*! QUERY MOBILE */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+    /*! NAVBAR */
+    .menu-mobile li {
+        font-size: 24px!important;
+    }
     /*! INDEX */
     select.index-select {
-        width: 200px;
+        width: 100%;
+    }
+    button.search-btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+    button.collaborate {
+        width: 100%;
     }
     section#banner {
         h2.banner {
