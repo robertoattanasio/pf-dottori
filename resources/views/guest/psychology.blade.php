@@ -9,8 +9,6 @@
             <div class="half-size">
                 <h2>Psicologo e Psicoterapeuta online</h2>
                 <h4>Con EpiCura puoi consultare i migliori psicologi e psicoterapeuti comodamente online, 7 giorni su 7, da smartphone, pc o tablet.</h4>
-                <br>
-                <h4>Prenota in pochi clic e ritrova adesso la tua serenità. </h4>
             </div>
         </div>
     </div>

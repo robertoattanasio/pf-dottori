@@ -184,10 +184,14 @@ button.collaborate:hover {
 
 .vh-25 {
   height: 25vh;
+  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
+  box-shadow: 0px 6px 5px -6px #a1a1a1;
 }
 
 .vh-45 {
   height: 45vh;
+  -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
+  box-shadow: 0px 6px 5px -6px #a1a1a1;
 }
 
 /* BACKGROUND COLORS */
@@ -1324,7 +1328,6 @@ footer {
 
 /*! QUERY TABLET */
 @media screen and (max-width: 1169px) {
-  /*! NAVBAR */
   nav.nav-desktop {
     display: none !important;
   }
@@ -1333,72 +1336,53 @@ footer {
     display: flex !important;
   }
 
-  /*! INDEX */
-  .jumbotron-big {
-    width: 100%;
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
+  /* Pagina FAQ */
+  .bg-image {
+    height: 100%;
+    background-image: url(../img/info-graphic-11.png);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: right;
   }
 
-  .jumbotron-wrapper {
-    width: 100%;
-    flex-flow: column nowrap;
+  /* /FAQ */
+  /* Pagina Psicologia Online */
+  .bg-image-2 {
+    height: 100%;
+    background-image: url(../img/info-graphic-12.png);
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 90%;
   }
-  .jumbotron-wrapper .jumbotron-left-container {
+
+  .half-size {
     width: 70%;
-    margin: 0 auto;
-  }
-  .jumbotron-wrapper .jumbotron-right-container {
-    display: none;
   }
 
-  section#payments {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  section#payments .payments-container {
-    flex-flow: column nowrap !important;
-  }
-  section#payments .payments-container .payments-left-container {
-    width: 100%;
-  }
-  section#payments .payments-container .payments-right-container {
-    width: 100%;
-    margin-top: 30px;
-  }
-
-  section#banner {
-    width: 70%;
-    margin: 0 auto;
-  }
-  section#banner h2.banner {
-    font-size: 40px;
-  }
+  /* /Psicologia Online */
+  /* Pagina Login */
+  /* /Login */
+  /* Pagina Registrati */
+  /* /Registrati */
 }
 /*! QUERY MOBILE */
 @media screen and (max-width: 767px) {
-  /*! NAVBAR */
-  .menu-mobile li {
-    font-size: 24px !important;
+  /* Pagina FAQ */
+  .bg-image {
+    height: 100%;
+    background-image: none;
   }
 
-  /*! INDEX */
-  select.index-select {
+  /* /FAQ */
+  /* Pagina Psicologia Online */
+  .bg-image-2 {
+    height: 100%;
+    background-image: none;
+  }
+
+  .half-size {
     width: 100%;
   }
 
-  button.search-btn {
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  button.collaborate {
-    width: 100%;
-  }
-
-  section#banner h2.banner {
-    font-size: 30px;
-  }
+  /* /Psicologia Online */
 }
