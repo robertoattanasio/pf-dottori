@@ -17,6 +17,15 @@
     align-items: center;
 }
 
+.about_container2 {
+  width: 60%;
+  margin: 0 auto;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
 .about_item {
     padding: 20px;
     text-align: center;
@@ -298,4 +307,26 @@
 iframe {
     width: 100%;
     height: 100vh;
+}
+
+
+//CODICE NUOVO
+
+.subfooter-ul li {
+  display: block;
+  text-align: start;
+  padding: 0px 10px;
+}
+.subfooter-ul li:hover {
+  text-decoration-line: underline;
+}
+
+.subfooter-ul li:first-child {
+  font-weight: bold;
+  padding: 10px;
+}
+
+.fab {
+  font-size: 50px;
+  padding: 30px;
 }

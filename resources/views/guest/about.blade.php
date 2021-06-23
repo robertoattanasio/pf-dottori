@@ -30,8 +30,8 @@
                 <p>L'anno di nascita della nostra azienda.</p>
             </div>
             <div class="about_item">
-                <h1>+ 5 scemi</h1>
-                <p>I cretini che ci hanno lavorato.</p>
+                <h1>+ 3 milioni</h1>
+                <p>I finanziamenti di chi ha creduto in noi.</p>
             </div>
             <div class="about_item">
                 <h1>+ 800</h1>
@@ -123,11 +123,11 @@
                 <h1 class="about_red">Il Team</h1>
             </div>
             <div class="top_main">
-                <img src="img/info-graphic-10.png" alt="">
+                <img src="img/info-graphic-26.png" alt="">
             </div>
             <div class="top_main">
-                <h1 class="about_red">I coglioni girano sempre in coppia...</h1>
-                <h1>A volte anche in 5!</h1>
+                <h1 class="about_red">Sognatori, creativi e appassionati: vogliamo semplificare la sanità e renderla migliore per tutti.</h1>
+                <h1>Siamo il primo poliambulatorio digitale in Italia</h1>
             </div>
 
             <div class="about_container">
@@ -144,7 +144,7 @@
                     </div>
                 </div>
                 <div class="about_item_3">
-                    <img src="img/info-graphic-11.png" alt="">
+                    <img src="img/info-graphic-27.png" alt="">
                 </div>
             </div>
  
@@ -216,6 +216,44 @@
                     <span class="dot" onclick="currentSlide(6)"></span>
                     <span class="dot" onclick="currentSlide(7)"></span>
                     <span class="dot" onclick="currentSlide(8)"></span>
+                </div>
+
+                <!-- SUBFOOTER -->
+                <div class="about_container2">
+                    <div>
+                        <ul class="subfooter-ul">
+                            <li>TrueDoctors</li>
+                            <li>Domande frequenti</li>
+                            <li>Psicologia On-line</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="subfooter-ul">
+                            <li>Scopri di più</li>
+                            <li>Tutte le recensioni</li>
+                            <li>Rassegna stampa</li>
+                            <li>Domande Frequenti</li>
+                            <li>Magazine</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="subfooter-ul">
+                            <li>Aspetti legali</li>
+                            <li>Privacy Policy</li>
+                            <li>Termini e condizioni</li>
+                            <li>Cookie Policy</li>
+                            <li>Avvertenza di rischio</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SOCIAL FOOTER -->
+
+                <div>
+                    <i class="fab fa-facebook-square about_red"></i>
+                    <i class="fab fa-instagram-square about_red"></i>
+                    <i class="fab fa-linkedin about_red"></i>
+                    <i class="fab fa-youtube about_red"></i>
                 </div>
 
         </div>

@@ -1,15 +1,67 @@
 /*! QUERY TABLET */
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1169px) {
     nav.nav-desktop {
         display: none!important;
     }
     nav.nav-mobile {
         display: flex!important;
     }
+
+    /* INIZIO PAGINA ABOUT*/
+    .bg-image-3 {
+        background-image: url("../img/info-graphic-8.png");
+        background-size: contain;
+    }
+    
+    .about_container {
+        align-items: flex-start;
+    }
+
+    .about_container h1 {
+        font-size: 25px;
+    }
+
+    .about_card_container {
+        display: block;
+    }
+    /* FINE PAGINA ABOUT*/
 }
 
 
 /*! QUERY MOBILE */
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 767px) {
+
+    /* INIZIO PAGINA ABOUT*/
+    
+    .jumbotron-small,
+    .jumbotron-wrapper,
+    .jumbotron-left-container {
+        height: auto!important;
+    }
+
+    .bg-image-3 {
+        background-image: none;
+    }
+
+    .about_container {
+        display: block;
+        height: auto;
+    }
+
+    .about_container2 {
+        display: block;
+        height: auto;
+    }
+
+    .about_item_2,
+    .about_item_3 {
+        display: none;
+    }
+    .fab {
+        font-size: 30px;
+    }
+    /* FINE PAGINA ABOUT*/
+}
+
