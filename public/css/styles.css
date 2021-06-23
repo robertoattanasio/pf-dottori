@@ -338,7 +338,19 @@ header .header-wrapper nav.nav-desktop li:last-child {
   margin-right: 0;
 }
 header .header-wrapper nav.nav-desktop li:nth-child(4) {
-  margin-right: 60px;
+  margin-right: 30px;
+}
+header .header-wrapper nav.nav-desktop li:nth-child(5) {
+  padding: 7px 20px;
+  border: 1px solid #1c4d7c;
+  border-radius: 20px;
+  transition: 200ms ease-in-out;
+  margin-right: 10px;
+}
+header .header-wrapper nav.nav-desktop li:nth-child(5):hover {
+  text-decoration: none;
+  color: #fafafa;
+  background-color: #1c4d7c;
 }
 header .header-wrapper nav.nav-desktop li:hover {
   text-decoration: underline;
