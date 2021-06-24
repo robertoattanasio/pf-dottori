@@ -9,13 +9,19 @@
     ?>
 
     <div class="info_doctor">
-        <img src="{{ asset('storage/' . $user['profile_pic']) }}" alt="">
+        @if ($user['profile_pic'])
+            <img style="width: 100px;" src="{{ asset('storage/'. $user['profile_pic']) }}">
+        @endif
         <h2>{{$user['name']}} {{$user['surname']}}</h2>
         
         @if($user->specializations)
         @foreach ($user->specializations->toArray() as $specialization)
             <p class="specialistica">{{$specialization['name']}}</p>
         @endforeach
+        @endif
+
+        @if ($user['cv'])
+            <a href="{{ asset('storage/'. $user['cv']) }}">Scarica il CV del dottore</a>
         @endif
 
         <p>Indirizzo: {{$user['address']}} {{$user['street_number']}}, 

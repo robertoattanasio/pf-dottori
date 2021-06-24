@@ -38,6 +38,9 @@
         @else
             @foreach ($users as $user)
                 <div class="card {{$user['county']}}" value="[{{$user['media_voti']}}, {{$user['numero_recensioni']}}]">
+                    @if ($user['profile_pic'])
+                        <img style="width: 100px;" src="{{ asset('storage/'. $user['profile_pic']) }}">
+                    @endif
                     <p id="name">{{$user['name']}}</p>
                     <p id="surname">{{$user['surname']}}</p>
                     <p id="county">{{$user['county']}}</p>

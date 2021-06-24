@@ -42,5 +42,6 @@ Route::prefix('admin')
     Route::get('/modifica-profilo', 'AdminController@editUser')->name('edit-profile');
     Route::get('/sponsorizzazioni', 'AdminController@sponsorizeUser')->name('boost-profile');
     Route::put('/sponsorizzazioni', 'AdminController@addSponsorization')->name('add-sponsorization');
+    Route::get('/payment/make', 'PaymentsController@make')->name('payment-make');
     Route::put('/', 'AdminController@updateUser')->name('return-edit-profile');
 });

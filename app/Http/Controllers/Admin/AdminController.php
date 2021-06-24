@@ -98,9 +98,16 @@ class AdminController extends Controller
         $boost = $request->all();
         // dd($boost);
 
-        Auth::user()->boosts()->sync($boost['boost_stuff']);
-
-        return redirect()->route('dashboard-about');
+        if (count($boost) > 2) {
+            $import = Boost::where('id', $boost['boost_stuff'])->first()['price'];
+            // dd($payment);
+            Auth::user()->boosts()->sync($boost['boost_stuff']);
+    
+            return view('admin.payment', compact('import'));    
+        } else {
+            return redirect()->route('boost-profile');    
+        }
+        
     }
 
     public function statistics()
@@ -123,20 +130,20 @@ class AdminController extends Controller
         // $this->validator($data);
         // dd($data);
 
-        // if (array_key_exists('profile_pic', $data)) {
-        //     $image_path = Storage::put('post_images', $data['profile_pic']);
-        //     $data['profile_pic'] = $image_path;
-        //     // dd($data['profile_pic']);
-        // } else {
-        //     $data['profile_pic'] = null;
-        // }
+        if (array_key_exists('profile_pic', $data)) {
+            $image_path = Storage::put('post_images', $data['profile_pic']);
+            $data['profile_pic'] = $image_path;
+            // dd($data['profile_pic']);
+        } else {
+            $data['profile_pic'] = null;
+        }
 
-        // if (array_key_exists('cv', $data)) {
-        //     $file_path = Storage::put('post_files', $data['cv']);
-        //     $data['cv'] = $file_path;
-        // } else {
-        //     $data['cv'] = null;
-        // }
+        if (array_key_exists('cv', $data)) {
+            $file_path = Storage::put('post_files', $data['cv']);
+            $data['cv'] = $file_path;
+        } else {
+            $data['cv'] = null;
+        }
 
         Auth::user()->update($data);
         // dd($data);
