@@ -2,6 +2,11 @@
 
 @section('content')
 
+    {{-- ICONE HOME E BACK --}}
+    <div class="doctor-icons">
+        <a href="{{ route('index') }}"><i class="fas fa-home"></i></a>
+    </div>
+
     <?php include(app_path().'/Includes/counties.php'); 
         use App\specialization;
         $specializations = Specialization::all()->toArray();
