@@ -17,9 +17,10 @@
     .about_card_container {
         display: flex;
         flex-flow: column nowrap;
-    }
-    .about_card {
-        height: fit-content!important;
+        .about_card {
+            width: 100%!important;
+            height: fit-content!important;
+        }
     }
     /* FINE PAGINA ABOUT*/
     /*! INDEX */

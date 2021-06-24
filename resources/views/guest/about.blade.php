@@ -52,17 +52,6 @@
                         personale sanitario e assistenti domiciliari in 10 delle principali città italiane. 
 
                         <div class="about_green about_bold margin-top-10" id="triggerModal">Il nostro servizio è attivo 7 giorni su 7, dalle 8 alle 20.
-
-                            <!-- The Modal -->
-                            <div id="myModal" class="modal">
-
-                                <!-- Modal content -->
-                                <div class="modal-content">
-                                    <span class="close">&times;</span>
-                                    <iframe src="https://www.youtube.com/embed/3Oqyq7x7e9E?autoplay=1&controls=0" frameborder="0"></iframe>
-                                </div>
-
-                            </div>
                         </div>
                     </p> 
                 </div>
