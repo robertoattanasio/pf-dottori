@@ -10,6 +10,7 @@
     @include main-wrapper;
     @include main-padding;
     padding-top: calc(50px - 18px);
+    height: 100%;
     button.accordion {
         margin-top: 18px;
         background-color: $color-background;

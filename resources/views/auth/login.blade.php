@@ -2,6 +2,12 @@
 
 @section('content')
 
+        {{-- ICONE HOME E BACK --}}
+        <div class="doctor-icons">
+            <a href="{{ route('index') }}"><i class="fas fa-home"></i></a>
+        </div>
+
+
         {{-- EMAIL --}}
         <div class="card-header">{{ __('Login') }}</div>
         <form class="form-auth" method="POST" action="{{ route('login') }}">
