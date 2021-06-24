@@ -1356,7 +1356,7 @@ footer {
   text-align: center;
 }
 
-/*! QUERY TABLET */
+/*! NAVBAR */
 @media screen and (max-width: 1169px) {
   nav.nav-desktop {
     display: none !important;
@@ -1385,6 +1385,49 @@ footer {
   }
 
   /* FINE PAGINA ABOUT*/
+  /*! INDEX */
+  .jumbotron-big {
+    width: 100%;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+
+  .jumbotron-wrapper {
+    width: 100%;
+    flex-flow: column nowrap;
+  }
+  .jumbotron-wrapper .jumbotron-left-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .jumbotron-wrapper .jumbotron-right-container {
+    display: none;
+  }
+
+  section#payments {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  section#payments .payments-container {
+    flex-flow: column nowrap !important;
+  }
+  section#payments .payments-container .payments-left-container {
+    width: 100%;
+  }
+  section#payments .payments-container .payments-right-container {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  section#banner {
+    width: 70%;
+    margin: 0 auto;
+  }
+  section#banner h2.banner {
+    font-size: 40px;
+  }
 
   /* Pagina FAQ */
   .bg-image {
@@ -1417,6 +1460,29 @@ footer {
 }
 /*! QUERY MOBILE */
 @media screen and (max-width: 767px) {
+  /*! NAVBAR */
+  .menu-mobile li {
+    font-size: 24px !important;
+  }
+
+  /*! INDEX */
+  select.index-select {
+    width: 100%;
+  }
+
+  button.search-btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  button.collaborate {
+    width: 100%;
+  }
+
+  section#banner h2.banner {
+    font-size: 30px;
+  }
+
   /* INIZIO PAGINA ABOUT*/
   .jumbotron-small,
 .jumbotron-wrapper,
@@ -1448,8 +1514,6 @@ footer {
   }
 
   /* FINE PAGINA ABOUT*/
-}
-@media screen and (max-width: 767px) {
   /* Pagina FAQ */
   .bg-image {
     height: 100%;
