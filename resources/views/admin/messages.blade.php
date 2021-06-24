@@ -15,8 +15,7 @@
                     <h4><span>mittente: </span> {{ $message['name_patient'] }} {{ $message['surname_patient'] }}</h4>
                     <p><span>email: </span> {{ $message['email_patient'] }}</p>
                     <p><span>data: </span> {{ substr($message['created_at'], 0, 10) }}</p>
-                    <p id="message_details"><a href="{{ route('info-message', [$message['email_patient']]) }}"><i
-                                class="far fa-envelope"></i></a></p>
+                    <p id="message_details"><a href="{{ route('info-message', [$message['email_patient']]) }}"><i class="far fa-envelope"></i></a></p>
                 </div>
             @endforeach
         </div>

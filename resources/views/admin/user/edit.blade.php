@@ -104,7 +104,7 @@
                 </div>
 
                 {{-- COUNTY --}}
-                {{-- <div class="form-auth-item">
+                <div class="form-auth-item">
                     <label for="county">{{ __('County') }}</label>
         
                     <div class="auth-item-input">
@@ -118,7 +118,7 @@
                             </span>
                         @enderror
                     </div>
-                </div> --}}
+                </div>
 
                 {{-- PROFILE PIC --}}
                 <div class="form-auth-item">

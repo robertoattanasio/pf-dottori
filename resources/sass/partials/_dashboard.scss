@@ -101,6 +101,7 @@ main.dashboard {
                 background-size: 550px;
                 background-repeat: no-repeat;
                 background-position: right bottom;
+                background-size: contain;
                 text-align: justify;
                 text-justify: inter-word;
                 overflow-y: auto;
@@ -108,6 +109,27 @@ main.dashboard {
                     h4 {
                         margin-bottom: 30px;
                         text-transform: capitalize;
+                    }
+                    .card_info {
+                        width: 60%;
+                        transition: 600ms;
+                        border: 1px solid transparent;
+                        background-color: $light-pink;
+                        @include small-padding-all-around;
+                        @include small-margin-bottom;
+                        span {
+                            color: $light-green;
+                            font-weight: bolder;
+                            text-transform: capitalize;
+                        }
+                        h4,
+                        h3,
+                        p {
+                            @include small-margin-bottom;
+                        }
+                        &:hover {
+                            @include box-shadow-dashboard-card;
+                        }
                     }
                 }
                 .card_message_details {
@@ -138,10 +160,28 @@ main.dashboard {
                 .marks_section {
                     scroll-snap-align: start;
                     height: 100%;
-                    li {
-                        display: block;
-                        @include small-margin-bottom;
+                    img {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 400px;
+                        height: 400px;
                     }
+                    li {
+                        width: 250px;
+                        display: flex;
+                        justify-content: space-between;
+                        @include small-margin-bottom;
+                        .stars_container {
+                            width: 50%;
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                    i.fas {
+                        color: $color-primary;
+                    }
+                    
                 }
                 .single_review,
                 .card_message,
@@ -149,6 +189,9 @@ main.dashboard {
                 .marks_section {
                     @include wide-margin-bottom;
                     &:last-child {
+                        margin-bottom: 0;
+                    }
+                    &:nth-child(2) li {
                         margin-bottom: 0;
                     }
                 }
@@ -180,8 +223,8 @@ main.dashboard {
                         color: $light-green;
                         i {
                             position: absolute;
-                            top: 10px;
-                            right: 10px;
+                            top: 5px;
+                            right: 5px;
                             font-size: 4em;
                         }
                         i:hover {
