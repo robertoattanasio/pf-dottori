@@ -89,6 +89,24 @@
 /*! QUERY MOBILE */
 
 @media screen and (max-width: 767px) {
+    section#sliderTeam {
+        height: 400px;
+        .slider-container {
+            width: 100%;
+            .image-container {
+                @include box-shadow;
+                margin: 0 20px;
+                width: 230px;
+                height: 230px;
+            }
+            i {
+                font-size: 30px;
+            }
+        }
+        p.sliderName {
+            margin-top: 0;
+        }
+    }
     /*! NAVBAR */
     .menu-mobile li {
         font-size: 24px!important;

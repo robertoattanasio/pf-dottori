@@ -118,6 +118,18 @@
                 </div>
             </section>
 
+            {{-- SLIDESHOW --}}
+            <section id="sliderTeam">
+                <div class="slider-container">
+                    <i class="fas fa-chevron-left arrowLeft"></i>
+                    <div class="image-container">       
+                        <img class="sliderImg" src="" alt="">
+                    </div>
+                    <i class="fas fa-chevron-right arrowRight"></i>
+                </div>
+                <p class="sliderName"></p>
+            </section>
+
             {{-- SECTION PAYMENTS --}}
             <section id="payments">
                 <div class="payments-container">
@@ -127,121 +139,97 @@
                         <p class="generic margin-top-10">Prenota e paga in pochi click, in totale sicurezza: accettiamo carte di credito, bancomat e prepagate. Puoi inoltre effettuare pagamenti tramite bonifico per le spese superiori a 150€.</p>
                     </div>
                     <div class="payments-right-container">
-                        <img src="img/info-graphic-27.png" alt="">
+                        <img name="slider" src="img/info-graphic-27.png" alt="">
                     </div>
 
                 </div>
             </section>
-
-                {{-- <!-- Slideshow container -->
-                <div class="slideshow-container">
-
-                    <!-- Full-width images with number and caption text -->
-                    <div class="mySlides fade">
-                        <div class="numbertext">1 / 8</div>
-                        <img src="img/carmine.jpeg">
-                        <div class="text about_red">Carmine</div>
-                    </div>
-                
-                    <div class="mySlides fade">
-                        <div class="numbertext">2 / 8</div>
-                        <img src="img/alessio.jpeg">
-                        <div class="text about_red">Alessio</div>
-                    </div>
-                
-                    <div class="mySlides fade">
-                        <div class="numbertext">3 / 8</div>
-                        <img src="img/roberto.jpeg">
-                        <div class="text about_red">Roberto</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">4 / 8</div>
-                        <img src="img/marco.jpeg">
-                        <div class="text about_red">Marco</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">5 / 8</div>
-                        <img src="img/omar.jpeg">
-                        <div class="text about_red">Omar</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">6 / 8</div>
-                        <img src="img/leonardo.jpeg">
-                        <div class="text about_red">Leonardo</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">7 / 8</div>
-                        <img src="img/salvatore.jpeg">
-                        <div class="text about_red">Salvatore</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">8 / 8</div>
-                        <img src="img/paolo.jpeg">
-                        <div class="text about_red">Paolo</div>
-                    </div>
-                
-                    <!-- Next and previous buttons -->
-                    <a class="prev" onclick="plusSlides(-1)"></a>
-                    <a class="next" onclick="plusSlides(1)"></a>
-                </div>
-                <br>
-                
-                <!-- The dots/circles -->
-                <div>
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
-                    <span class="dot" onclick="currentSlide(5)"></span>
-                    <span class="dot" onclick="currentSlide(6)"></span>
-                    <span class="dot" onclick="currentSlide(7)"></span>
-                    <span class="dot" onclick="currentSlide(8)"></span>
-                </div> --}}
-
-                <!-- SUBFOOTER -->
-                <div class="about_container2">
-                    <div>
-                        <ul class="subfooter-ul">
-                            <li>TrueDoctors</li>
-                            <li>Domande frequenti</li>
-                            <li>Psicologia On-line</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul class="subfooter-ul">
-                            <li>Scopri di più</li>
-                            <li>Tutte le recensioni</li>
-                            <li>Rassegna stampa</li>
-                            <li>Domande Frequenti</li>
-                            <li>Magazine</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul class="subfooter-ul">
-                            <li>Aspetti legali</li>
-                            <li>Privacy Policy</li>
-                            <li>Termini e condizioni</li>
-                            <li>Cookie Policy</li>
-                            <li>Avvertenza di rischio</li>
-                        </ul>
-                    </div>
-                </div>
-
+            
                 <!-- SOCIAL FOOTER -->
-
                 <div class="social-footer">
                     <i class="fab fa-facebook-square about_red"></i>
                     <i class="fab fa-instagram-square about_red"></i>
                     <i class="fab fa-linkedin about_red"></i>
                     <i class="fab fa-youtube about_red"></i>
                 </div>
-
         </div>
 
+        <script>
+            var navFixedTop = document.querySelector('header');
     
+            var body = document.getElementById('mainBody');
+            var btnMobileMenu = document.querySelector('.hamburger');
+            var menuMobile = document.querySelector('.menu-mobile');
+    
+            // APERTURA MOBILE MENU
+            btnMobileMenu.addEventListener('click', function() {
+                btnMobileMenu.classList.toggle('active');
+                if (btnMobileMenu.classList.contains('active')) {
+                    menuMobile.style.transform = "translateY(-0%)";
+                    body.style.overflow = "hidden";
+    
+                } else {
+                    menuMobile.style.transform = "translateY(-100%)";
+                    body.style.overflow = "auto";
+                }
+    
+            })
+    
+            // ATTIVAZIONE BOX_SHADOW DELLA NAVBAR ON SCROLL
+            window.addEventListener('scroll', function() {
+                navFixedTop.classList.toggle('nav_scrollOverHeader', window.scrollY > 10);
+            })
+
+            // SLIDESHOW
+            var sliderStart = 0;
+            var images = [{
+                    name: 'Alessio Petrelli',
+                    link: 'img/team/alessio.png'
+                },
+                {
+                    name: 'Carmine Bonavoglia',
+                    link: 'img/team/carmine.png'
+                }, {
+                    name: 'Marco Lepore',
+                    link: 'img/team/marco.jpeg'
+                }, {
+                    name: 'Roberto Attanasio',
+                    link: 'img/team/roberto.jpeg'
+                }, {
+                    name: 'Omar D\'Amico',
+                    link: 'img/team/omar.jpeg'
+                },
+            ];
+            var sliderArrowLeft = document.querySelector('.arrowLeft');
+            var sliderArrowRight = document.querySelector('.arrowRight');
+
+            var sliderTeam = document.querySelector('.sliderImg');
+            sliderTeam.src = images[sliderStart].link;
+            var sliderName = document.querySelector('.sliderName');
+            sliderName.innerHTML = images[sliderStart].name;
+
+            sliderArrowLeft.addEventListener('click', function() {
+                sliderStart--;
+                if (sliderStart < 0) {
+                    sliderStart = images.length - 1;
+                    sliderTeam.src = images[sliderStart].link;
+                    sliderName.innerHTML = images[sliderStart].name;
+                } else {
+                    sliderTeam.src = images[sliderStart].link;
+                    sliderName.innerHTML = images[sliderStart].name;
+                }
+            });
+
+            sliderArrowRight.addEventListener('click', function() {
+                sliderStart++;
+                if (sliderStart > 4) {
+                    sliderStart = 0;
+                    sliderTeam.src = images[sliderStart].link;
+                    sliderName.innerHTML = images[sliderStart].name;
+                } else {
+                    sliderTeam.src = images[sliderStart].link;
+                    sliderName.innerHTML = images[sliderStart].name;
+                }
+            });
+        </script>
 @endsection
