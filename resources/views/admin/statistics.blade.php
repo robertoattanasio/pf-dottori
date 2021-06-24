@@ -6,6 +6,20 @@
 
     <?php
     use App\Mark;
+    use App\Review; //Aggiunto adesso da me
+
+    //Aggiunto adesso da me
+    function monthlyMarks () {
+        
+    };
+
+    function monthlyReviewsNumber () {
+        
+    };
+
+    function totals () {
+        
+    };
 
     $marks_months = [
     [
@@ -91,14 +105,17 @@
 
     for ($i = 0; $i < count($marks_months); $i++) { 
         if (date('m', strtotime($review['created_at'])) == $marks_months[$i]['value']) {
+            // numero di recensioni mensili
             $marks_months[$i]['nr_reviews'] +=1;
             $marks_months[$i]['sum_marks'] += $review['mark'];}
         }
         $sum_marks +=$review['mark'];
         }
 
+        // totali - media voti complessivi
         if ($n_reviews !=0) {
-        $avrg_mark=$sum_marks / $n_reviews; 
+        $avrg_mark=$sum_marks / $n_reviews;
+        
         } 
     ?> 
         
@@ -114,34 +131,69 @@
             <div class="marks_container">
 
                 {{-- MEDIA VOTI MENSILE --}}
-                <div class="marks_section">
+                <div class="marks_section relative">
+                    <img src="{{asset('img/info-graphic-3.png')}}">
                     <h3>Media voti mensile:</h3>
                     <ul class="avrg_marks">
                         @for ($j = 0; $j < count($marks_months); $j++)
                             @if ($marks_months[$j]['nr_reviews'] == 0)
-                                <li>{{ $marks_months[$j]['month'] }} : n/d</li>
+                                <li>
+                                    {{ $marks_months[$j]['month'] }} :
+                                    <div class="stars_container">
+                                        <?php  
+                                        $starEmpty="<i class='far fa-star'></i>";
+                                        echo str_repeat($starEmpty, 5);
+                                    ?>
+                                    </div>
+                                    
+                                </li> 
                             @else
-                                <li>{{ $marks_months[$j]['month'] }} :
-                                    {{ $marks_months[$j]['sum_marks'] / $marks_months[$j]['nr_reviews'] }}</li>
+                                <?php   
+                                    $tmp = $marks_months[$j]['sum_marks'] / $marks_months[$j]['nr_reviews'];
+                                    $tpmFloored = floor($tmp);
+                                ?>
+
+                                <li>{{ $marks_months[$j]['month'] }} : 
+                                    <div class="stars_container">
+                                        <?php
+                                        $starEmpty="<i class='far fa-star'></i>";
+                                        $starFull="<i class='fas fa-star'></i>"; 
+                                        echo str_repeat($starFull, $tpmFloored);
+                                        echo str_repeat($starEmpty, 5 - $tpmFloored);
+                                    ?>
+                                    </div>
+                                    
+                                </li>                           
+                        
                                 @endif
                             @endfor
                     </ul>
                 </div>
-    
+
+                {{-- <?php $star="<i class='far fa-star'>"; echo str_repeat("$star", 2);?> --}}
+
                 {{-- RECENSIONI MENSILI --}}
-                <div class="marks_section">
+                <div class="marks_section relative">
+                    <img src="{{asset('img/info-graphic-3.png')}}">
                     <div class="reviews_section">
-                        <h3>Recensioni mensili:</h3>
+                        <h3>Numero recensioni mensili:</h3>
                         <ul class="avrg_reviews">
                             @for ($j = 0; $j < count($marks_months); $j++)
-                                <li>{{ $marks_months[$j]['month'] }} : {{ $marks_months[$j]['nr_reviews'] }}</li><br>
+                                <li>
+                                    {{ $marks_months[$j]['month'] }} :
+                                    <div>
+                                        {{ $marks_months[$j]['nr_reviews'] }}
+                                    </div>
+                                    
+                                </li>
                             @endfor
                         </ul>
                     </div>
                 </div>
     
                 {{-- TOTALI --}}
-                <div class="marks_section">
+                <div class="marks_section relative">
+                    <img src="{{asset('img/info-graphic-3.png')}}">
                     <div class="totals_section">
                         <h3>Totali:</h3>
                         @if ($avrg_mark == 0)

@@ -45,7 +45,7 @@
 
                 {{-- DOCTOR-PIC --}}
                 <div class="doctor-pic">
-                    <img src="{{ asset('storage/' . Auth::user()->profile_pic) }}">
+                    <img src="{{ asset('storage/'.Auth::user()->profile_pic) }}">
                 </div>
 
                 <div class="doctor-menu">

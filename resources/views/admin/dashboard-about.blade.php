@@ -13,12 +13,29 @@
         </div>
         <div class="doctor-right-bottom-container relative">
             <div class="personal_info">
-                <h4><span>Nome: </span> {{ Auth::user()->name }} {{ Auth::user()->surname }}</h4>
-                <h4><span>Indirizzo: </span> {{ Auth::user()->address }}, {{ Auth::user()->street_number }}</h4>
-                <h4><span>Città: </span> {{ Auth::user()->city }}</h4>
-                <h4><span>Provincia: </span> {{ Auth::user()->county }}</h4>
-                <h4><span id="email">Email: </span> {{ Auth::user()->email }}</h4>
-                <h4><span>Telefono: </span>+39 {{ Auth::user()->phone_number }}</h4>
+                <div class="card_info">
+                    <h4><span>Nome: </span> {{ Auth::user()->name }} {{ Auth::user()->surname }}</h4>
+                </div>
+                <div class="card_info">
+                    <h4><span>Indirizzo: </span> {{ Auth::user()->address }}, {{ Auth::user()->street_number }}</h4>
+                </div>
+                <div class="card_info">
+                    <h4><span>Città: </span> {{ Auth::user()->city }}</h4>
+                </div>
+                <div class="card_info">
+                    <h4><span>Provincia: </span> {{ Auth::user()->county }}</h4>
+                </div>
+                <div class="card_info">
+                    <h4><span id="email">Email: </span> {{ Auth::user()->email }}</h4>
+                </div>
+                <div class="card_info">
+                    <h4><span>Telefono: </span>+39 {{ Auth::user()->phone_number }}</h4>
+                </div>
+                
+                
+                
+                
+                
             </div>
 
         </div>
