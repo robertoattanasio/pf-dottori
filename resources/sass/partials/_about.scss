@@ -332,13 +332,16 @@ iframe {
     display: block;
     text-align: start;
     &:hover {
+        cursor: pointer;
         text-decoration-line: underline;
     }
     &:first-child {
+        cursor: none;
         font-weight: bold;
         margin-bottom: 20px;
     }
     &:first-child:hover {
+        cursor: inherit;
         text-decoration-line: none;
     }
 }
