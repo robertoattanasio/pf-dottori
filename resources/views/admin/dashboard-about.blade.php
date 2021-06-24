@@ -31,7 +31,8 @@
                 <div class="card_info">
                     <h4><span>Telefono: </span>+39 {{ Auth::user()->phone_number }}</h4>
                 </div>
-                
+
+                <a class="margin-top-20" href="{{route('infoDoctor', [Auth::user()->id])}}">Visualizza il tuo profilo online</a>
                 
                 
                 

@@ -13,7 +13,7 @@
         </div>
 
         <div class="doctor-right-bottom-container relative">
-            <form action="{{ route('return-edit-profile') }}" method="post">
+            <form action="{{ route('return-edit-profile') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
@@ -105,12 +105,15 @@
 
                 {{-- COUNTY --}}
                 <div class="form-auth-item">
-                    <label for="county">{{ __('County') }}</label>
+                    <label for="county">{{ __('Provincia') }}</label>
         
                     <div class="auth-item-input">
-                        <input id="county" value="{{ Auth::user()->county }}" type="text"
-                            class="form-control @error('county') is-invalid @enderror" name="county"
-                            value="{{ old('county') }}" required autocomplete="county" autofocus>
+        
+                        <select name="county">
+                            @foreach ($counties_name as $county_name)
+                                <option {{(Auth::user()->county == $county_name) ? "selected" : null}}>{{$county_name}}</option>
+                            @endforeach
+                        </select>
         
                         @error('county')
                             <span class="invalid-feedback" role="alert">
@@ -119,7 +122,7 @@
                         @enderror
                     </div>
                 </div>
-
+        
                 {{-- PROFILE PIC --}}
                 <div class="form-auth-item">
                     <label for="fname">Profile picture:</label>

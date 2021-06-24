@@ -50,55 +50,60 @@
     </div>
 
     {{-- DOCTOR CONTAINER --}}
-    <div class="doctors-container">
-        <h3>I nostri specialisti di punta</h3>
-        {{-- PARAGRAPH --}}
-        <p class="generic margin-top-10">Prenota in pochi clic servizi sanitari e socio-assistenziali, 7 giorni su 7, senza liste d'attesa.</p>
+    @if($sponsorized_users)
+        <div class="doctors-container">
+            <h3>I nostri specialisti di punta</h3>
+            {{-- PARAGRAPH --}}
+            <p class="generic margin-top-10">Prenota in pochi clic servizi sanitari e socio-assistenziali, 7 giorni su 7, senza liste d'attesa.</p>
 
-        {{-- DOCTOR SCROLL HORIZONTAL --}}
-        <div class="doctors-scroll-container margin-top-20">
+            {{-- DOCTOR SCROLL HORIZONTAL --}}
+            <div class="doctors-scroll-container margin-top-20">
 
-            @foreach ($sponsorized_users as $user)
-                {{-- DOCTOR CARD --}}
-                <div class="doctors-card {{$user['county']}}">
+                @foreach ($sponsorized_users as $user)
+                    {{-- DOCTOR CARD --}}
+                    <div class="doctors-card {{$user['county']}}">
 
-                    {{-- DOCTOR CARD INFO --}}
-                    <div class="doctors-card-info">
-                        <span></span>
-                        <span id="name">{{$user['name']}}</span>
-                        <span id="surname">{{$user['surname']}}</span>
-                        <div class="margin-top-10" id="county">{{$user['county']}}</div>
+                        {{-- DOCTOR CARD INFO --}}
+                        <div class="doctors-card-info">
+                            <span></span>
+                            @if ($user['profile_pic'])
+                                <img style="width: 100px;" src="{{ asset('storage/'. $user['profile_pic']) }}">
+                            @endif
+                                <span id="name">{{$user['name']}}</span>
+                            <span id="surname">{{$user['surname']}}</span>
+                            <div class="margin-top-10" id="county">{{$user['county']}}</div>
 
-                        <div class="doctors-card-specialistic margin-top-10">
-                            <ul>
-                                @if($user->specializations)
-                                    @foreach ($user->specializations->toArray() as $specialization)
-                                        <li class="specialistica">&bull; {{$specialization['name']}}</li>
-                                    @endforeach
-                                @endif
-                            </ul>
+                            <div class="doctors-card-specialistic margin-top-10">
+                                <ul>
+                                    @if($user->specializations)
+                                        @foreach ($user->specializations->toArray() as $specialization)
+                                            <li class="specialistica">&bull; {{$specialization['name']}}</li>
+                                        @endforeach
+                                    @endif
+                                </ul>
+                            </div>
                         </div>
+
+                        {{-- DOCTOR CARD VOTES --}}
+                        <div class="doctor-card-votes margin-top-10">
+                            @if($user['numero_recensioni'])
+                            <div id="media_voti">Media voti: {{$user['media_voti']}}/5</div>
+
+                            <div id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</div>
+                            @endif
+                        </div>
+
+                        {{-- @if ($user['specialization'])
+                        <p id="specialistica">{{$user['specialization']}}</p>
+                        @endif --}}
+                        <a class="margin-top-20" href="{{route('infoDoctor', [$user['id']])}}">Vedi informazioni specialista</a>
                     </div>
-
-                    {{-- DOCTOR CARD VOTES --}}
-                    <div class="doctor-card-votes margin-top-10">
-                        @if($user['numero_recensioni'])
-                        <div id="media_voti">Media voti: {{$user['media_voti']}}/5</div>
-
-                        <div id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</div>
-                        @endif
-                    </div>
-
-                    {{-- @if ($user['specialization'])
-                    <p id="specialistica">{{$user['specialization']}}</p>
-                    @endif --}}
-                    <a class="margin-top-20" href="{{route('infoDoctor', [$user['id']])}}">Vedi informazioni specialista</a>
-                </div>
-                {{-- FINE DOCTOR CARD --}}
-            @endforeach
+                    {{-- FINE DOCTOR CARD --}}
+                @endforeach
+            </div>
+            {{-- FINE DOCTOR SCROLL HORIZONTAL --}}
         </div>
-        {{-- FINE DOCTOR SCROLL HORIZONTAL --}}
-    </div>
+    @endif
     {{-- DOCTOR CONTAINER --}}
 
     {{-- SECTION PAYMENTS --}}
