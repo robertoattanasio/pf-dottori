@@ -9,21 +9,17 @@
     }
     /* INIZIO PAGINA ABOUT*/
     .bg-image-3 {
-        background-image: url("../img/info-graphic-8.png");
-        background-size: contain;
+        background-image: none;
     }
-    .about_container {
-        align-items: flex-start;
-    }
-    .about_container h1 {
-        font-size: 25px;
-    }
-
     .about_item_3 {
         display: none;
     }
     .about_card_container {
-        display: block;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .about_card {
+        height: fit-content!important;
     }
     /* FINE PAGINA ABOUT*/
     /*! INDEX */
@@ -49,6 +45,7 @@
                 width: 100%
             }
             .payments-right-container {
+                justify-content: center;
                 width: 100%;
                 margin-top: 30px;
             }
@@ -112,16 +109,12 @@
         }
     }
     /* INIZIO PAGINA ABOUT*/
-    .jumbotron-small,
-    .jumbotron-wrapper,
-    .jumbotron-left-container {
-        height: auto!important;
-    }
-    .bg-image-3 {
-        background-image: none;
-    }
     .about_container {
-        display: block;
+        @include main-padding;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
         height: auto;
     }
     .about_container2 {

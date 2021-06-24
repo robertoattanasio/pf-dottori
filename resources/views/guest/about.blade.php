@@ -1,10 +1,10 @@
 @extends('layouts.homepage')
 
-@section('pageTitle', 'Home')
+@section('pageTitle', 'Chi Siamo')
 
 @section('content')
         {{-- JUMBOTRON --}}
-        <div class="jumbotron-small bg-image-3">
+        <div class="jumbotron-small bg-image-3 bg-color-lightblue">
 
             {{-- JUMBOTRON WRAPPER --}}
             <div class="jumbotron-wrapper">
@@ -26,33 +26,32 @@
 
         <div class="about_container">
             <div class="about_item">
-                <h1>2021</h1>
-                <p>L'anno di nascita della nostra azienda.</p>
+                <h3>2021</h3>
+                <p class="generic margin-top-10">L'anno di nascita della nostra azienda.</p>
             </div>
             <div class="about_item">
-                <h1>+ 3 milioni</h1>
-                <p>I finanziamenti di chi ha creduto in noi.</p>
+                <h3>+ 3M</h3>
+                <p class="generic margin-top-10">I finanziamenti di chi ha creduto in noi.</p>
             </div>
             <div class="about_item">
-                <h1>+ 800</h1>
-                <p>I professionisti attivi nella nostra rete.</p>
+                <h3>+ 800</h3>
+                <p class="generic margin-top-10">I professionisti attivi nella nostra rete.</p>
             </div>
             <div class="about_item">
-                <h1>+ 4000</h1>
-                <p>Le famiglie che ci hanno già denunciato.</p>
+                <h3>+ 4000</h3>
+                <p class="generic margin-top-10">Le famiglie che ci hanno già denunciato.</p>
             </div>
         </div> 
 
-        <div class="about_main"> <!--deve occupare il 100% width -->
+        <div class="about_main">
             <div class="about_submain">
-                <div class="top_main"><!--deve occupare il 80% width -->
+                <div class="top_main">
                     <h2 class="about_red">Come funziona?</h2>
-                    <p>
+                    <p class="generic margin-top-10">
                         Abbiamo una rete nazionale che oggi conta 800 professionisti attivi, tra medici, 
                         personale sanitario e assistenti domiciliari in 10 delle principali città italiane. 
 
-                        <!-- Trigger/Open The Modal -->
-                        <span class="about_green about_bold" id="triggerModal">Il nostro servizio è attivo 7 giorni su 7, dalle 8 alle 20.
+                        <div class="about_green about_bold margin-top-10" id="triggerModal">Il nostro servizio è attivo 7 giorni su 7, dalle 8 alle 20.
 
                             <!-- The Modal -->
                             <div id="myModal" class="modal">
@@ -64,7 +63,7 @@
                                 </div>
 
                             </div>
-                        </span>
+                        </div>
                     </p> 
                 </div>
 
@@ -74,10 +73,10 @@
                             <i class="fas fa-notes-medical"></i>
                         </div>
                         <div>
-                            <p class="about_uppercase about_padding">SCEGLI LA SOLUZIONE</p> <!-- uppercase -->
+                            <p class="about_uppercase about_padding margin-top- margin-top-10">SCEGLI LA SOLUZIONE</p> <!-- uppercase -->
                         </div> 
                         <div>
-                            <p>
+                            <p class="generic margin-top-10">
                                 Offriamo un’ampia scelta di servizi sanitari per rispondere esattamente 
                                 a ciò di cui hai bisogno. Se hai un problema e non sai a chi rivolgerti, 
                                 il nostro team di esperti ti aiuterà ad individuare la soluzione più adatta a te.
@@ -90,10 +89,10 @@
                             <i class="fas fa-calendar-alt"></i>
                         </div>
                         <div>
-                            <p class="about_uppercase about_padding">PRENOTA LA SEDUTA</p> <!-- uppercase -->
+                            <p class="about_uppercase about_padding margin-top- margin-top-10">PRENOTA LA SEDUTA</p> <!-- uppercase -->
                         </div> 
                         <div>
-                            <p>
+                            <p class="generic margin-top-10">
                                 Contattaci o prenota direttamente online. Noi troveremo per te il miglior 
                                 professionista che faccia al caso tuo che ti guiderà durante l’intero percorso 
                                 terapeutico. Riceverai il servizio direttamente a casa, senza liste d’attesa.
@@ -106,10 +105,10 @@
                             <i class="fas fa-heartbeat"></i>
                         </div>
                         <div>
-                            <p class="about_uppercase about_padding">MIGLIORA LA TUA SALUTE</p> <!-- uppercase -->
+                            <p class="about_uppercase about_padding margin-top- margin-top-10">PER LA TUA SALUTE</p> <!-- uppercase -->
                         </div> 
                         <div>
-                            <p>
+                            <p class="generic margin-top-10">
                                 Rilassati e prenditi cura della tua salute o quella del tuo animale, 
                                 a tutto il resto pensiamo noi. Ti affiancheremo durante tutto il percorso di cura, 
                                 con un team di esperti disponibile 7 giorni su 7, anche in orario serale.
@@ -120,35 +119,32 @@
             </div>
 
             <div class="top_main">
-                <h1 class="about_red">Il Team</h1>
-            </div>
-            <div class="top_main">
                 <img src="img/info-graphic-26.png" alt="">
             </div>
-            <div class="top_main">
-                <h1 class="about_red">Sognatori, creativi e appassionati: vogliamo semplificare la sanità e renderla migliore per tutti.</h1>
-                <h1>Siamo il primo poliambulatorio digitale in Italia</h1>
-            </div>
 
-            <div class="about_container">
-                <div class="about_item_2">
-                    <div>
-                        <h3>An international remote working Team</h3>
-                    </div>
-                    <div>
-                        <p>
-                            Dopo Garibaldi e Mazzini anche TrueDoctors ha unificato l'Italia. <br>
-                            Convinti che culture diverse contribuiscano ad arricchire le persone coinvolte. <br>
-                            <span class="about_red">Lavora nel team persino uno di Potenza!</span> 
-                        </p>
-                    </div>
+            {{-- SECTION BANNER --}}
+            <section id="banner">
+                <div class="banner-container">
+                    <h2 class="banner">Sognatori, creativi e appassionati.<br>Vogliamo semplificare la sanità e renderla migliore per tutti.</h2>
                 </div>
-                <div class="about_item_3">
-                    <img src="img/info-graphic-27.png" alt="">
+            </section>
+
+            {{-- SECTION PAYMENTS --}}
+            <section id="payments">
+                <div class="payments-container">
+                    <div class="payments-left-container">
+                        <h3>Un Team Internazionale</h3>
+                        {{-- PARAGRAPH --}}
+                        <p class="generic margin-top-10">Prenota e paga in pochi click, in totale sicurezza: accettiamo carte di credito, bancomat e prepagate. Puoi inoltre effettuare pagamenti tramite bonifico per le spese superiori a 150€.</p>
+                    </div>
+                    <div class="payments-right-container">
+                        <img src="img/info-graphic-27.png" alt="">
+                    </div>
+
                 </div>
-            </div>
- 
-                <!-- Slideshow container -->
+            </section>
+
+                {{-- <!-- Slideshow container -->
                 <div class="slideshow-container">
 
                     <!-- Full-width images with number and caption text -->
@@ -216,7 +212,7 @@
                     <span class="dot" onclick="currentSlide(6)"></span>
                     <span class="dot" onclick="currentSlide(7)"></span>
                     <span class="dot" onclick="currentSlide(8)"></span>
-                </div>
+                </div> --}}
 
                 <!-- SUBFOOTER -->
                 <div class="about_container2">
@@ -249,7 +245,7 @@
 
                 <!-- SOCIAL FOOTER -->
 
-                <div>
+                <div class="social-footer">
                     <i class="fab fa-facebook-square about_red"></i>
                     <i class="fab fa-instagram-square about_red"></i>
                     <i class="fab fa-linkedin about_red"></i>
