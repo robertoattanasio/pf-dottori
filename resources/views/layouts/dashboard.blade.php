@@ -45,7 +45,11 @@
 
                 {{-- DOCTOR-PIC --}}
                 <div class="doctor-pic">
-                    <img src="{{ asset('storage/'.Auth::user()->profile_pic) }}">
+                    @if (Auth::user()->profile_pic)
+                        <img src="{{ asset('storage/'. Auth::user()->profile_pic) }}">
+                    @else 
+                        <img src="..\img\medico_default.png" alt="">
+                    @endif
                 </div>
 
                 <div class="doctor-menu">

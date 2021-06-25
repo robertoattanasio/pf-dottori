@@ -100,14 +100,12 @@ class AdminController extends Controller
 
         if (count($boost) > 2) {
             $import = Boost::where('id', $boost['boost_stuff'])->first()['price'];
-            // dd($payment);
-            Auth::user()->boosts()->sync($boost['boost_stuff']);
-    
+            // dd($payment);    
             return view('admin.payment', compact('import'));    
         } else {
             return redirect()->route('boost-profile');    
         }
-        
+
     }
 
     public function statistics()
@@ -135,14 +133,14 @@ class AdminController extends Controller
             $data['profile_pic'] = $image_path;
             // dd($data['profile_pic']);
         } else {
-            $data['profile_pic'] = null;
+            $data['profile_pic'] = Auth::user()->profile_pic;
         }
 
         if (array_key_exists('cv', $data)) {
             $file_path = Storage::put('post_files', $data['cv']);
             $data['cv'] = $file_path;
         } else {
-            $data['cv'] = null;
+            $data['cv'] = Auth::user()->cv;
         }
 
         Auth::user()->update($data);

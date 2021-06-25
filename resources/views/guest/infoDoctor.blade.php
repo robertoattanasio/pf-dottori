@@ -11,6 +11,8 @@
     <div class="info_doctor">
         @if ($user['profile_pic'])
             <img style="width: 100px;" src="{{ asset('storage/'. $user['profile_pic']) }}">
+        @else
+            <img src="..\img\medico_default.png" alt="">
         @endif
         <h2>{{$user['name']}} {{$user['surname']}}</h2>
         

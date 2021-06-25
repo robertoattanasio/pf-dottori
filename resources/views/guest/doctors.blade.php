@@ -40,6 +40,8 @@
                 <div class="card {{$user['county']}}" value="[{{$user['media_voti']}}, {{$user['numero_recensioni']}}]">
                     @if ($user['profile_pic'])
                         <img style="width: 100px;" src="{{ asset('storage/'. $user['profile_pic']) }}">
+                    @else 
+                        <img src="img\medico_default.png" alt="">
                     @endif
                     <p id="name">{{$user['name']}}</p>
                     <p id="surname">{{$user['surname']}}</p>

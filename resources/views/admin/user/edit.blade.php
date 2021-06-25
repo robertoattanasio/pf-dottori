@@ -4,7 +4,9 @@
 
 @section('content')
 
-    <?php include app_path() . '/Includes/counties.php'; ?>
+    <?php 
+    include app_path() . '/Includes/counties.php'; 
+    ?>
 
     {{-- DOCTOR RIGHT CONTAINER --}}
     <div class="doctor-right-container">
@@ -132,7 +134,7 @@
                 {{-- CV --}}
                 <div class="form-auth-item">
                     <label for="fname">Curriculum vitae:</label>
-                    <input type="file" value="{{ 'storage/' . Auth::user()->cv }}" name="cv">
+                    <input type="file" name="cv" value="{{ 'storage/' . Auth::user()->cv }}" name="cv">
                 </div>
 
                 {{-- PHONE NUMBER --}}
