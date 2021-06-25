@@ -191,6 +191,10 @@ button.collaborate:hover {
   background-color: #cef5f2;
 }
 
+.bg-color-lightgrey {
+  background-color: #f5f8ff;
+}
+
 .nav_scrollOverHeader {
   -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
   box-shadow: 0px 6px 5px -6px #a1a1a1;
@@ -873,6 +877,57 @@ input[type=number] {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.psyco_main {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+}
+.psyco_main .psyco_container {
+  padding: 50px 0;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.psyco_main .psyco_container .psyco_wrapper {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+}
+.psyco_main .psyco_container .psyco_wrapper .psyco_left_container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  flex-flow: column nowrap;
+}
+.psyco_main .psyco_container .psyco_wrapper .psyco_right_container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.psyco_main .psyco_container .psyco_wrapper .psyco_right_container img {
+  width: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.psyco_main .psyco_container .psyco_card {
+  width: calc(100% / 3);
+  min-height: 450px;
+  background-color: #f5f8ff;
+  color: #224760;
+  padding: 20px;
+}
+.psyco_main .psyco_container .psyco_card i {
+  font-size: 100px;
+  padding: 10px;
 }
 
 /*! MAIN CARD */
