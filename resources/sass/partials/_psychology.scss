@@ -14,12 +14,17 @@
     justify-content: center;
 }
 
+.psyco_green{
+    color: #00ccbc;
+}
+
 .psyco_main {
     width: 100%;
     background-color: white;
     text-align: center;
     
     .psyco_container {
+        width: 100%;
         @include main-padding;
         .psyco_wrapper{
             @include main-wrapper;
@@ -50,14 +55,101 @@
         gap: 20px;
         .psyco_card{
             width: calc(100% / 3);
-            min-height: 450px;
-            background-color: $light-grey;
+            min-height: 400px;
             color: $color-font-primary;
-            padding: 20px;
-            i {
-                font-size: 100px;
-                padding: 10px;
+            padding: 20px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            a {
+                font-weight: 600;
+                &:hover{
+                    text-decoration: underline;
+                }
             }
+            .img_container{
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                position: relative;
+                .img_circle{
+                    width: 60px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            button{
+                background-color: white;
+                border: 1px solid $color-primary;
+                color: $color-primary;
+                padding: 15px 50px;
+                &:hover{
+                    color: white;
+                    background-color: $color-primary;
+                    transition: .4s ease-in-out;
+                }
+            }
+        }
+        .psyco_mini_container{
+            @include main-padding;
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            flex-flow: wrap;
+            gap: 20px;
+            .psyco_card_mini{
+                width: calc(100% / 2 - 40px);
+                min-height: 200px;
+                background-color: #fff;
+                padding: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                &:hover{
+                    background-color:#00ccbc;
+                    color: #00ccbc;
+                    padding: 0;
+                }
+            }
+            .ms_position{
+                position: relative;
+                
+                .ms_layover{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(0, 0, 0, 0.0);
+                    color: transparent;
+                    &:hover{
+                        cursor: pointer;
+                        color: white;
+                        padding: 20px;
+                    }
+                }
+                .fas{
+                    position: absolute;
+                    bottom: 5%;
+                    right: 5%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        .card_shadow{
+            @include box-shadow-dashboard-card;
         }
     }
 }
+
+/* 
+.bg-color-lightgreen{
+    background-color: $lighter-green;
+}
+
+.bg-color-lightgrey{
+    background-color: $light-grey;
+}
+*/

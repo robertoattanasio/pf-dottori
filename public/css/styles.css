@@ -195,6 +195,10 @@ button.collaborate:hover {
   background-color: #f5f8ff;
 }
 
+.bg-color-lightgreen {
+  background-color: #cfe6ea;
+}
+
 .nav_scrollOverHeader {
   -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
   box-shadow: 0px 6px 5px -6px #a1a1a1;
@@ -926,12 +930,17 @@ input[type=number] {
   justify-content: center;
 }
 
+.psyco_green {
+  color: #00ccbc;
+}
+
 .psyco_main {
   width: 100%;
   background-color: white;
   text-align: center;
 }
 .psyco_main .psyco_container {
+  width: 100%;
   padding: 50px 0;
   width: 100%;
   height: -webkit-fit-content;
@@ -967,16 +976,102 @@ input[type=number] {
 }
 .psyco_main .psyco_container .psyco_card {
   width: calc(100% / 3);
-  min-height: 450px;
-  background-color: #f5f8ff;
+  min-height: 400px;
   color: #224760;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.psyco_main .psyco_container .psyco_card a {
+  font-weight: 600;
+}
+.psyco_main .psyco_container .psyco_card a:hover {
+  text-decoration: underline;
+}
+.psyco_main .psyco_container .psyco_card .img_container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+}
+.psyco_main .psyco_container .psyco_card .img_container .img_circle {
+  width: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.psyco_main .psyco_container .psyco_card button {
+  background-color: white;
+  border: 1px solid #1c4d7c;
+  color: #1c4d7c;
+  padding: 15px 50px;
+}
+.psyco_main .psyco_container .psyco_card button:hover {
+  color: white;
+  background-color: #1c4d7c;
+  transition: 0.4s ease-in-out;
+}
+.psyco_main .psyco_container .psyco_mini_container {
+  padding: 50px 0;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-flow: wrap;
+  gap: 20px;
+}
+.psyco_main .psyco_container .psyco_mini_container .psyco_card_mini {
+  width: calc(100% / 2 - 40px);
+  min-height: 200px;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.psyco_main .psyco_container .psyco_mini_container .psyco_card_mini:hover {
+  background-color: #00ccbc;
+  color: #00ccbc;
+  padding: 0;
+}
+.psyco_main .psyco_container .psyco_mini_container .ms_position {
+  position: relative;
+}
+.psyco_main .psyco_container .psyco_mini_container .ms_position .ms_layover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: transparent;
+}
+.psyco_main .psyco_container .psyco_mini_container .ms_position .ms_layover:hover {
+  cursor: pointer;
+  color: white;
   padding: 20px;
 }
-.psyco_main .psyco_container .psyco_card i {
-  font-size: 100px;
-  padding: 10px;
+.psyco_main .psyco_container .psyco_mini_container .ms_position .fas {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  transform: translate(-50%, -50%);
+}
+.psyco_main .psyco_container .card_shadow {
+  box-shadow: #a1a1a1 0px 5px 15px;
+  cursor: pointer;
 }
 
+/* 
+.bg-color-lightgreen{
+    background-color: $lighter-green;
+}
+
+.bg-color-lightgrey{
+    background-color: $light-grey;
+}
+*/
 /*! MAIN CARD */
 main.card {
   width: 100%;
@@ -1606,6 +1701,47 @@ footer .lower_footer ul li {
     height: -moz-fit-content;
     height: fit-content;
     padding: 50px 0;
+  .psyco_container {
+    width: 100%;
+    flex-flow: column nowrap;
+    text-align: center !important;
+  }
+  .psyco_container .psyco_wrapper {
+    width: 100%;
+    flex-flow: column nowrap;
+    align-items: space-around;
+    justify-content: center;
+  }
+  .psyco_container .psyco_wrapper .psyco_left_container {
+    width: 100% !important;
+  }
+  .psyco_container .psyco_wrapper .psyco_right_container {
+    display: none !important;
+  }
+  .psyco_container .psyco_card {
+    width: 100% !important;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+  .psyco_container .psyco_mini_container {
+    justify-content: center !important;
+    align-content: center;
+  }
+  .psyco_container .psyco_mini_container .psyco_card_mini {
+    width: calc(100% / 2);
+  }
+
+  /* /Psicologia Online */
+  /* Pagina Login */
+  /* /Login */
+  /* Pagina Registrati */
+  /* /Registrati */
+}
+/*! QUERY MOBILE */
+@media screen and (max-width: 767px) {
+  section#sliderTeam {
+    height: 400px;
   }
 
   .upper_footer {
@@ -1716,4 +1852,10 @@ footer .lower_footer ul li {
   .half-size {
     width: 100%;
   }
+
+  .psyco_card_mini {
+    width: 100% !important;
+  }
+
+  /* /Psicologia Online */
 }

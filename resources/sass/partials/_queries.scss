@@ -110,6 +110,72 @@
         .menu-mobile li {
             font-size: 24px!important;
         }
+    }
+    /* Pagina FAQ */
+    .bg-image {
+        height: 100%;
+        background-image: url(../img/info-graphic-11.png);
+        background-repeat: no-repeat;
+        background-size: 20%;
+        background-position: right;
+    }
+    /* /FAQ */
+    /* Pagina Psicologia Online */
+    .bg-image-2 {
+        height: 100%;
+        background-image: url(../img/info-graphic-12.png);
+        background-repeat: no-repeat;
+        background-position-y: 50%;
+        background-position-x: 90%;
+    }
+    .half-size {
+        width: 70%;
+    }
+
+    .psyco_container{
+        width: 100%;
+        flex-flow: column nowrap;
+        text-align: center!important;
+        .psyco_wrapper {
+            width: 100%;
+            flex-flow: column nowrap;
+            align-items: space-around;
+            justify-content: center;
+            .psyco_left_container {
+                width: 100%!important;
+            }
+            .psyco_right_container {
+                display: none!important;
+            }
+        }
+        .psyco_card{
+            width: 100%!important;
+            height: fit-content!important;
+        }
+        .psyco_mini_container{
+            justify-content: center!important;
+            align-content: center;
+            .psyco_card_mini{
+                width: calc(100% / 2);
+            }
+        }
+    }
+
+
+    /* /Psicologia Online */
+    /* Pagina Login */
+    /* /Login */
+    /* Pagina Registrati */
+    /* /Registrati */
+}
+
+
+/*! QUERY MOBILE */
+
+@media screen and (max-width: 767px) {
+    section#sliderTeam {
+        height: 400px;
+        .slider-container {
         /*! INDEX */
         select.index-select {
             width: 100%;
@@ -178,3 +244,45 @@
             width: 100%;
         }
     }
+    /* INIZIO PAGINA ABOUT*/
+    .about_container {
+        @include main-padding;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        height: auto;
+    }
+    .about_container2 {
+        display: block;
+        height: auto;
+    }
+    .about_item_2,
+    .about_item_3 {
+        display: none;
+    }
+    .fab {
+        font-size: 30px;
+    }
+    /* FINE PAGINA ABOUT*/
+    /* Pagina FAQ */
+    .bg-image {
+        height: 100%;
+        background-image: none;
+    }
+    /* /FAQ */
+    /* Pagina Psicologia Online */
+    .bg-image-2 {
+        height: 100%;
+        background-image: none;
+    }
+    .half-size {
+        width: 100%;
+    }
+
+
+    .psyco_card_mini{
+        width: 100%!important;
+    }
+    /* /Psicologia Online */
+}

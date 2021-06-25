@@ -198,6 +198,10 @@ button.collaborate {
     background-color: $light-grey;
 }
 
+.bg-color-lightgreen{
+    background-color: $lighter-green;
+}
+
 // CLASSE MODULARE PER IL BOX-SHADOW DELLA NAVBAR
 .nav_scrollOverHeader {
     @include box-shadow;
