@@ -1,63 +1,149 @@
 @extends('layouts.homepage')
 
-@section('pageTitle', 'doctors')
+@section('pageTitle', 'Ricerca Dottori')
 
 @section('content')
 
 <?php include(app_path().'/Includes/counties.php'); ?>
 
-    <div class="ricerca_avanzata">
-        <label for="cerca">Cerca per citta':</label>
-        <select id="countySelect">
-            <option value="Tutti">- Tutti i risultati -</option>
-            @foreach ($counties_name as $county_name)
-                <option value="{{$county_name}}">{{$county_name}}</option>
-            @endforeach
-        </select>
-    
-        <label for="cerca">Cerca per voti:</label>
-        <select id="markSelect">
-            <option value="0">- Tutti i risultati -</option>
-            <option value="4">>=4</option>
-            <option value="3">>=3</option>
-        </select>
-    
-        <label for="cerca">Cerca per numero recensioni:</label>
-        <select id="reviewSelect">
-            <option value="0">- Tutti i risultati -</option>
-            <option value="5">>=5</option>
-            <option value="2">>=2</option>
-        </select>   
+    {{-- JUMBOTRON --}}
+    <div class="jumbotron-big">
+
+        {{-- JUMBOTRON WRAPPER --}}
+        <div class="jumbotron-wrapper">
+
+            {{-- JUMBOTRON LEFT CONTAINER --}}
+            <div class="jumbotron-left-container">
+
+                {{-- H2 TITLE --}}
+                <h2>Visite a domicilio, videoconsulti e assistenza domiciliare</h2>
+                
+                {{-- PARAGRAPH --}}
+                <p class="generic margin-top-10">Prenota in pochi clic servizi sanitari e socio-assistenziali, 7 giorni su 7, senza liste d'attesa.</p>
+
+                {{-- H3 SEARCH --}}
+                <h4 class="margin-top-80">I nostri dottori per tutte le tue esigenze</h4>
+
+                <div class="search-container margin-top-30">
+                    <select id="countySelect" class="index-select">
+                        <option value="Tutti">Cerca nella tua città</option>
+
+                        @foreach ($counties_name as $county_name)
+                            <option value="{{$county_name}}">{{$county_name}}</option>
+                        @endforeach
+                    </select>
+
+                    <div class="search-container margin-top-10">
+                        <select id="markSelect" class="index-select">
+                            <option value="0">Cerca per voti</option>
+
+                            <option value="4">>=4</option>
+                            <option value="3">>=3</option>
+                        </select>
+                    </div>
         
-        <button id="search_doctors">Ricerca</button>
+                    <div class="search-container margin-top-10">
+                        <select id="reviewSelect" class="index-select">
+                            <option value="0">Cerca per numero recensioni</option>
+
+                            <option value="5">>=5</option>
+                            <option value="2">>=2</option>
+                        </select>   
+                    </div>
+
+                    <button id="search_doctors" class="search-btn margin-top-30">Ricerca</button>
+
+                </div>
+
+            </div>
+            {{-- FINE JUMBOTRON LEFT CONTAINER --}}
+
+            <div class="jumbotron-right-container">
+                <img src="img/info-graphic-1.png" alt="">
+            </div>
+
+        </div>
     </div>
 
-    <div class="results">
-        @if (count($users) == 0)
-            <h3>Nessun risultato.</h3>
-        @else
+    <div class="doctors-container">
+        <div class="doctors-scroll-container">
+
             @foreach ($users as $user)
-                <div class="card {{$user['county']}}" value="[{{$user['media_voti']}}, {{$user['numero_recensioni']}}]">
-                    @if ($user['profile_pic'])
-                        <img style="width: 100px;" src="{{ asset('storage/'. $user['profile_pic']) }}">
-                    @else 
-                        <img src="img\medico_default.png" alt="">
-                    @endif
-                    <p id="name">{{$user['name']}}</p>
-                    <p id="surname">{{$user['surname']}}</p>
-                    <p id="county">{{$user['county']}}</p>
-                    @if($user['numero_recensioni'])
-                    <p id="media_voti">Media voti: {{$user['media_voti']}}</p>
-                    <p id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</p>
-                    @endif
-                    <a href="{{route('infoDoctor', [$user['id']])}}">Vedi informazioni specialista</a>
+                {{-- DOCTOR CARD --}}
+                <div class="doctor-card {{$user['county']}}" value="[{{$user['media_voti']}}, {{$user['numero_recensioni']}}]">
+
+                    {{-- DOCTOR CARD PHOTO --}}
+                    <div class="doctor-card-pic">
+                        @if ($user['profile_pic'])
+                            <img src="{{ asset('storage/'. $user['profile_pic']) }}">
+                        @else 
+                            <img src="img\medico_default.png" alt="">
+                        @endif
+                    </div>
+
+                    {{-- DOCTOR CARD INFO --}}
+                    <div class="doctor-card-info margin-top-20">
+                        <span id="name">{{$user['name']}}</span>
+                        <span id="surname">{{$user['surname']}}</span>
+                        <div class="margin-top-10" id="county">{{$user['county']}}</div>
+                    </div>
+
+                    {{-- DOCTOR CARD SPECIALISTIC --}}
+                    <div class="doctor-card-specialistic margin-top-10">
+                        {{-- <ul>
+                            @if($user->specializations)
+                                @foreach ($user->specializations->toArray() as $specialization)
+                                    <li class="specialistica">&bull; {{$specialization['name']}}</li>
+                                @endforeach
+                            @endif
+                        </ul> --}}
+                    </div>
+
+                    {{-- DOCTOR CARD VOTES --}}
+                    <div class="doctor-card-votes margin-top-10">
+                        @if($user['numero_recensioni'])
+                            <div id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</div>
+
+                            <div id="media_voti">Media voti: {{$user['media_voti']}}/5</div>
+                        @endif
+                    </div>
+
+                    {{-- DOCTOR CARD BUTTON DETAILS --}}
+                    <a class="btn-doctor-info margin-top-20" href="{{route('infoDoctor', [$user['id']])}}">Vedi informazioni specialista</a>
+                    
                 </div>
-            @endforeach 
-        @endif
+                {{-- FINE DOCTOR CARD --}}
+            @endforeach
+        </div>
+        {{-- FINE DOCTOR SCROLL HORIZONTAL --}}
     </div>
 
 
     <script>
+        var navFixedTop = document.querySelector('header');
+
+        var body = document.getElementById('mainBody');
+        var btnMobileMenu = document.querySelector('.hamburger');
+        var menuMobile = document.querySelector('.menu-mobile');
+
+        // APERTURA MOBILE MENU
+        btnMobileMenu.addEventListener('click', function() {
+            btnMobileMenu.classList.toggle('active');
+            if (btnMobileMenu.classList.contains('active')) {
+                menuMobile.style.transform = "translateY(-0%)";
+                body.style.overflow = "hidden";
+
+            } else {
+                menuMobile.style.transform = "translateY(-100%)";
+                body.style.overflow = "auto";
+            }
+
+        })
+
+        // ATTIVAZIONE BOX_SHADOW DELLA NAVBAR ON SCROLL
+        window.addEventListener('scroll', function() {
+            navFixedTop.classList.toggle('nav_scrollOverHeader', window.scrollY > 10);
+        })
 
         // QUESTA RIGA SERVE SE VUOI VEDERE IN CONSOLE LOG L'ARRAY USERS IN CONSOLELOG JAVASCRIPT
         // users = <?php echo json_encode($users) ?>;
@@ -66,9 +152,9 @@
             var county_selected = document.getElementById('countySelect').value;
             var review_selected = document.getElementById('reviewSelect').value;
             var mark_selected = document.getElementById('markSelect').value;
-            console.log(mark_selected);
-            console.log(review_selected);
-            var none = document.getElementsByClassName('card');
+            // console.log(mark_selected);
+            // console.log(review_selected);
+            var none = document.getElementsByClassName('doctor-card');
 
             if (county_selected == "Tutti") {
                 // console.log('tutti');
@@ -101,11 +187,8 @@
                     if (JSON.parse(block[ii].getAttribute('value'))[0] >= mark_selected && JSON.parse(block[ii].getAttribute('value'))[1] >= review_selected) {
                         block[ii].classList.remove("none");
                     }
-
                 }
-
             } 
-
         });
 
     </script>

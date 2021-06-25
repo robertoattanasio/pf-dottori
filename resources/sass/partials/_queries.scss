@@ -95,8 +95,12 @@
             }
         }
         /*! LOGIN */
+        main.card {
+            background-color: $color-primary;
+        }
         .wrapper-auth {
-            width: 80%!important;
+            width: 100%!important;
+            box-shadow: none!important;
         }
     }
     /*! QUERY MOBILE */

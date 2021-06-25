@@ -477,22 +477,67 @@ main.home .jumbotron-small {
 }
 .doctors-container .doctors-scroll-container {
   width: 100%;
-  height: 520px;
-  overflow-x: auto;
+  height: 570px;
+  display: flex;
+  align-items: center;
   white-space: nowrap;
+  flex-flow: row;
+  overflow-x: scroll;
+  gap: 10px;
 }
-.doctors-container .doctors-scroll-container .doctors-card {
-  display: inline-block;
+.doctors-container .doctors-scroll-container .doctor-card {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 350px;
   color: white;
-  width: 400px;
   height: 500px;
   padding: 20px;
   background-color: #528f87;
   -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
   box-shadow: 0px 6px 5px -6px #a1a1a1;
 }
-.doctors-container .doctors-scroll-container .doctors-card ul li {
+.doctors-container .doctors-scroll-container .doctor-card .doctor-card-pic {
+  width: 120px;
+  height: 120px;
+  align-self: center;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #fafafa;
+}
+.doctors-container .doctors-scroll-container .doctor-card .doctor-card-pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.doctors-container .doctors-scroll-container .doctor-card .doctor-card-info {
+  flex: 0 0 auto;
+}
+.doctors-container .doctors-scroll-container .doctor-card .doctor-card-specialistic {
+  flex: 1 1 auto;
+}
+.doctors-container .doctors-scroll-container .doctor-card .doctor-card-specialistic ul li {
   display: block;
+}
+.doctors-container .doctors-scroll-container .doctor-card a.btn-doctor-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  width: 100%;
+  height: 50px;
+  padding: 5px 15px;
+  border: 1px solid #fafafa;
+  transition: 200ms ease-in-out;
+}
+.doctors-container .doctors-scroll-container .doctor-card a.btn-doctor-info:hover {
+  background-color: white;
+  color: #528f87;
 }
 
 section#payments {
@@ -1578,8 +1623,13 @@ footer .lower_footer ul li {
   }
 
   /*! LOGIN */
+  main.card {
+    background-color: #1c4d7c;
+  }
+
   .wrapper-auth {
-    width: 80% !important;
+    width: 100% !important;
+    box-shadow: none !important;
   }
 }
 /*! QUERY MOBILE */
