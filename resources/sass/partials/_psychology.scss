@@ -13,3 +13,51 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.psyco_main {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    
+    .psyco_container {
+        @include main-padding;
+        .psyco_wrapper{
+            @include main-wrapper;
+            display: flex;
+            .psyco_left_container{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            flex-flow: column nowrap;
+            }
+            .psyco_right_container{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-end;
+                img {
+                    width: 50%;
+                    object-fit: contain;
+                }
+            }
+        }
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        .psyco_card{
+            width: calc(100% / 3);
+            min-height: 450px;
+            background-color: $light-grey;
+            color: $color-font-primary;
+            padding: 20px;
+            i {
+                font-size: 100px;
+                padding: 10px;
+            }
+        }
+    }
+}
