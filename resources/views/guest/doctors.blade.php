@@ -47,8 +47,8 @@
                     <p id="surname">{{$user['surname']}}</p>
                     <p id="county">{{$user['county']}}</p>
                     @if($user['numero_recensioni'])
-                    <p id="media_voti">Media voti: {{$user['media_voti']}}</p>
-                    <p id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</p>
+                        <p id="media_voti">Media voti: {{$user['media_voti']}}</p>
+                        <p id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</p>
                     @endif
                     <a href="{{route('infoDoctor', [$user['id']])}}">Vedi informazioni specialista</a>
                 </div>

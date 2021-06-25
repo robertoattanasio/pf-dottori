@@ -8,6 +8,7 @@ use App\Boost;
 use App\Message;
 use App\Reviews;
 use App\Mark;
+use App\Receipt;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use App\Mail\SendNewMail;
@@ -88,8 +89,28 @@ class AdminController extends Controller
 
     public function sponsorizeUser()
     {
+        $receipts = Receipt::where('user_id', Auth::user()->id)->get()->toArray();
         $boosts = Boost::all();
-        return view('admin.boost', compact('boosts'));
+        $is_sponsorized = [
+            'success' => false,
+            'expires' => ''
+        ];
+
+        if ($receipts) {
+
+            foreach ($receipts as $receipt) {
+
+                if ($receipt['expires_at'] > date("Y-m-d h:i:sa")) {
+                    $is_sponsorized['success'] = true;
+                    $is_sponsorized['expires'] = $receipt['expires_at'];
+                    return view('admin.boost', compact('boosts'), compact('is_sponsorized'));
+                }
+
+            }
+
+        }
+
+        return view('admin.boost', compact('boosts'), compact('is_sponsorized'));
     }
 
     public function addSponsorization(Request $request)

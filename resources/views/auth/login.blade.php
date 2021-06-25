@@ -42,13 +42,13 @@
                 </div>
             </div>
 
-            <div class="form-auth-item">
+            {{-- <div class="form-auth-item">
                 <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                 <label class="" for="remember">
                     {{ __('Ricordami') }}
                 </label>
-            </div>
+            </div> --}}
 
             <div class="form-auth-item">
                 <div class="button-auth">

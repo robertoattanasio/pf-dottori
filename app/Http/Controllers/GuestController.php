@@ -9,6 +9,7 @@ use App\Mark;
 use App\Review;
 use App\Message;
 use App\Boost;
+use App\Receipt;
 
 class GuestController extends Controller
 {
@@ -27,23 +28,34 @@ class GuestController extends Controller
 
                 if ($users[$i]->boosts->contains($boost)) {
                     
-                    // dd($users[$i]);
+                    $receipts = Receipt::where('user_id', $users[$i]['id'])->get()->toArray();
+            
+                    if ($receipts) {
+            
+                        foreach ($receipts as $receipt) {
+            
+                            if ($receipt['expires_at'] > date("Y-m-d h:i:sa")) {
+                                $somma_voti = 0;
+                                $media_voti = 0;
+                                $numero_recensioni = 0;
+                                $reviews = Review::where('user_id', $users[$i]['id'])->get();
+                                foreach ($reviews as $review) {
+                                    $somma_voti += Mark::where('id', $review['mark_id'])->first()['mark'];
+                                }
+                                if (count($reviews) != 0) {
+                                    $media_voti = $somma_voti/count($reviews);
+                                }
+                    
+                                $users[$i]['media_voti'] = $media_voti;
+                                $users[$i]['numero_recensioni'] = count($reviews);
+                    
+                                array_push($sponsorized_users, $users[$i]);            
+                            }
+            
+                        }
+            
+                    }            
 
-                    $somma_voti = 0;
-                    $media_voti = 0;
-                    $numero_recensioni = 0;
-                    $reviews = Review::where('user_id', $users[$i]['id'])->get();
-                    foreach ($reviews as $review) {
-                        $somma_voti += Mark::where('id', $review['mark_id'])->first()['mark'];
-                    }
-                    if (count($reviews) != 0) {
-                        $media_voti = $somma_voti/count($reviews);
-                    }
-        
-                    $users[$i]['media_voti'] = $media_voti;
-                    $users[$i]['numero_recensioni'] = count($reviews);
-        
-                    array_push($sponsorized_users, $users[$i]);
                 }    
 
             }
@@ -91,31 +103,43 @@ class GuestController extends Controller
         for ($i = 0; $i < count($users); $i++) {
             $user = User::where('id', $users[$i])->first();
 
+            
             foreach ($boosts as $boost) {
 
                 if ($user->boosts->contains($boost)) {
-                    // dd($user);
-                    $somma_voti = 0;
-                    $media_voti = 0;
-                    $numero_recensioni = 0;
-                    $reviews = Review::where('user_id', $user['id'])->get();
-                    foreach ($reviews as $review) {
-                        $somma_voti += Mark::where('id', $review['mark_id'])->first()['mark'];
+
+                    $receipts = Receipt::where('user_id', $users[$i]['id'])->get()->toArray();
+            
+                    if ($receipts) {
+            
+                        foreach ($receipts as $receipt) {
+            
+                            if ($receipt['expires_at'] > date("Y-m-d h:i:sa")) {
+                                // dd($user);
+                                $somma_voti = 0;
+                                $media_voti = 0;
+                                $numero_recensioni = 0;
+                                $reviews = Review::where('user_id', $user['id'])->get();
+                                foreach ($reviews as $review) {
+                                    $somma_voti += Mark::where('id', $review['mark_id'])->first()['mark'];
+                                }
+                                if (count($reviews) != 0) {
+                                    $media_voti = $somma_voti/count($reviews);
+                                }
+                    
+                                $user['media_voti'] = $media_voti;
+                                $user['numero_recensioni'] = count($reviews);
+                                // dd($user);
+                                $v = $users[$contatore];
+                                // dd($v);
+                                $users[$contatore] = $user;
+                                // dd($users[$contatore]);
+                                $users[$i] = $v;
+                                $contatore += 1;
+                                // dd($contatore);
+                            }
+                        }
                     }
-                    if (count($reviews) != 0) {
-                        $media_voti = $somma_voti/count($reviews);
-                    }
-        
-                    $user['media_voti'] = $media_voti;
-                    $user['numero_recensioni'] = count($reviews);
-                    // dd($user);
-                    $v = $users[$contatore];
-                    // dd($v);
-                    $users[$contatore] = $user;
-                    // dd($users[$contatore]);
-                    $users[$i] = $v;
-                    $contatore += 1;
-                    // dd($contatore);
                 }    
 
             }
