@@ -328,6 +328,8 @@ header .header-wrapper nav.nav-desktop {
   align-items: center;
 }
 header .header-wrapper nav.nav-desktop li {
+  padding-bottom: 10px;
+  border-bottom: 1px solid transparent;
   margin-right: 20px;
 }
 header .header-wrapper nav.nav-desktop li:last-child {
@@ -349,7 +351,7 @@ header .header-wrapper nav.nav-desktop li:nth-child(5):hover {
   background-color: #1c4d7c;
 }
 header .header-wrapper nav.nav-desktop li:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid #1c4d7c;
 }
 header .header-wrapper nav.nav-mobile {
   width: 80%;
@@ -1359,11 +1361,15 @@ footer {
   background-color: #1c4d7c;
   font-size: 0.8em;
 }
-footer p, footer a, footer li {
+footer p,
+footer a,
+footer li {
   padding-bottom: 10px;
   border-bottom: 1px solid transparent;
 }
-footer p:hover, footer a:hover, footer li:hover {
+footer p:hover,
+footer a:hover,
+footer li:hover {
   border-bottom: 1px solid #f6f8fe;
   cursor: pointer;
 }
@@ -1397,8 +1403,9 @@ footer .lower_footer ul li {
   margin-bottom: 10px;
 }
 
-/*! NAVBAR */
+/*! TABLET */
 @media screen and (max-width: 1169px) {
+  /*! NAVBAR */
   nav.nav-desktop {
     display: none !important;
   }
@@ -1407,7 +1414,7 @@ footer .lower_footer ul li {
     display: flex !important;
   }
 
-  /* INIZIO PAGINA ABOUT*/
+  /* PAGINA ABOUT*/
   .bg-image-3 {
     background-image: none;
   }
@@ -1427,7 +1434,6 @@ footer .lower_footer ul li {
     height: fit-content !important;
   }
 
-  /* FINE PAGINA ABOUT*/
   /*! INDEX */
   .jumbotron-big {
     width: 100%;
@@ -1473,7 +1479,7 @@ footer .lower_footer ul li {
     font-size: 40px;
   }
 
-  /* Pagina FAQ */
+  /* PAGINA FAQ */
   .bg-image {
     height: 100%;
     background-image: url(../img/info-graphic-11.png);
@@ -1482,8 +1488,7 @@ footer .lower_footer ul li {
     background-position: right;
   }
 
-  /* /FAQ */
-  /* Pagina Psicologia Online */
+  /* PAGINA PSICOLOGIA ONLINE */
   .bg-image-2 {
     height: 100%;
     background-image: url(../img/info-graphic-12.png);
@@ -1496,34 +1501,30 @@ footer .lower_footer ul li {
     width: 70%;
   }
 
-  /* /Psicologia Online */
-  /* Pagina Login */
-  /* /Login */
-  /* Pagina Registrati */
-  /* /Registrati */
+  /*! FOOTER */
+  footer {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 50px 0;
+  }
+
+  .upper_footer {
+    flex-flow: column nowrap;
+  }
+  .upper_footer * {
+    margin-bottom: 20px;
+  }
+
+  .lower_footer {
+    flex-flow: column nowrap;
+  }
+  .lower_footer ul {
+    margin-bottom: 40px;
+  }
 }
 /*! QUERY MOBILE */
 @media screen and (max-width: 767px) {
-  section#sliderTeam {
-    height: 400px;
-  }
-  section#sliderTeam .slider-container {
-    width: 100%;
-  }
-  section#sliderTeam .slider-container .image-container {
-    -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
-    box-shadow: 0px 6px 5px -6px #a1a1a1;
-    margin: 0 20px;
-    width: 230px;
-    height: 230px;
-  }
-  section#sliderTeam .slider-container i {
-    font-size: 30px;
-  }
-  section#sliderTeam p.sliderName {
-    margin-top: 0;
-  }
-
   /*! NAVBAR */
   .menu-mobile li {
     font-size: 24px !important;
@@ -1547,7 +1548,7 @@ footer .lower_footer ul li {
     font-size: 24px;
   }
 
-  /* INIZIO PAGINA ABOUT*/
+  /* PAGINA ABOUT */
   .about_container {
     padding: 50px 0;
     display: flex;
@@ -1571,15 +1572,33 @@ footer .lower_footer ul li {
     font-size: 30px;
   }
 
-  /* FINE PAGINA ABOUT*/
-  /* Pagina FAQ */
+  section#sliderTeam {
+    height: 400px;
+  }
+  section#sliderTeam .slider-container {
+    width: 100%;
+  }
+  section#sliderTeam .slider-container .image-container {
+    -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
+    box-shadow: 0px 6px 5px -6px #a1a1a1;
+    margin: 0 20px;
+    width: 230px;
+    height: 230px;
+  }
+  section#sliderTeam .slider-container i {
+    font-size: 30px;
+  }
+  section#sliderTeam p.sliderName {
+    margin-top: 0;
+  }
+
+  /* PAGINA FAQ */
   .bg-image {
     height: 100%;
     background-image: none;
   }
 
-  /* /FAQ */
-  /* Pagina Psicologia Online */
+  /* PAGINA PSICOLOGIA ONLINE */
   .bg-image-2 {
     height: 100%;
     background-image: none;
@@ -1588,6 +1607,4 @@ footer .lower_footer ul li {
   .half-size {
     width: 100%;
   }
-
-  /* /Psicologia Online */
 }

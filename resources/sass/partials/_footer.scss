@@ -10,11 +10,15 @@ footer {
     color: $white;
     background-color: $color-primary;
     font-size: 0.8em;
-    p, a, li {
+    p,
+    a,
+    li {
         padding-bottom: 10px;
         border-bottom: 1px solid transparent;
     }
-    p:hover, a:hover, li:hover {
+    p:hover,
+    a:hover,
+    li:hover {
         border-bottom: 1px solid $color-background;
         cursor: pointer;
     }
@@ -22,7 +26,6 @@ footer {
     .lower_footer,
     .main_footer {
         @include main-wrapper;
-        
     }
     .upper_footer {
         display: flex;
@@ -45,6 +48,6 @@ footer {
             li {
                 @include small-margin-bottom;
             }
-        }       
+        }
     }
 }

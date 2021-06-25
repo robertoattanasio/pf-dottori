@@ -1,6 +1,6 @@
 @extends('layouts.homepage')
 
-@section('pageTitle', 'Home')
+@section('pageTitle', 'Psicologia Online')
 
 @section('content')
 

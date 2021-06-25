@@ -1,6 +1,6 @@
 <footer>
     <div class="upper_footer">
-        <p>TrueDoctors S.r.l. - P.Iva 26911120732 - © 2021 - Tutti i diritti riservati</p>
+        <p>TrueDoctors S.r.l. © 2021 - Tutti i diritti riservati</p>
         <a href="https://www.google.it/maps/search/Contrada+Don+Ciccio+3,+85020+Filiano/@40.8103547,15.7024655,15z/data=!3m1!4b1"><i class="fas fa-map-marker-alt"></i> Contrada Don Ciccio 3, 85020 Filiano (PZ)</a>  
         <a href="mailto: info@truedoctors.it"><i class="far fa-envelope"></i> info@truedoctors.it</a> 
         <a href="3408178229"><i class="fas fa-phone"></i> +39 3408178222</a>
