@@ -125,19 +125,19 @@
         </div>
 
         {{-- PROFILE PIC --}}
-        <div class="form-auth-item">
+        <div class="form-auth-item margin-top-20">
             <label for="fname">Foto del profilo:</label>
             <input type="file" name="profile_pic">
         </div>
 
         {{-- CV --}}
-        <div class="form-auth-item">
+        <div class="form-auth-item margin-top-20">
             <label for="fname">Curriculum vitae:</label>
             <input type="file" name="cv">
         </div>
 
         {{-- PHONE NUMBER --}}
-        <div class="form-auth-item">
+        <div class="form-auth-item margin-top-20">
             <label for="phone_number">{{ __('Numero di telefono') }}</label>
 
             <div class="auth-item-input">
