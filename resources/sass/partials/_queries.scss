@@ -78,6 +78,37 @@
     .half-size {
         width: 70%;
     }
+
+    .psyco_container{
+        width: 100%;
+        flex-flow: column nowrap;
+        text-align: center!important;
+        .psyco_wrapper {
+            width: 100%;
+            flex-flow: column nowrap;
+            align-items: space-around;
+            justify-content: center;
+            .psyco_left_container {
+                width: 100%!important;
+            }
+            .psyco_right_container {
+                display: none!important;
+            }
+        }
+        .psyco_card{
+            width: 100%!important;
+            height: fit-content!important;
+        }
+        .psyco_mini_container{
+            justify-content: center!important;
+            align-content: center;
+            .psyco_card_mini{
+                width: calc(100% / 2);
+            }
+        }
+    }
+
+
     /* /Psicologia Online */
     /* Pagina Login */
     /* /Login */
@@ -161,6 +192,11 @@
     }
     .half-size {
         width: 100%;
+    }
+
+
+    .psyco_card_mini{
+        width: 100%!important;
     }
     /* /Psicologia Online */
 }
