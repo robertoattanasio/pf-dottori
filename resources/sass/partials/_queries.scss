@@ -1,117 +1,64 @@
-    /*! TABLET */
-    
-    @media screen and (max-width: 1169px) {
-        /*! NAVBAR */
-        nav.nav-desktop {
-            display: none!important;
-        }
-        nav.nav-mobile {
-            display: flex!important;
-        }
-        /* PAGINA ABOUT*/
-        .bg-image-3 {
-            background-image: none;
-        }
-        .about_item_3 {
-            display: none;
-        }
-        .about_card_container {
-            display: flex;
-            flex-flow: column nowrap;
-            .about_card {
-                width: 100%!important;
-                height: fit-content!important;
-            }
-        }
-        /*! INDEX */
-        .jumbotron-big {
-            width: 100%;
+/*! TABLET */
+
+@media screen and (max-width: 1169px) {
+    /*! NAVBAR */
+    nav.nav-desktop {
+        display: none!important;
+    }
+    nav.nav-mobile {
+        display: flex!important;
+    }
+    /* PAGINA ABOUT*/
+    .bg-image-3 {
+        background-image: none;
+    }
+    .about_item_3 {
+        display: none;
+    }
+    .about_card_container {
+        display: flex;
+        flex-flow: column nowrap;
+        .about_card {
+            width: 100%!important;
             height: fit-content!important;
         }
-        .jumbotron-wrapper {
-            width: 100%;
-            flex-flow: column nowrap;
-            .jumbotron-left-container {
-                @include main-wrapper;
-            }
-            .jumbotron-right-container {
-                display: none;
-            }
-        }
-        section#payments {
-            height: fit-content;
-            .payments-container {
-                flex-flow: column nowrap!important;
-                .payments-left-container {
-                    width: 100%
-                }
-                .payments-right-container {
-                    justify-content: center;
-                    width: 100%;
-                    margin-top: 30px;
-                }
-            }
-        }
-        section#banner {
+    }
+    /*! INDEX */
+    .jumbotron-big {
+        width: 100%;
+        height: fit-content!important;
+    }
+    .jumbotron-wrapper {
+        width: 100%;
+        flex-flow: column nowrap;
+        .jumbotron-left-container {
             @include main-wrapper;
-            h2.banner {
-                font-size: 40px;
-            }
         }
-        /* PAGINA FAQ */
-        .bg-image {
-            height: 100%;
-            background-image: url(../img/info-graphic-11.png);
-            background-repeat: no-repeat;
-            background-size: 20%;
-            background-position: right;
-        }
-        /* PAGINA PSICOLOGIA ONLINE */
-        .bg-image-2 {
-            height: 100%;
-            background-image: url(../img/info-graphic-12.png);
-            background-repeat: no-repeat;
-            background-position-y: 50%;
-            background-position-x: 90%;
-        }
-        .half-size {
-            width: 70%;
-        }
-        /*! FOOTER */
-        footer {
-            height: fit-content;
-            @include main-padding;
-        }
-        .upper_footer {
-            flex-flow: column nowrap;
-            * {
-                @include standard-margin-bottom;
-            }
-        }
-        .lower_footer {
-            flex-flow: column nowrap;
-            ul {
-                @include wide-margin-bottom;
-            }
-        }
-        /*! LOGIN */
-        main.card {
-            background-color: $color-primary;
-        }
-        .wrapper-auth {
-            width: 100%!important;
-            box-shadow: none!important;
+        .jumbotron-right-container {
+            display: none;
         }
     }
-    /*! QUERY MOBILE */
-    
-    @media screen and (max-width: 767px) {
-        /*! NAVBAR */
-        .menu-mobile li {
-            font-size: 24px!important;
+    section#payments {
+        height: fit-content;
+        .payments-container {
+            flex-flow: column nowrap!important;
+            .payments-left-container {
+                width: 100%
+            }
+            .payments-right-container {
+                justify-content: center;
+                width: 100%;
+                margin-top: 30px;
+            }
         }
     }
-    /* Pagina FAQ */
+    section#banner {
+        @include main-wrapper;
+        h2.banner {
+            font-size: 40px;
+        }
+    }
+    /* PAGINA FAQ */
     .bg-image {
         height: 100%;
         background-image: url(../img/info-graphic-11.png);
@@ -119,8 +66,7 @@
         background-size: 20%;
         background-position: right;
     }
-    /* /FAQ */
-    /* Pagina Psicologia Online */
+    /* PAGINA PSICOLOGIA ONLINE */
     .bg-image-2 {
         height: 100%;
         background-image: url(../img/info-graphic-12.png);
@@ -131,8 +77,7 @@
     .half-size {
         width: 70%;
     }
-
-    .psyco_container{
+    .psyco_container {
         width: 100%;
         flex-flow: column nowrap;
         text-align: center!important;
@@ -148,100 +93,71 @@
                 display: none!important;
             }
         }
-        .psyco_card{
+        .psyco_card {
             width: 100%!important;
             height: fit-content!important;
         }
-        .psyco_mini_container{
+        .psyco_mini_container {
             justify-content: center!important;
             align-content: center;
-            .psyco_card_mini{
+            .psyco_card_mini {
                 width: calc(100% / 2);
             }
         }
     }
-
-
-    /* /Psicologia Online */
-    /* Pagina Login */
-    /* /Login */
-    /* Pagina Registrati */
-    /* /Registrati */
+    /*! FOOTER */
+    footer {
+        height: fit-content;
+        @include main-padding;
+    }
+    .upper_footer {
+        flex-flow: column nowrap;
+        * {
+            @include standard-margin-bottom;
+        }
+    }
+    .lower_footer {
+        flex-flow: column nowrap;
+        ul {
+            @include wide-margin-bottom;
+        }
+    }
+    /*! LOGIN */
+    main.card {
+        background-color: $color-primary;
+    }
+    .wrapper-auth {
+        width: 100%!important;
+        box-shadow: none!important;
+    }
 }
 
 
 /*! QUERY MOBILE */
 
 @media screen and (max-width: 767px) {
-    section#sliderTeam {
-        height: 400px;
-        .slider-container {
-        /*! INDEX */
-        select.index-select {
-            width: 100%;
-        }
-        button.search-btn {
-            width: 100%;
-            margin-top: 20px;
-        }
-        button.collaborate {
-            width: 100%;
-        }
-        section#banner {
-            h2.banner {
-                font-size: 24px;
-            }
-        }
-        /* PAGINA ABOUT */
-        .about_container {
-            @include main-padding;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-flow: column nowrap;
-            height: auto;
-        }
-        .about_container2 {
-            display: block;
-            height: auto;
-        }
-        .about_item_2,
-        .about_item_3 {
-            display: none;
-        }
-        .fab {
+    /*! NAVBAR */
+    .menu-mobile li {
+        font-size: 24px!important;
+    }
+    /*! NAVBAR */
+    .menu-mobile li {
+        font-size: 24px!important;
+    }
+    /*! INDEX */
+    select.index-select {
+        width: 100%;
+    }
+    button.search-btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+    button.collaborate {
+        width: 100%;
+    }
+    section#banner {
+        h2.banner {
             font-size: 30px;
-        }
-        section#sliderTeam {
-            height: 400px;
-            .slider-container {
-                width: 100%;
-                .image-container {
-                    @include box-shadow;
-                    margin: 0 20px;
-                    width: 230px;
-                    height: 230px;
-                }
-                i {
-                    font-size: 30px;
-                }
-            }
-            p.sliderName {
-                margin-top: 0;
-            }
-        }
-        /* PAGINA FAQ */
-        .bg-image {
-            height: 100%;
-            background-image: none;
-        }
-        /* PAGINA PSICOLOGIA ONLINE */
-        .bg-image-2 {
-            height: 100%;
-            background-image: none;
-        }
-        .half-size {
-            width: 100%;
         }
     }
     /* INIZIO PAGINA ABOUT*/
@@ -270,7 +186,6 @@
         height: 100%;
         background-image: none;
     }
-    /* /FAQ */
     /* Pagina Psicologia Online */
     .bg-image-2 {
         height: 100%;
@@ -279,10 +194,7 @@
     .half-size {
         width: 100%;
     }
-
-
-    .psyco_card_mini{
+    .psyco_card_mini {
         width: 100%!important;
     }
-    /* /Psicologia Online */
 }

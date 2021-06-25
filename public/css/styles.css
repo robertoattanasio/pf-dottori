@@ -1695,12 +1695,6 @@ footer .lower_footer ul li {
     width: 70%;
   }
 
-  /*! FOOTER */
-  footer {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    padding: 50px 0;
   .psyco_container {
     width: 100%;
     flex-flow: column nowrap;
@@ -1732,16 +1726,12 @@ footer .lower_footer ul li {
     width: calc(100% / 2);
   }
 
-  /* /Psicologia Online */
-  /* Pagina Login */
-  /* /Login */
-  /* Pagina Registrati */
-  /* /Registrati */
-}
-/*! QUERY MOBILE */
-@media screen and (max-width: 767px) {
-  section#sliderTeam {
-    height: 400px;
+  /*! FOOTER */
+  footer {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 50px 0;
   }
 
   .upper_footer {
@@ -1775,6 +1765,11 @@ footer .lower_footer ul li {
     font-size: 24px !important;
   }
 
+  /*! NAVBAR */
+  .menu-mobile li {
+    font-size: 24px !important;
+  }
+
   /*! INDEX */
   select.index-select {
     width: 100%;
@@ -1790,10 +1785,10 @@ footer .lower_footer ul li {
   }
 
   section#banner h2.banner {
-    font-size: 24px;
+    font-size: 30px;
   }
 
-  /* PAGINA ABOUT */
+  /* INIZIO PAGINA ABOUT*/
   .about_container {
     padding: 50px 0;
     display: flex;
@@ -1817,33 +1812,14 @@ footer .lower_footer ul li {
     font-size: 30px;
   }
 
-  section#sliderTeam {
-    height: 400px;
-  }
-  section#sliderTeam .slider-container {
-    width: 100%;
-  }
-  section#sliderTeam .slider-container .image-container {
-    -o-box-shadow: 0px 6px 5px -6px #a1a1a1;
-    box-shadow: 0px 6px 5px -6px #a1a1a1;
-    margin: 0 20px;
-    width: 230px;
-    height: 230px;
-  }
-  section#sliderTeam .slider-container i {
-    font-size: 30px;
-  }
-  section#sliderTeam p.sliderName {
-    margin-top: 0;
-  }
-
-  /* PAGINA FAQ */
+  /* FINE PAGINA ABOUT*/
+  /* Pagina FAQ */
   .bg-image {
     height: 100%;
     background-image: none;
   }
 
-  /* PAGINA PSICOLOGIA ONLINE */
+  /* Pagina Psicologia Online */
   .bg-image-2 {
     height: 100%;
     background-image: none;
@@ -1856,6 +1832,4 @@ footer .lower_footer ul li {
   .psyco_card_mini {
     width: 100% !important;
   }
-
-  /* /Psicologia Online */
 }
