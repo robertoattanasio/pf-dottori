@@ -52,7 +52,7 @@
 
             <div class="form-auth-item">
                 <div class="button-auth">
-                    <button type="submit" class="">
+                    <button type="submit" class="big-button pink-button">
                         {{ __('Login') }}
                     </button>
                     @if (Route::has('password.request'))

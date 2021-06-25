@@ -200,7 +200,7 @@
         {{-- SUBMIT --}}
         <div class="form-auth-item">
             <div class="auth-item-input">
-                <button type="submit">
+                <button type="submit" class="big-button pink-button">
                     {{ __('Registrati') }}
                 </button>
             </div>
