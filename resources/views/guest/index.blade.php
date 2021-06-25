@@ -68,6 +68,8 @@
                             <span></span>
                             @if ($user['profile_pic'])
                                 <img style="width: 100px;" src="{{ asset('storage/'. $user['profile_pic']) }}">
+                            @else 
+                                <img src="img\medico_default.png" alt="">
                             @endif
                                 <span id="name">{{$user['name']}}</span>
                             <span id="surname">{{$user['surname']}}</span>

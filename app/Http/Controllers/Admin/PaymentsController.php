@@ -5,15 +5,16 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Braintree\Transaction;
+use App\Boost;
+use Illuminate\Support\Facades\Auth;
 
 class PaymentsController extends Controller
 {
     public function make(Request $request)
     {
-        dd($request);
+        // dd($request);
         $import = $request->all()['import'];
-        $payload = $request->input('payload', false);
-        $nonce = $payload['nonce'];
+        $nonce = $request->all()['payment_method_nonce'];
         $status = Transaction::sale([
             'amount' => $import,
             'paymentMethodNonce' => $nonce,
@@ -21,15 +22,14 @@ class PaymentsController extends Controller
                         'submitForSettlement' => True
                         ]
         ]);
-        return response()->json($status);    
+
+        if ($status->success == true) {
+            $id = Boost::where('price', $import)->first()['id'];
+            // dd($id);
+            Auth::user()->boosts()->sync($id);
+        } 
+
+        return view('admin.resultpayment', compact('status'));    
     }
 }
-
-// $import = $request->all()['import'];
-// $user = Auth::user();
-// $user->createAsBraintreeCustomer();
-// $user->charge(1, [
-//     'custom_option' => $import,
-// ]);        
-// return response()->json($user);    
 

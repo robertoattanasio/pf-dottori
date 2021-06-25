@@ -14,32 +14,37 @@
 
     <div class="doctor-right-container">
         <div class="doctor-right-top-container">
-            <h1>BRAINTREE SUCA</h1>
-            <h1>_CYKA BLYAT_</h1>
-            <h1>_TROLOL_</h1>
+            <h1>Pagamento</h1>
         </div>
         <div class="doctor-right-bottom-container relative">
-            <form id="payment-form">
+            <form id="payment-form" method='post' action="{{ route('payment-make') }}">
+                @csrf
+                @method('GET')
+
                 <div id="dropin-container"></div>
-                <input style="display: none" id="import" value="{{$import}}" type="text"
+                <input id="import" value="{{$import}}" type="hidden"
                 class="form-control @error('import') is-invalid @enderror" name="import"
                 required autocomplete="import" autofocus>
-                <input style="display: none" id="nonce" value="{{$import}}" type="text"
-                class="form-control @error('nonce') is-invalid @enderror" name="nonce"
-                required autocomplete="nonce" autofocus>
-                <button id="submit-button">Pay</button>            
-            </form>        
+                <input id="nonce" value="" type="hidden"
+                class="form-control @error('nonce') is-invalid @enderror" name="payment_method_nonce"
+                required autocomplete="payment_method_nonce" autofocus>
+                <button id="submit-button" type="submit">Pay</button>            
+            </form> 
         </div>
 
         <script>
-            var button = document.querySelector('#submit-button');            
+            var form = document.querySelector('#payment-form');  
+
             braintree.dropin.create({
             authorization: "{{ ClientToken::generate() }}",
             container: '#dropin-container'
             }, function (createErr, instance) {
-                button.addEventListener('click', function () {
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    console.log('fwefe')
                     instance.requestPaymentMethod(function (err, payload) {
-                        console.log(payload);
+                        document.querySelector('#nonce').value = payload.nonce;
+                        form.submit();
                     });
                 });
             });

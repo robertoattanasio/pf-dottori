@@ -1,0 +1,27 @@
+@extends('layouts.dashboard')
+
+@section('pageTitle', 'Payment')
+
+@section('content')
+
+    <div class="doctor-right-container">
+        <div class="doctor-right-top-container">
+            <h1>Pagamento</h1>
+        </div>
+        <div class="doctor-right-bottom-container relative">
+            @if ($status->success == true)
+                <div class="success">
+                    <p>Pagamento riuscito.</p>
+                    <a href="{{ route('dashboard-about') }}">Torna alla dashboard.</a>
+                </div>
+            @else 
+                <div class="success">
+                    <p>Errore pagamento.</p>
+                    <a href="{{ route('dashboard-about') }}">Torna alla dashboard.</a>
+                </div>
+            @endif
+        </div>
+
+    </div>
+
+@endsection
