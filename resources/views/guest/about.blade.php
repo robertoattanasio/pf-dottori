@@ -197,7 +197,7 @@
                     link: 'img/team/roberto.jpeg'
                 }, {
                     name: 'Omar D\'Amico',
-                    link: 'img/team/omar.jpeg'
+                    link: 'img/team/omar.png'
                 },
             ];
             var sliderArrowLeft = document.querySelector('.arrowLeft');
