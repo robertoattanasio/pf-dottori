@@ -28,12 +28,15 @@
                 <input id="nonce" value="" type="hidden"
                 class="form-control @error('nonce') is-invalid @enderror" name="payment_method_nonce"
                 required autocomplete="payment_method_nonce" autofocus>
-                <button id="submit-button" type="submit">Pay</button>            
+                <button id="submit-button">Pay</button>  
+                <button id="to-payment" type="submit" class='none'>Pay</button>          
             </form> 
         </div>
 
         <script>
-            var form = document.querySelector('#payment-form');  
+            var form = document.querySelector('#payment-form');
+            var button_one = document.querySelector('#submit-button');  
+            var button_two = document.querySelector('#to-payment');  
 
             braintree.dropin.create({
             authorization: "{{ ClientToken::generate() }}",
@@ -41,10 +44,15 @@
             }, function (createErr, instance) {
                 form.addEventListener('submit', function (event) {
                     event.preventDefault();
-                    console.log('fwefe')
+                    console.log('ongoing');
                     instance.requestPaymentMethod(function (err, payload) {
                         document.querySelector('#nonce').value = payload.nonce;
-                        form.submit();
+                        button_one.classList.add("none");
+                        button_two.classList.remove("none");
+
+                        button_two.addEventListener('click', function() {
+                            form.submit();
+                        });
                     });
                 });
             });
