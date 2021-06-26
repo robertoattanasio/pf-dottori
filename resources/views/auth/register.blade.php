@@ -1,5 +1,7 @@
 @extends('layouts.card')
 
+@section('pageTitle', 'Registrati')
+
 @section('content')
 
     {{-- ICONE HOME E BACK --}}

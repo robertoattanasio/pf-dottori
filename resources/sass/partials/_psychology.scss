@@ -1,12 +1,12 @@
-.bg-image-2{
-        height: 100%;
-        background-image: url(../img/info-graphic-9.png);
-        background-repeat: no-repeat;
-        background-position: right bottom;
-        background-position-y: 20%;
+.bg-image-2 {
+    height: 100%;
+    background-image: url(../img/info-graphic-9.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-position-y: 20%;
 }
 
-.half-size{
+.half-size {
     height: 100%;
     width: 50%;
     display: flex;
@@ -14,7 +14,7 @@
     justify-content: center;
 }
 
-.psyco_green{
+.psyco_green {
     color: #00ccbc;
 }
 
@@ -22,22 +22,21 @@
     width: 100%;
     background-color: white;
     text-align: center;
-    
     .psyco_container {
         width: 100%;
         @include main-padding;
-        .psyco_wrapper{
+        .psyco_wrapper {
             @include main-wrapper;
             display: flex;
-            .psyco_left_container{
-            width: 50%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            text-align: left;
-            flex-flow: column nowrap;
+            .psyco_left_container {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                text-align: left;
+                flex-flow: column nowrap;
             }
-            .psyco_right_container{
+            .psyco_right_container {
                 width: 50%;
                 height: 100%;
                 display: flex;
@@ -53,7 +52,7 @@
         display: flex;
         justify-content: center;
         gap: 20px;
-        .psyco_card{
+        .psyco_card {
             width: calc(100% / 3);
             min-height: 400px;
             color: $color-font-primary;
@@ -64,16 +63,16 @@
             align-items: center;
             a {
                 font-weight: 600;
-                &:hover{
+                &:hover {
                     text-decoration: underline;
                 }
             }
-            .img_container{
+            .img_container {
                 width: 120px;
                 height: 120px;
                 border-radius: 50%;
                 position: relative;
-                .img_circle{
+                .img_circle {
                     width: 60px;
                     position: absolute;
                     top: 50%;
@@ -81,42 +80,42 @@
                     transform: translate(-50%, -50%);
                 }
             }
-            button{
+            button {
                 background-color: white;
                 border: 1px solid $color-primary;
                 color: $color-primary;
                 padding: 15px 50px;
-                &:hover{
+                transition: $short-transition;
+                &:hover {
+                    cursor: pointer;
                     color: white;
                     background-color: $color-primary;
-                    transition: .4s ease-in-out;
                 }
             }
         }
-        .psyco_mini_container{
+        .psyco_mini_container {
             @include main-padding;
             width: 100%;
             display: flex;
             justify-content: start;
             flex-flow: wrap;
             gap: 20px;
-            .psyco_card_mini{
+            .psyco_card_mini {
                 width: calc(100% / 2 - 40px);
                 min-height: 200px;
                 background-color: #fff;
                 padding: 20px;
                 display: flex;
                 flex-wrap: wrap;
-                &:hover{
-                    background-color:#00ccbc;
+                &:hover {
+                    background-color: #00ccbc;
                     color: #00ccbc;
                     padding: 0;
                 }
             }
-            .ms_position{
+            .ms_position {
                 position: relative;
-                
-                .ms_layover{
+                .ms_layover {
                     width: 100%;
                     height: 100%;
                     position: absolute;
@@ -124,13 +123,13 @@
                     left: 0;
                     background-color: rgba(0, 0, 0, 0.0);
                     color: transparent;
-                    &:hover{
+                    &:hover {
                         cursor: pointer;
                         color: white;
                         padding: 20px;
                     }
                 }
-                .fas{
+                .fas {
                     position: absolute;
                     bottom: 5%;
                     right: 5%;
@@ -138,18 +137,8 @@
                 }
             }
         }
-        .card_shadow{
+        .card_shadow {
             @include box-shadow-dashboard-card;
         }
     }
 }
-
-/* 
-.bg-color-lightgreen{
-    background-color: $lighter-green;
-}
-
-.bg-color-lightgrey{
-    background-color: $light-grey;
-}
-*/

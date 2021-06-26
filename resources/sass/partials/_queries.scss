@@ -1,6 +1,10 @@
 /*! TABLET */
 
 @media screen and (max-width: 1169px) {
+    /*! TYPOGRAPHY */
+    h2 {
+        font-size: 30px;
+    }
     /*! NAVBAR */
     nav.nav-desktop {
         display: none!important;
@@ -107,19 +111,20 @@
     }
     /*! FOOTER */
     footer {
-        height: fit-content;
-        @include main-padding;
-    }
-    .upper_footer {
-        flex-flow: column nowrap;
-        * {
-            @include standard-margin-bottom;
+        .footer-wrapper {
+            flex-flow: column nowrap;
+            .left-footer {
+                padding-left: 0!important;
+                border-left: none!important;
+            }
+            .right-footer {
+                margin-top: 20px;
+                padding-left: 0!important;
+                border-left: none!important;
+            }
         }
-    }
-    .lower_footer {
-        flex-flow: column nowrap;
-        ul {
-            @include wide-margin-bottom;
+        .made_from {
+            align-items: flex-start;
         }
     }
     /*! LOGIN */
@@ -136,6 +141,10 @@
 /*! QUERY MOBILE */
 
 @media screen and (max-width: 767px) {
+    /*! TYPOGRAPHY */
+    h2 {
+        font-size: 22px;
+    }
     /*! NAVBAR */
     .menu-mobile li {
         font-size: 24px!important;
@@ -157,7 +166,7 @@
     }
     section#banner {
         h2.banner {
-            font-size: 30px;
+            font-size: 20px;
         }
     }
     /* INIZIO PAGINA ABOUT*/
@@ -180,6 +189,26 @@
     .fab {
         font-size: 30px;
     }
+    section#sliderTeam {
+        height: 400px;
+        .slider-container {
+            .image-container {
+                width: 150px;
+                height: 150px;
+                margin: 0 10px;
+            }
+        }
+        p.sliderName {
+            margin-top: 0;
+            font-size: 30px;
+            font-weight: 600;
+            color: $white;
+        }
+    }
+    .about_submain {
+        width: 100%;
+        margin: 0 auto;
+    }
     /* FINE PAGINA ABOUT*/
     /* Pagina FAQ */
     .bg-image {
@@ -196,5 +225,26 @@
     }
     .psyco_card_mini {
         width: 100%!important;
+    }
+    footer {
+        .footer-wrapper {
+            .left-footer {
+                font-size: 10px;
+            }
+            .right-footer {
+                ul {
+                    &:first-child {}
+                    li {
+                        font-size: 10px;
+                        &:first-child {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        .made_from {
+            font-size: 10px;
+        }
     }
 }

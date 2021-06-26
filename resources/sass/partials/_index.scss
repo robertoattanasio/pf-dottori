@@ -6,7 +6,7 @@
     height: fit-content;
     .doctors-scroll-container {
         width: 100%;
-        height: 570px;
+        height: 550px;
         display: flex;
         align-items: center;
         white-space: nowrap;
@@ -18,9 +18,9 @@
             flex-flow: column nowrap;
             flex-grow: 0;
             flex-shrink: 0;
-            flex-basis: 350px;
+            flex-basis: 170px;
             color: white;
-            height: 500px;
+            height: 450px;
             padding: 20px;
             background-color: $color-secondary;
             @include box-shadow;
@@ -58,7 +58,7 @@
                 height: 50px;
                 padding: 5px 15px;
                 border: 1px solid $white;
-                transition: 200ms ease-in-out;
+                transition: $short-transition;
                 &:hover {
                     background-color: white;
                     color: $color-secondary;

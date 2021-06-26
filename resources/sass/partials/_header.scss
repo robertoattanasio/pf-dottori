@@ -9,7 +9,7 @@
     background-color: $white;
     z-index: 991;
     transform: translateY(-100%);
-    transition: 600ms ease-in-out;
+    transition: $long-transition;
     @include box-shadow;
     display: flex;
     justify-content: center;
@@ -45,7 +45,7 @@ header {
     top: 0;
     left: 0;
     background-color: $color-background;
-    transition: 200ms ease-in-out;
+    transition: $short-transition;
     .header-wrapper {
         @include main-wrapper;
         height: 100%;
@@ -86,7 +86,7 @@ header {
                     padding: 7px 20px;
                     border: 1px solid $color-primary;
                     border-radius: 20px;
-                    transition: 200ms ease-in-out;
+                    transition: $short-transition;
                     margin-right: 10px;
                     &:hover {
                         text-decoration: none;
@@ -121,7 +121,7 @@ header {
                 top: 50%;
                 left: 50%;
                 transform: translate( -50%, -50%);
-                transition: .2s ease-in-out;
+                transition: $short-transition;
             }
             .hamburger .hamburger-line:nth-child(1) {
                 transform: translate( -50%, -50%) translateY(-8px);

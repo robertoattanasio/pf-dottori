@@ -59,7 +59,6 @@
 
 @mixin box-shadow-dashboard-card {
     box-shadow: $color-shadow 0px 5px 15px;
-    cursor: pointer;
 }
 
 @mixin text-shadow {
@@ -67,7 +66,7 @@
 }
 
 @mixin transition-border-li {
-    transition: 120ms ease-in-out;
+    transition: $short-transition;
     padding-left: 10px;
     border-left: 4px solid transparent;
 }
@@ -109,7 +108,7 @@ select.index-select {
     color: $color-primary;
     border: 1px solid $color-primary;
     @include box-shadow;
-    transition: 200ms ease-in-out;
+    transition: $short-transition;
     &:focus {
         border-color: $color-primary;
         outline: 0;
@@ -126,7 +125,7 @@ button.search-btn {
     background-color: $color-primary;
     color: $white;
     @include box-shadow;
-    transition: 200ms ease-in-out;
+    transition: $short-transition;
     &:hover {
         background-color: $white;
         color: $color-primary;
@@ -144,7 +143,7 @@ button.collaborate {
     background-color: $pink;
     color: $white;
     @include box-shadow;
-    transition: 200ms ease-in-out;
+    transition: $short-transition;
     &:hover {
         background-color: transparent;
         color: $color-primary;
@@ -187,19 +186,19 @@ button.collaborate {
 /* BACKGROUND COLORS */
 
 .bg-color-yellow {
-    background-color: $light-yellow;
+    background-color: $light-yellow!important;
 }
 
 .bg-color-lightblue {
-    background-color: $light-blue;
+    background-color: $light-blue!important;
 }
 
 .bg-color-lightgrey {
-    background-color: $light-grey;
+    background-color: $light-grey!important;
 }
 
-.bg-color-lightgreen{
-    background-color: $lighter-green;
+.bg-color-lightgreen {
+    background-color: $lighter-green!important;
 }
 
 // CLASSE MODULARE PER IL BOX-SHADOW DELLA NAVBAR

@@ -8,6 +8,19 @@
         use App\Mark;
     ?>
 
+        {{-- JUMBOTRON FAQ --}}
+        <div class="jumbotron-small">
+            <div class="bg-image">
+                <div class="container-faq">
+                    <div class="half-size">
+                        <h2>{{$user['name']}} {{$user['surname']}}</h2>
+                        <p class="generic margin-top-10">Scopri tutte le informazioni del nostro specialista.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- /JUMBOTRON FAQ --}}
+
     <div class="info_doctor">
         @if ($user['profile_pic'])
             <img style="width: 100px;" src="{{ asset('storage/'. $user['profile_pic']) }}">
@@ -55,5 +68,32 @@
             </div>
         @endforeach
     </div>
+
+    <script>
+        var navFixedTop = document.querySelector('header');
+
+        var body = document.getElementById('mainBody');
+        var btnMobileMenu = document.querySelector('.hamburger');
+        var menuMobile = document.querySelector('.menu-mobile');
+
+        // APERTURA MOBILE MENU
+        btnMobileMenu.addEventListener('click', function() {
+            btnMobileMenu.classList.toggle('active');
+            if (btnMobileMenu.classList.contains('active')) {
+                menuMobile.style.transform = "translateY(-0%)";
+                body.style.overflow = "hidden";
+
+            } else {
+                menuMobile.style.transform = "translateY(-100%)";
+                body.style.overflow = "auto";
+            }
+
+        })
+
+        // ATTIVAZIONE BOX_SHADOW DELLA NAVBAR ON SCROLL
+        window.addEventListener('scroll', function() {
+            navFixedTop.classList.toggle('nav_scrollOverHeader', window.scrollY > 10);
+        })
+    </script>
 
 @endsection

@@ -17,7 +17,7 @@
 
 
     {{-- TITLE --}}
-    <title>@yield('pageTitle')</title>
+    <title>@yield('pageTitle') | TrueDoctors</title>
 
 </head>
 <body>

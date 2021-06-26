@@ -40,7 +40,7 @@
                         Attraverso il questionario, potrai raccontarci di te e delle tue esigenze: noi ti assegneremo lo specialista più adatto per ritrovare armonia e serenità.
                     </p>
                 </div>
-                <div class="about_uppercase margin-top-10">
+                <div class="about_uppercase margin-top-30">
                     <a href="#">PRENOTA IL TUO PERCORSO</a>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                         Sei tu a scegliere quando ricevere il videoconsulto gratuito. In fase di prenotazione, seleziona data e orario che preferisci, noi lo comunicheremo al tuo terapeuta.
                     </p>
                 </div>
-                <div class="about_uppercase margin-top-10">
+                <div class="about_uppercase margin-top-30">
                     <a href="#">PRENOTA IL TUO PERCORSO</a>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                         Cliccando sul link che riceverai via mail potrai usufruire del primo videoconsulto gratuito. Accedi comodamente da smartphone, pc o tablet e parla con il professionista scelto apposta per te.
                     </p>
                 </div>
-                <div class="about_uppercase margin-top-10">
+                <div class="about_uppercase margin-top-30">
                     <a href="#">PRENOTA IL TUO PERCORSO</a>
                 </div>
             </div>

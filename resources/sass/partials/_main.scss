@@ -15,6 +15,7 @@ main.home {
         width: 100%;
         height: 40vh;
         @include box-shadow;
+        background-color: $color-background;
     }
 }
 
@@ -49,10 +50,10 @@ main.home {
     }
 }
 
-.info_doctor {
-    .contatti {
-        li {
-            display: block;
-        }
-    }
-}
+// .info_doctor {
+//     .contatti {
+//         li {
+//             display: block;
+//         }
+//     }
+// }

@@ -30,7 +30,7 @@ main.card {
                 font-size: 30px;
                 margin-right: 10px;
                 &:hover {
-                    transition: 600ms;
+                    transition: $long-transition;
                     text-shadow: 0px 0px 10px $color-background;
                 }
             }
@@ -76,7 +76,7 @@ main.card {
                 color: $color-primary;
                 border: none;
                 @include box-shadow;
-                transition: 200ms ease-in-out;
+                transition: $short-transition;
                 &:focus {
                     border-color: $color-primary;
                     outline: 0;
@@ -92,7 +92,7 @@ main.card {
                 background-color: $color-primary;
                 color: $white;
                 @include box-shadow;
-                transition: 200ms ease-in-out;
+                transition: $short-transition;
                 &:hover {
                     background-color: $white;
                     color: $color-primary;

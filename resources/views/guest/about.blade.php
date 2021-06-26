@@ -183,7 +183,7 @@
         // SLIDESHOW
         var sliderStart = 0;
         var images = [{
-                name: 'Alessio Petrelli',
+                name: 'Alessio Pretelli',
                 link: 'img/team/alessio.png'
             },
             {
