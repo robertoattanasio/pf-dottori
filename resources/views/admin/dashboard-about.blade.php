@@ -33,7 +33,7 @@
                         <h4><span>Telefono: </span>+39 {{ Auth::user()->phone_number }}</h4>
                     </div>
 
-                    <a class="margin-top-20" href="{{route('infoDoctor', [Auth::user()->id])}}">Visualizza il tuo profilo online</a>
+                    <a class="margin-top-20" href="{{route('infoDoctor', [Auth::user()->id])}}"><i class="far fa-user"></i><i class="fas fa-chevron-right"></i><i class="fas fa-globe"></i></a>
                 @else 
                     <p>Per visualizzare tutti i tuoi dati ed essere visibile nella sezione ricerca dottore, completa il tuo profilo, inserendo la tua specializzazione nella sezione 'modifica'.</p>
                 @endif
