@@ -142,37 +142,12 @@
             <h3>Sei un medico o un professionista sanitario?</h3>
             {{-- PARAGRAPH --}}
             <p class="generic margin-top-10">Lavoriamo solo con personale qualificato e certificato, capace di rispondere a precisi criteri di selezione.<br>Il nostro obiettivo è garantirti un servizio con elevati standard di qualità.<br><br>Con noi la tua salute è nelle mani dei migliori professionisti!</p>
-            <button class="margin-top-40 collaborate">Collaboriamo</button>
+            <a href="{{ route('register') }}"><button class="margin-top-40 collaborate">Collaboriamo</button></a>
         </div>
     </section>
     {{-- FINE SECTION COLLABORATE --}}
 
     <script>
-    //     function progressBar() {
-    //     var body = document.getElementById('mainBody');
-    //     var emptyProgressBar = document.querySelector('.progress-bar');
-    //     var filledProgressBar = document.querySelector('.progress-bar-fill');
-
-    //     var filledProgressBarWidth = 0;
-
-    //     filledProgressBar.style.width = `${filledProgressBarWidth}%`;
-
-    //     var progressBar = setInterval(progressBar, 3);
-
-    //     function progressBar() {
-    //         if (filledProgressBarWidth >= 100) {
-    //             clearInterval(progressBar);
-    //             emptyProgressBar.style.opacity = 0;
-    //             body.style.overflow = 'auto';
-
-    //         } else {
-    //             filledProgressBarWidth++;
-    //             filledProgressBar.style.width = `${filledProgressBarWidth}%`;
-    //         }
-            
-    //     }
-
-    // }
 
         var navFixedTop = document.querySelector('header');
 
