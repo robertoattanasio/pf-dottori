@@ -4,9 +4,9 @@ main.card {
     @include flex-center;
     .wrapper-auth {
         position: relative;
-        min-height: 500px;
+        height: fit-content;
         width: 50%;
-        padding: 2%;
+        padding: 20px;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -17,10 +17,10 @@ main.card {
         color: $white;
         .doctor-icons {
             position: absolute;
-            bottom: 20px;
-            right: 20px;
+            top: 15px;
+            right: 15px;
             text-align: center;
-            font-size: 11px;
+            font-size: 10px;
             a {
                 display: flex;
                 justify-content: center;
@@ -29,16 +29,16 @@ main.card {
             i {
                 font-size: 30px;
                 margin-right: 10px;
+                transition: $long-transition;
                 &:hover {
-                    transition: $long-transition;
                     text-shadow: 0px 0px 10px $color-background;
                 }
             }
         }
         .card-header {
             text-transform: uppercase;
-            font-size: 30px;
-            font-weight: 400;
+            font-size: 20px;
+            font-weight: 600;
             @include standard-margin-bottom;
         }
         .form-auth {
@@ -53,49 +53,75 @@ main.card {
                     height: 30px;
                     width: 100%;
                 }
-            }
-            label {
-                font-size: 12px;
-            }
-            .auth-item-input input {
-                background-color: $color-background;
-                border: none;
-                outline: none;
-                padding: 5px 15px;
-                height: 30px;
-                @include box-shadow;
-            }
-            .auth-item-input select {
-                cursor: pointer;
-                font-family: inherit;
-                font-size: 14px;
-                width: 100%;
-                height: 30px;
-                padding: 5px 15px;
-                outline: none;
-                color: $color-primary;
-                border: none;
-                @include box-shadow;
-                transition: $short-transition;
-                &:focus {
-                    border-color: $color-primary;
-                    outline: 0;
+                input {
+                    background-color: $color-background;
+                    border: none;
+                    outline: none;
+                    padding: 5px 15px;
+                    height: 30px;
+                    @include box-shadow;
+                }
+                select {
+                    cursor: pointer;
+                    font-family: inherit;
+                    font-size: 14px;
+                    width: 100%;
+                    height: 30px;
+                    padding: 5px 15px;
+                    outline: none;
+                    color: $color-primary;
+                    border: none;
+                    @include box-shadow;
+                    transition: $short-transition;
+                    &:focus {
+                        border-color: $color-primary;
+                        outline: 0;
+                    }
+                }
+                textarea.message {
+                    font-family: inherit;
+                    width: 100%;
+                    height: 300px;
+                    padding: 10px 15px;
                 }
             }
-            .form-auth-item button {
-                cursor: pointer;
-                font-family: inherit;
-                font-size: 14px;
-                width: 100px;
-                height: 40px;
-                border: 1px solid $color-background;
-                background-color: $color-primary;
-                color: $white;
-                @include box-shadow;
-                transition: $short-transition;
-                &:hover {
-                    background-color: $white;
+            .form-auth-item {
+                label {
+                    font-size: 12px;
+                }
+                button {
+                    cursor: pointer;
+                    font-family: inherit;
+                    font-size: 14px;
+                    width: 100px;
+                    height: 40px;
+                    border: 1px solid $color-background;
+                    background-color: $color-primary;
+                    color: $white;
+                    @include box-shadow;
+                    transition: $short-transition;
+                    &:hover {
+                        background-color: $white;
+                        color: $color-primary;
+                    }
+                }
+                select.review-vote {
+                    margin-left: 20px;
+                    cursor: pointer;
+                    font-family: inherit;
+                    font-size: 14px;
+                    width: 50px;
+                    height: 30px;
+                    padding: 5px 7px;
+                    outline: none;
                     color: $color-primary;
+                    border: none;
+                    @include box-shadow;
+                    transition: $short-transition;
+                    &:focus {
+                        border-color: $color-primary;
+                        outline: 0;
+                    }
                 }
             }
             .forgot-your-password {

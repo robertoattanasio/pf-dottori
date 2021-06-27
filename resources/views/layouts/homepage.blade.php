@@ -21,7 +21,12 @@
 
 </head>
 
-<body id="mainBody" class="">
+<body id="mainBody" class="" onload="progressBar()">
+
+    {{-- <div class="progress-bar">
+        <div class="progress-bar-fill">
+        </div>
+    </div> --}}
     
     @include('partials.header')
 

@@ -24,12 +24,20 @@
     <title>@yield('pageTitle')</title>
 </head>
 
-<body>
+<body class="">
 
     <main class="dashboard">
         <div class="container">
             {{-- DOCTOR LEFT CONTAINER --}}
             <div class="doctor-left-container">
+                {{-- DOCTOR-PIC --}}
+                <div class="doctor-pic">
+                    @if (Auth::user()->profile_pic)
+                        <img src="{{ asset('storage/'. Auth::user()->profile_pic) }}">
+                    @else 
+                        <img src="..\img\medico_default.png" alt="">
+                    @endif
+                </div>
 
                 {{-- DOCTOR ICONS --}}
                 <div class="doctor-icons">
@@ -43,22 +51,15 @@
                     </form>
                 </div>
 
-                {{-- DOCTOR-PIC --}}
-                <div class="doctor-pic">
-                    @if (Auth::user()->profile_pic)
-                        <img src="{{ asset('storage/'. Auth::user()->profile_pic) }}">
-                    @else 
-                        <img src="..\img\medico_default.png" alt="">
-                    @endif
-                </div>
+
 
                 <div class="doctor-menu">
                     <ul>
-                        <li><a href="{{ route('dashboard-about') }}">Il Mio Profilo</a></li>
-                        <li><a href="{{ route('reviews') }}">Recensioni</a></li>
-                        <li><a href="{{ route('messages') }}">Messaggi</a></li>
-                        <li><a href="{{ route('statistics') }}">Statistiche</a></li>
-                        <li><a href="{{ route('boost-profile') }}">Sponsorizzazioni</a></li>
+                        <li><a href="{{ route('dashboard-about') }}"><i class="fas fa-info-circle"></i><p> Il Mio Profilo</p> </a></li>
+                        <li><a href="{{ route('reviews') }}"><i class="fas fa-registered"></i><p> Recensioni</p></a></li>
+                        <li><a href="{{ route('messages') }}"><i class="fas fa-envelope"></i><p> Messaggi</p></a></li>
+                        <li><a href="{{ route('statistics') }}"><i class="fas fa-percent"></i><p> Statistiche</p></a></li>
+                        <li><a href="{{ route('boost-profile') }}"><i class="fas fa-bolt"></i><p> Sponsorizzazioni</p></a></li>
                     </ul>
                 </div>
             </div>

@@ -148,6 +148,32 @@
     {{-- FINE SECTION COLLABORATE --}}
 
     <script>
+    //     function progressBar() {
+    //     var body = document.getElementById('mainBody');
+    //     var emptyProgressBar = document.querySelector('.progress-bar');
+    //     var filledProgressBar = document.querySelector('.progress-bar-fill');
+
+    //     var filledProgressBarWidth = 0;
+
+    //     filledProgressBar.style.width = `${filledProgressBarWidth}%`;
+
+    //     var progressBar = setInterval(progressBar, 3);
+
+    //     function progressBar() {
+    //         if (filledProgressBarWidth >= 100) {
+    //             clearInterval(progressBar);
+    //             emptyProgressBar.style.opacity = 0;
+    //             body.style.overflow = 'auto';
+
+    //         } else {
+    //             filledProgressBarWidth++;
+    //             filledProgressBar.style.width = `${filledProgressBarWidth}%`;
+    //         }
+            
+    //     }
+
+    // }
+
         var navFixedTop = document.querySelector('header');
 
         var body = document.getElementById('mainBody');

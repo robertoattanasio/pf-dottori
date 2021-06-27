@@ -1,6 +1,6 @@
 @extends('layouts.homepage')
 
-@section('pageTitle', 'doctors')
+@section('pageTitle', 'Informazioni')
 
 @section('content')
 
@@ -8,66 +8,97 @@
         use App\Mark;
     ?>
 
-        {{-- JUMBOTRON FAQ --}}
-        <div class="jumbotron-small">
-            <div class="bg-image">
-                <div class="container-faq">
-                    <div class="half-size">
-                        <h2>{{$user['name']}} {{$user['surname']}}</h2>
-                        <p class="generic margin-top-10">Scopri tutte le informazioni del nostro specialista.</p>
+        {{-- JUMBOTRON --}}
+    <div class="jumbotron-small">
+
+        {{-- JUMBOTRON WRAPPER --}}
+        <div class="jumbotron-wrapper">
+
+            {{-- JUMBOTRON LEFT CONTAINER --}}
+            <div class="jumbotron-left-container">
+
+                {{-- H2 TITLE --}}
+                <h2>Informazioni</h2>
+                
+                {{-- PARAGRAPH --}}
+                <p class="generic margin-top-10">Scopri tutti i dettagli del nostro specialista.</p>
+
+                {{-- H3 SEARCH --}}
+            </div>
+            {{-- FINE JUMBOTRON LEFT CONTAINER --}}
+
+            <div class="jumbotron-right-container">
+                <img src="../img/info-graphic-1.png" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="single-doctor-container">
+        <div class="single-doctor-left-container">
+            <div class="single-doctor-pic">
+                @if ($user['profile_pic'])
+                <img src="{{ asset('storage/'. $user['profile_pic']) }}">
+                @else
+                    <img src="..\img\medico_default.png" alt="">
+                @endif
+            </div>
+
+        </div>
+
+        <div class="single-doctor-right-container">
+            <h3>{{$user['name']}} {{$user['surname']}}</h3>
+        
+            <div class="doctor-specialistic margin-top-10">
+                @if($user->specializations)
+                    @foreach ($user->specializations->toArray() as $specialization)
+                        <p>&bull; {{$specialization['name']}}</p>
+                    @endforeach
+                @endif
+            </div>
+
+            <div class="doctor-info margin-top-10">
+                <p>Indirizzo: {{$user['address']}} {{$user['street_number']}}, 
+                    {{$user['city']}}, {{$user['county']}}</p>
+                <p class="margin-top-10">Email: {{$user['email']}}</p>
+                <p>Telefono: {{$user['phone_number']}}</p>
+
+                @if($user['numero_recensioni'])
+                <p class="margin-top-10"id="media_voti">Media voti: {{$user['media_voti']}}/5</p>
+                <p id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</p>
+                @endif
+                    
+                </div>
+                
+                <div class="doctor-buttons">
+                    @if ($user['cv'])
+                        <a class="btn-doctor-card" href="{{ asset('storage/'. $user['cv']) }}">Scarica il CV</a>
+                    @endif
+                    <a class="btn-doctor-card" href="{{route('contact-it', [$user['id']])}}">Contatta</a>
+                    <a class="btn-doctor-card" href="{{route('review-it', [$user['id']])}}">Recensisci</a>
+                </div>
+                
+                <div class="reviews-doctor">
+                    @foreach ($reviews as $review)
+                    <div class="review-doctor-card">
+                        <p class="review-name">Scritto da: {{$review['name_patient']}}</p>
+                        <p class="review-vote">Voto: {{Mark::where('id', $review['mark_id'])->first()['mark']}}/5</p>
+                        <p class="review-date">Data: {{$review['created_at']}}</p>
+                        <p class="review-text">{{$review['review_text']}}</p>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>
-        {{-- /JUMBOTRON FAQ --}}
 
-    <div class="info_doctor">
-        @if ($user['profile_pic'])
-            <img style="width: 100px;" src="{{ asset('storage/'. $user['profile_pic']) }}">
-        @else
-            <img src="..\img\medico_default.png" alt="">
-        @endif
-        <h2>{{$user['name']}} {{$user['surname']}}</h2>
+
+    </div>
+    <div class="info-doctor">
+
         
-        @if($user->specializations)
-        @foreach ($user->specializations->toArray() as $specialization)
-            <p class="specialistica">{{$specialization['name']}}</p>
-        @endforeach
-        @endif
-
-        @if ($user['cv'])
-            <a href="{{ asset('storage/'. $user['cv']) }}">Scarica il CV del dottore</a>
-        @endif
-
-        <p>Indirizzo: {{$user['address']}} {{$user['street_number']}}, 
-            {{$user['city']}}, {{$user['county']}}</p>
-        <div class="contatti">
-            <p>Contatti:</p>
-            <ul>
-                <li>Email: {{$user['email']}}</li>
-                <li>Telefono: {{$user['phone_number']}}</li>
-            </ul>
-        </div>
-        @if($user['numero_recensioni'])
-        <p id="media_voti">Media voti: {{$user['media_voti']}}</p>
-        <p id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</p>
-        @endif
-
-
-        <button><a href="{{route('contact-it', [$user['id']])}}">Contatta</a></button>
-        <button><a href="{{route('review-it', [$user['id']])}}">Recensisci</a></button>
     </div>
 
-    <div class="reviews_doctor">
-        @foreach ($reviews as $review)
-            <div class="card_reviews">
-                <h4>{{$review['name_patient']}}</h4>
-                <p>{{$review['review_text']}}</p>
-                <p>Voto: {{Mark::where('id', $review['mark_id'])->first()['mark']}}</p>
-                <p>Scritta in data: {{$review['created_at']}}</p>
-            </div>
-        @endforeach
-    </div>
+
 
     <script>
         var navFixedTop = document.querySelector('header');

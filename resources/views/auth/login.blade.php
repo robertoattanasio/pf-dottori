@@ -12,7 +12,7 @@
 
         {{-- EMAIL --}}
         <div class="card-header">{{ __('Login') }}</div>
-        <form class="form-auth" method="POST" action="{{ route('login') }}">
+            <form class="form-auth" method="POST" action="{{ route('login') }}">
             @csrf
 
             <div class="form-auth-item">

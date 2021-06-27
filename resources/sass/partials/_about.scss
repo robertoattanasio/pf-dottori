@@ -96,6 +96,7 @@
         background-color: rgb(34, 71, 96);
         color: white;
         padding: 20px;
+        transition: $long-transition;
         i {
             font-size: 100px;
             padding: 10px;
@@ -103,7 +104,6 @@
         &:hover {
             color: rgb(34, 71, 96);
             background-color: $color-background;
-            transition: $long-transition;
         }
     }
 }

@@ -26,7 +26,7 @@
 
                 <div class="search-container margin-top-30">
                     <select id="countySelect" class="index-select">
-                        <option value="Tutti">Cerca nella tua città</option>
+                        <option value="Tutti">Tutte le città</option>
 
                         @foreach ($counties_name as $county_name)
                             <option value="{{$county_name}}">{{$county_name}}</option>
@@ -35,7 +35,7 @@
 
                     <div class="search-container margin-top-10">
                         <select id="markSelect" class="index-select">
-                            <option value="0">Cerca per voti</option>
+                            <option value="0">Tutti i voti</option>
 
                             <option value="4">>=4</option>
                             <option value="3">>=3</option>
@@ -44,7 +44,7 @@
         
                     <div class="search-container margin-top-10">
                         <select id="reviewSelect" class="index-select">
-                            <option value="0">Cerca per numero recensioni</option>
+                            <option value="0">Tutte le recensioni</option>
 
                             <option value="5">>=5</option>
                             <option value="2">>=2</option>

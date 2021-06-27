@@ -31,6 +31,7 @@
                 border-radius: 50%;
                 overflow: hidden;
                 border: 5px solid $white;
+                @include box-shadow;
                 img {
                     width: 100%;
                     height: 100%;
@@ -59,6 +60,7 @@
                 padding: 5px 15px;
                 border: 1px solid $white;
                 transition: $short-transition;
+                @include box-shadow;
                 &:hover {
                     background-color: white;
                     color: $color-secondary;
@@ -142,5 +144,98 @@ section#collaborate {
         width: 65%;
         margin: 0 auto;
         height: 100%;
+    }
+}
+
+
+/*! INFO DOCTOR */
+
+.single-doctor-container {
+    @include main-wrapper;
+    @include main-padding;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 450px;
+    .single-doctor-left-container {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        background-color: $color-secondary;
+        .single-doctor-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            border: 5px solid $white;
+            overflow: hidden;
+            @include box-shadow;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .single-doctor-right-container {
+        width: 70%;
+        height: 100%;
+        padding: 20px;
+        border: 2px solid $color-secondary;
+        overflow-y: scroll;
+        .doctor-buttons {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 10px;
+            padding-top: 40px;
+            a.btn-doctor-card {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-self: flex-end;
+                cursor: pointer;
+                font-family: inherit;
+                font-size: 14px;
+                width: 100%;
+                height: 50px;
+                padding: 5px 15px;
+                color: $white;
+                border: 1px solid $color-secondary;
+                background-color: $color-secondary;
+                transition: $short-transition;
+                @include box-shadow;
+                &:hover {
+                    background-color: white;
+                    color: $color-secondary;
+                }
+            }
+        }
+        .reviews-doctor {
+            width: 100%;
+            padding-top: 40px;
+            .review-doctor-card {
+                padding: 8px 0;
+                border-top: 1px solid $color-secondary;
+                p.review-name {
+                    font-size: 22px;
+                    font-weight: 600;
+                }
+                p.review-vote {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+                p.review-date {
+                    font-size: 14px;
+                    font-weight: 400;
+                    font-style: italic;
+                    margin-top: 10px;
+                }
+                .review-text {
+                    font-size: 16px;
+                    margin-top: 20px;
+                }
+            }
+        }
     }
 }

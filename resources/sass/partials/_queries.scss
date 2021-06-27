@@ -62,6 +62,20 @@
             font-size: 40px;
         }
     }
+    .single-doctor-container {
+        flex-flow: column nowrap;
+        height: fit-content;
+        .single-doctor-left-container {
+            width: 100%;
+            @include main-padding;
+        }
+        .single-doctor-right-container {
+            width: 100%;
+            .doctor-buttons {
+                flex-flow: column nowrap;
+            }
+        }
+    }
     /* PAGINA FAQ */
     .bg-image {
         height: 100%;
@@ -134,6 +148,41 @@
     .wrapper-auth {
         width: 100%!important;
         box-shadow: none!important;
+    }
+    /*! DASHBOARD */
+    main.dashboard {
+        .container {
+            width: 100%;
+            height: 100%;
+            .doctor-left-container {
+                flex: 0 0 100px;
+                .doctor-icons {
+                    flex-flow: column nowrap;
+                    a {
+                        &:nth-child(2) {
+                            margin: 30px 0;
+                        }
+                    }
+                }
+                .doctor-menu {
+                    ul {
+                        width: 100%;
+                        align-items: center;
+                        li {
+                            a {
+                                i {
+                                    font-size: 30px;
+                                }
+                                margin-bottom: 20px;
+                                p {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -233,7 +282,6 @@
             }
             .right-footer {
                 ul {
-                    &:first-child {}
                     li {
                         font-size: 10px;
                         &:first-child {
