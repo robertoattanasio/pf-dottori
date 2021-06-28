@@ -1458,13 +1458,15 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
   margin-bottom: 30px;
   text-transform: capitalize;
 }
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .personal_info a i {
+  font-size: 3em;
+}
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .personal_info .card_info {
-  width: 60%;
   transition: 600ms;
   border: 1px solid transparent;
   background-color: #fae3ec;
   padding: 10px 10px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .personal_info .card_info span {
   color: #528f87;
@@ -1683,7 +1685,57 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
   bottom: 5px;
   right: 10px;
 }
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .dashboard_edit {
+  height: 100%;
+  width: 100%;
+  transition: 600ms;
+  border: 1px solid transparent;
+  background-color: #fae3ec;
+  overflow: hidden;
+  padding: 10px 10px;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .dashboard_edit:hover {
+  box-shadow: #a1a1a1 0px 5px 15px;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .dashboard_edit .form-auth-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .dashboard_edit .form-auth-item label {
+  font-size: 1.2em;
+  color: #528f87;
+  font-weight: bold;
+  padding-right: 10px;
+  border: 1px solid transparent;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .dashboard_edit .form-auth-item .auth-item-input input {
+  padding: 2px 2px;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .dashboard_edit #specialization {
+  width: 200px;
+  height: 130px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .dashboard_edit #specialization button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 
+@media screen and (max-width: 991px) {
+  main.dashboard #specialization button {
+    width: 100px;
+    font-size: 0.8em;
+    transition: 600ms;
+    white-space: nowrap;
+  }
+
+  .dashboard_edit label {
+    white-space: nowrap;
+  }
+}
 /*! FOOTER */
 footer {
   width: 100%;

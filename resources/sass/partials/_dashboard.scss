@@ -137,13 +137,17 @@ main.dashboard {
                         margin-bottom: 30px;
                         text-transform: capitalize;
                     }
+                    a {
+                        i {
+                        font-size: 3em;
+                        }
+                    }
                     .card_info {
-                        width: 60%;
                         transition: 600ms;
                         border: 1px solid transparent;
                         background-color: $light-pink;
                         @include small-padding-all-around;
-                        @include small-margin-bottom;
+                        @include wide-margin-bottom;
                         span {
                             color: $light-green;
                             font-weight: bolder;
@@ -300,7 +304,64 @@ main.dashboard {
                     bottom: 5px;
                     right: 10px;
                 }
+                .dashboard_edit {
+                    height: 100%;
+                    width: 100%;
+                    transition: 600ms;
+                    border: 1px solid transparent;
+                    background-color: $light-pink;
+                    overflow: hidden;
+                    @include small-padding-all-around;
+                    &:hover {
+                        @include box-shadow-dashboard-card;
+                    }
+                    .form-auth-item {
+                        display: flex;
+                        align-items: center;
+                        @include standard-margin-bottom;
+                        label {
+                            font-size: 1.2em;
+                            color: $color-secondary;
+                            font-weight: bold;
+                            padding-right: 10px;
+                            border: 1px solid transparent;
+                        }
+                        .auth-item-input {
+                            input {
+                                padding: 2px 2px;
+                               
+                            }
+                        }
+                        
+                    }
+                    #specialization {
+                        width: 200px;
+                        height: 130px;
+                        overflow-x: hidden;
+                        overflow-y: auto;
+                        button {
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                        }
+                    }
+                    
+                    
+                }
             }
         }
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    main.dashboard #specialization button {
+        width: 100px;
+        font-size: 0.8em;
+        transition: 600ms;
+        white-space: nowrap;
+    }
+    .dashboard_edit label {
+        white-space: nowrap;
     }
 }
