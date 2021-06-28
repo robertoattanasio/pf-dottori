@@ -70,7 +70,7 @@
 
             @if (count($users) == 0)
 
-                <h2>nessun risultato</h2>
+                <p class="no-doctors">Non ci sono dottori<br>che soddisfano i tuoi requisiti.</p>
 
                 @else
 

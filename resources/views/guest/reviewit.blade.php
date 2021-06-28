@@ -1,6 +1,6 @@
 @extends('layouts.card')
 
-@section('pageTitle', 'review-it')
+@section('pageTitle', 'Recensisci il dottore')
 
 @section('content')
 
@@ -29,7 +29,7 @@
         <div class="form-auth-item">
             <label for="review_text">{{ __('Recensione') }}</label>
             <div class="auth-item-input">
-                <input id="review_text" type="text" name="review_text" required autocomplete="review_text" autofocus>
+                <textarea class="message" id="review_text" type="text" name="review_text" required autocomplete="review_text" autofocus></textarea>
             </div>
         </div>
 

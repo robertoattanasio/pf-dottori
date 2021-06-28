@@ -112,6 +112,7 @@
             }
         }
         .psyco_card {
+            justify-content: flex-start!important;
             width: 100%!important;
             height: fit-content!important;
         }
@@ -219,6 +220,9 @@
         }
     }
     /* INIZIO PAGINA ABOUT*/
+    .card_shadow {
+        box-shadow: none!important;
+    }
     .about_container {
         @include main-padding;
         display: flex;

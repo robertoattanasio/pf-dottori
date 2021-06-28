@@ -79,6 +79,7 @@ main.card {
                     }
                 }
                 textarea.message {
+                    resize: none;
                     font-family: inherit;
                     width: 100%;
                     height: 300px;

@@ -239,7 +239,7 @@
                     </p>
                 </div>
                 <div>
-                    <button>PARLA CON UN TUTOR</button>
+                    <button class="margin-top-20">PARLA CON UN TUTOR</button>
                 </div>
             </div>
 
@@ -264,7 +264,7 @@
                     </p>
                 </div>
                 <div>
-                    <button>PARLA CON UN TUTOR</button>
+                    <button class="margin-top-20">PARLA CON UN TUTOR</button>
                 </div>
             </div>
 
@@ -289,7 +289,7 @@
                     </p>
                 </div>
                 <div>
-                    <button>PARLA CON UN TUTOR</button>
+                    <button class="margin-top-20">PARLA CON UN TUTOR</button>
                 </div>
             </div>
         </div>
