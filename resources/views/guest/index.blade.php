@@ -93,7 +93,7 @@
                             @if($user['numero_recensioni'])
                                 <div id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</div>
 
-                                <div id="media_voti">Media voti:{{round($user['media_voti'], 1)}}/5</div>
+                                <div id="media_voti">Media voti: {{round($user['media_voti'], 1)}}/5</div>
                             @endif
                         </div>
 
