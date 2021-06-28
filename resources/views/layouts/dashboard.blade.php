@@ -26,9 +26,7 @@
 
 <body class="">
 
-    <div id="loader">
-
-    </div>
+    <div id="loader"></div>
 
     <main class="dashboard">
         <div class="container">

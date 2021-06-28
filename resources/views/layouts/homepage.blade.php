@@ -23,9 +23,7 @@
 
 <body id="mainBody" class="">
 
-    <div id="loader">
-
-    </div>
+    <div id="loader"></div>
     
     @include('partials.header')
 

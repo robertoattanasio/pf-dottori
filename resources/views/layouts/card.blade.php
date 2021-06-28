@@ -21,12 +21,29 @@
 
 </head>
 <body>
+
+    <div id="loader"></div>
     
     <main class="card">
         <div class="wrapper-auth">
             @yield('content')
         </div>
     </main>
+
+    <script>
+
+        var body = document.getElementById('mainBody');
+        var loader = document.getElementById('loader');
+
+        window.addEventListener('load', function(){
+            loader.style.opacity = 0;
+
+            setTimeout(function(){ 
+            body.style.overflow = 'auto';
+                }, 100);
+        })
+
+    </script>
 
 </body>
 </html>
