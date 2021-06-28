@@ -35,7 +35,7 @@
                     @if (Auth::user()->profile_pic)
                         <img src="{{ asset('storage/'. Auth::user()->profile_pic) }}">
                     @else 
-                        <img src="..\img\medico_default.png" alt="">
+                        <img src="..\..\img\medico_default.png" alt="">
                     @endif
                 </div>
 

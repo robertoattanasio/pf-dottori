@@ -110,7 +110,7 @@
                             @if($user['numero_recensioni'])
                                 <div id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</div>
 
-                                <div id="media_voti">Media voti: {{$user['media_voti']}}/5</div>
+                                <div id="media_voti">Media voti: {{round($user['media_voti'], 1)}}/5</div>
                             @endif
                         </div>
 
@@ -162,6 +162,8 @@
             // console.log(mark_selected);
             // console.log(review_selected);
             var none = document.getElementsByClassName('doctor-card');
+            var cards = document.querySelector('.doctors-scroll-container').childNodes;
+
 
             if (county_selected == "Tutti") {
                 // console.log('tutti');
@@ -195,7 +197,7 @@
                         block[ii].classList.remove("none");
                     }
                 }
-            } 
+            }
         });
 
     </script>

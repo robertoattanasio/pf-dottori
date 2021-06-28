@@ -64,7 +64,7 @@
                 <p>Telefono: {{$user['phone_number']}}</p>
 
                 @if($user['numero_recensioni'])
-                <p class="margin-top-10"id="media_voti">Media voti: {{$user['media_voti']}}/5</p>
+                <p class="margin-top-10"id="media_voti">Media voti: {{round($user['media_voti'], 1)}}/5</p>
                 <p id="numero_recensioni">Numero recensioni: {{$user['numero_recensioni']}}</p>
                 @endif
                     
