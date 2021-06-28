@@ -151,7 +151,6 @@
 
         var navFixedTop = document.querySelector('header');
 
-        var body = document.getElementById('mainBody');
         var btnMobileMenu = document.querySelector('.hamburger');
         var menuMobile = document.querySelector('.menu-mobile');
 

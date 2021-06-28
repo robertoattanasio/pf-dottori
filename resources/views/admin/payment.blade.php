@@ -28,8 +28,8 @@
                 <input id="nonce" value="" type="hidden"
                 class="form-control @error('nonce') is-invalid @enderror" name="payment_method_nonce"
                 required autocomplete="payment_method_nonce" autofocus>
-                <button id="submit-button">Pay</button>  
-                <button id="to-payment" type="submit" class='none'>Pay</button>          
+                <button id="submit-button" class="small-button green-button">Pay</button>  
+                <button id="to-payment" type="submit" class='none small-button green-button' >Pay</button>          
             </form> 
         </div>
 

@@ -11,7 +11,7 @@
 
         <div class="doctor-right-bottom-container relative">
             @if ($is_sponsorized['success'] == true)
-                <h3>Il tuo profilo e' gia' sponsorizzato.</h3>
+                <h3>Il tuo profilo è già sponsorizzato.</h3>
                 <p>Scadenza sponsorizzazione in data: {{$is_sponsorized['expires']}}</p>
             @else
                 <form action="{{ route('add-sponsorization') }}" method="post">

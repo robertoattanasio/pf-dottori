@@ -12,7 +12,7 @@
         white-space: nowrap;
         flex-flow: row;
         overflow-x: scroll;
-        gap: 10px;
+        // gap: 10px;
         margin-top: 20px;
         border: 2px solid $color-secondary;
         .doctor-card {
@@ -24,7 +24,11 @@
             color: white;
             height: 100%;
             padding: 20px;
+            border-right: 1px solid $white;
             background-color: $color-secondary;
+            &:last-child {
+                border-right: none;
+            }
             .doctor-card-pic {
                 width: 120px;
                 height: 120px;

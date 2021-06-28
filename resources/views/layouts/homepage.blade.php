@@ -22,6 +22,10 @@
 </head>
 
 <body id="mainBody" class="">
+
+    <div id="loader">
+
+    </div>
     
     @include('partials.header')
 
@@ -30,6 +34,21 @@
     </main>
 
     @include('partials.footer')
+
+    <script>
+
+        var body = document.getElementById('mainBody');
+        var loader = document.getElementById('loader');
+
+        window.addEventListener('load', function(){
+            loader.style.opacity = 0;
+
+            setTimeout(function(){ 
+            body.style.overflow = 'auto';
+                }, 100);
+        })
+
+    </script>
 
 </body>
 </html>
