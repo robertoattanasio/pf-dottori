@@ -70,10 +70,16 @@
 
             @if (count($users) == 0)
 
+            
                 <p class="no-doctors">Non ci sono dottori<br>che soddisfano i tuoi requisiti.</p>
 
                 @else
 
+                <div id="no_result" class="none_no_result">
+
+                    <p class="no-doctors">Non ci sono dottori<br>che soddisfano i tuoi requisiti.</p>
+
+                </div>
                 @foreach ($users as $user)
                     {{-- DOCTOR CARD --}}
                     <div class="doctor-card {{$user['county']}}" value="[{{$user['media_voti']}}, {{$user['numero_recensioni']}}]">
@@ -197,6 +203,18 @@
                         block[ii].classList.remove("none");
                     }
                 }
+            }
+
+            var no_result = document.getElementById('no_result');
+            var hidden_results = document.getElementsByClassName('none');
+
+            if (hidden_results.length == none.length) {
+
+            if (no_result.classList.contains('none_no_result')) {
+                no_result.classList.remove("none_no_result");
+            }
+            } else {
+            no_result.classList.add("none_no_result");
             }
         });
 
