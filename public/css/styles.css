@@ -1462,7 +1462,6 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .personal_info h4 {
   margin-bottom: 30px;
-  text-transform: capitalize;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .personal_info a i {
   font-size: 3em;
@@ -1524,36 +1523,46 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
   width: 300px;
   height: 300px;
 }
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section li {
-  width: 250px;
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .li_marks_section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
 }
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section li .stars_container {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .li_marks_section label {
+  font-weight: 600;
 }
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section i.fas {
-  color: #1c4d7c;
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .li_marks_section .bar_container {
+  border-left: 1px solid #1c4d7c;
+  background-color: #fefcf8;
+  height: 100%;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .li_marks_section .bar_container .bar {
+  color: #fefcf8;
+  text-align: center;
+  background-color: #1c4d7c;
+  height: 100%;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section:nth-child(2) {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section .totals_section p {
+  font-weight: 600;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost {
   margin-bottom: 40px;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review:last-child,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message:last-child,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost:last-child,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section:last-child {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost:last-child {
   margin-bottom: 0;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review:nth-child(2) li,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .card_message:nth-child(2) li,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost:nth-child(2) li,
-main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section:nth-child(2) li {
+main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost:nth-child(2) li {
   margin-bottom: 0;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_review,
@@ -1667,9 +1676,11 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .single_boost #answer,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #email_patient,
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container .marks_section #answer {
+  font-family: inherit;
+  padding: 5px 10px;
+  resize: none;
   width: 300px;
   height: 30px;
-  text-transform: capitalize;
   border: 1px solid #fae3ec;
 }
 main.dashboard .container .doctor-right-container .doctor-right-bottom-container h4 span {
@@ -1730,6 +1741,16 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
   right: 0;
 }
 
+@media screen and (min-width: 992px) {
+  .li_marks_section {
+    width: 55%;
+    height: 30px;
+    line-height: 30px;
+  }
+  .li_marks_section .bar_container {
+    width: 75%;
+  }
+}
 @media screen and (max-width: 991px) {
   main.dashboard #specialization button {
     width: 100px;
@@ -1740,6 +1761,19 @@ main.dashboard .container .doctor-right-container .doctor-right-bottom-container
 
   .dashboard_edit label {
     white-space: nowrap;
+  }
+
+  .marks_section_title {
+    font-size: 20px;
+  }
+
+  .li_marks_section {
+    width: 75%;
+    height: 20px;
+    line-height: 20px;
+  }
+  .li_marks_section .bar_container {
+    width: 60%;
   }
 }
 /*! FOOTER */

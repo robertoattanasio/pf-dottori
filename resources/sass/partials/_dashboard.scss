@@ -117,7 +117,6 @@ main.dashboard {
                 .personal_info {
                     h4 {
                         margin-bottom: 30px;
-                        text-transform: capitalize;
                     }
                     a {
                         i {
@@ -180,25 +179,47 @@ main.dashboard {
                         width: 300px;
                         height: 300px;
                     }
-                    li {
-                        width: 250px;
+                    .li_marks_section {
                         display: flex;
                         justify-content: space-between;
+                        align-items: center;
                         @include small-margin-bottom;
-                        .stars_container {
-                            width: 50%;
-                            display: flex;
-                            justify-content: space-between;
+                        label {
+                            font-weight: 600;
                         }
+                        .bar_container {
+                            border-left: 1px solid $color-primary;
+                            background-color: $cream-white;
+                            height: 100%;
+                            .bar {
+                                color: $cream-white;
+                                text-align: center;
+                                background-color: $color-primary;
+                                height: 100%;
+                            }
+                        }
+                        // .stars_container {
+                        //     width: 50%;
+                        //     display: flex;
+                        //     justify-content: space-between;
+                        // }
                     }
-                    i.fas {
-                        color: $color-primary;
+                    // i.fas {
+                    //     color: $color-primary;
+                    // }
+                    &:nth-child(2) {
+                        @include wide-margin-top;
+                        @include wide-margin-bottom;
+                    }
+                    .totals_section {
+                        p {
+                            font-weight: 600;
+                        }
                     }
                 }
                 .single_review,
                 .card_message,
-                .single_boost,
-                .marks_section {
+                .single_boost {
                     @include wide-margin-bottom;
                     &:last-child {
                         margin-bottom: 0;
@@ -261,9 +282,11 @@ main.dashboard {
                     }
                     #email_patient,
                     #answer {
+                        font-family: inherit;
+                        padding: 5px 10px;
+                        resize: none;
                         width: 300px;
                         height: 30px;
-                        text-transform: capitalize;
                         border: 1px solid $light-pink;
                     }
                 }
@@ -331,6 +354,17 @@ main.dashboard {
     }
 }
 
+@media screen and (min-width: 992px) {
+    .li_marks_section {
+        width: 55%;
+        height: 30px;
+        line-height: 30px;
+        .bar_container {
+            width: 75%;
+        }
+    }
+}
+
 @media screen and (max-width: 991px) {
     main.dashboard #specialization button {
         width: 100px;
@@ -340,5 +374,16 @@ main.dashboard {
     }
     .dashboard_edit label {
         white-space: nowrap;
+    }
+    .marks_section_title {
+        font-size: 20px;
+    }
+    .li_marks_section {
+        width: 75%;
+        height: 20px;
+        line-height: 20px;
+        .bar_container {
+            width: 60%;
+        }
     }
 }

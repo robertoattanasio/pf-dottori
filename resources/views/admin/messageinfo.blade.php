@@ -33,7 +33,7 @@
                         <label for="answer">{{ __('risposta') }}</label>
 
                         <div class="auth-item-input">
-                            <input id="answer" type="text" name="answer" required autocomplete="answer" autofocus>
+                            <textarea id="answer" type="text" name="answer" required autocomplete="answer" autofocus></textarea>
                         </div>
                     </div>
 

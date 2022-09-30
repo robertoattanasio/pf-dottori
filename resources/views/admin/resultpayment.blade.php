@@ -11,13 +11,13 @@
         <div class="doctor-right-bottom-container relative">
             @if ($status->success == true)
                 <div class="success">
-                    <p>Pagamento riuscito.</p>
-                    <a href="{{ route('dashboard-about') }}">Torna alla dashboard.</a>
+                    <h3>Pagamento riuscito.</h3>
+                    <a href="{{ route('dashboard-about') }}" class="margin-top-10">Torna alla dashboard.</a>
                 </div>
             @else 
                 <div class="success">
-                    <p>Errore pagamento.</p>
-                    <a href="{{ route('dashboard-about') }}">Torna alla dashboard.</a>
+                    <h3>Errore pagamento.</h3>
+                    <a href="{{ route('dashboard-about') }}" class="margin-top-10">Torna alla dashboard.</a>
                 </div>
             @endif
         </div>

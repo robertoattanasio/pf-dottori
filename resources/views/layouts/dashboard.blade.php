@@ -24,7 +24,7 @@
     <title>@yield('pageTitle')</title>
 </head>
 
-<body class="">
+<body id="mainBody" class="">
 
     <div id="loader"></div>
 
